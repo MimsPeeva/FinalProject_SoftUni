@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj",
+      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
+      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Acer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "projectName": "Recipify.Web.ViewModels",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj": {
+              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj"
+            },
+            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj": {
+              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj"
+            },
+            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj": {
+              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

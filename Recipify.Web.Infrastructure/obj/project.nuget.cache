@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "/2mBJymXXkw=",
+  "success": false,
+  "projectFilePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.Infrastructure\\Recipify.Web.Infrastructure.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.Infrastructure\\Recipify.Web.Infrastructure.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.Infrastructure\\Recipify.Web.Infrastructure.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

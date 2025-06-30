@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "dgSpecHash": "eGuQ3gwwWHw=",
+  "success": false,
+  "projectFilePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

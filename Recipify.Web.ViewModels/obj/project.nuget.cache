@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "W6KTW0cJeZc=",
+  "success": false,
+  "projectFilePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.AutoMapping\\AspNetCoreArchTemplate.Services.AutoMapping.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj",
+      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
