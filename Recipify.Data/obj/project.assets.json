@@ -1589,6 +1589,41 @@
             "rid": "win"
           }
         }
+      },
+      "Recipify.Data.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Recipify.Data.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recipify.Data.Common.dll": {}
+        }
+      },
+      "Recipify.Data.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Recipify.Data.Common": "1.0.0",
+          "Recipify.GCommon": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Recipify.Data.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recipify.Data.Models.dll": {}
+        }
+      },
+      "Recipify.GCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Recipify.GCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recipify.GCommon.dll": {}
+        }
       }
     }
   },
@@ -4212,17 +4247,32 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Recipify.Data.Common/1.0.0": {
+      "type": "project",
+      "path": "../Recipify.Data.Common/Recipify.Data.Common.csproj",
+      "msbuildProject": "../Recipify.Data.Common/Recipify.Data.Common.csproj"
+    },
+    "Recipify.Data.Models/1.0.0": {
+      "type": "project",
+      "path": "../Recipify.Data.Models/Recipify.Data.Models.csproj",
+      "msbuildProject": "../Recipify.Data.Models/Recipify.Data.Models.csproj"
+    },
+    "Recipify.GCommon/1.0.0": {
+      "type": "project",
+      "path": "../Recipify.GCommon/Recipify.GCommon.csproj",
+      "msbuildProject": "../Recipify.GCommon/Recipify.GCommon.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj",
-      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj",
-      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.15",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "Recipify.Data.Common >= 1.0.0",
+      "Recipify.Data.Models >= 1.0.0",
+      "Recipify.GCommon >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4232,11 +4282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data\\Recipify.Data.csproj",
+      "projectUniqueName": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
       "projectName": "Recipify.Data",
-      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data\\Recipify.Data.csproj",
+      "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data\\obj\\",
+      "outputPath": "D:\\FinalProject_SoftUni\\Recipify.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4258,14 +4308,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj": {
-              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj"
+            "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj": {
+              "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj"
             },
-            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj": {
-              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj"
+            "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj": {
+              "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj"
             },
-            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj": {
-              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj"
+            "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj": {
+              "projectPath": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj"
             }
           }
         }
@@ -4324,34 +4374,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Models\\AspNetCoreArchTemplate.Data.Models.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

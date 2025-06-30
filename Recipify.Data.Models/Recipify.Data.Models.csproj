@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Data.Common\AspNetCoreArchTemplate.Data.Common.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.GCommon\AspNetCoreArchTemplate.GCommon.csproj" />
+    <ProjectReference Include="..\Recipify.Data.Common\Recipify.Data.Common.csproj" />
+    <ProjectReference Include="..\Recipify.GCommon\Recipify.GCommon.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Data\AspNetCoreArchTemplate.Data.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Services.Core\AspNetCoreArchTemplate.Services.Core.csproj" />
+    <ProjectReference Include="..\Recipify.Data\Recipify.Data.csproj" />
+    <ProjectReference Include="..\Recipify.Services.Core\Recipify.Services.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

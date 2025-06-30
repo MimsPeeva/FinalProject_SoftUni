@@ -1,17 +1,83 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj": {}
+    "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj": {}
   },
   "projects": {
-    "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj": {
+    "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
-        "projectName": "Recipify.Data.Models",
-        "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
+        "projectUniqueName": "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj",
+        "projectName": "Recipify.Data.Common",
+        "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\obj\\",
+        "outputPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
+        "projectName": "Recipify.Data.Models",
+        "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +99,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj": {
-                "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj"
+              "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj": {
+                "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Data.Common\\Recipify.Data.Common.csproj"
               },
-              "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj": {
-                "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj"
+              "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj": {
+                "projectPath": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj"
               }
             }
           }
@@ -63,6 +129,72 @@
               "version": "[8.0.15, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj",
+        "projectName": "Recipify.GCommon",
+        "projectPath": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",

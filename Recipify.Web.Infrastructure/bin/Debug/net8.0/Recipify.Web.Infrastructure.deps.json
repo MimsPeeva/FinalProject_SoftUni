@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Recipify.Web.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Recipify.GCommon": "1.0.0"
+        },
+        "runtime": {
+          "Recipify.Web.Infrastructure.dll": {}
+        }
+      },
+      "Recipify.GCommon/1.0.0": {
+        "runtime": {
+          "Recipify.GCommon.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Recipify.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Recipify.GCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+D:\FinalProject_SoftUni\Recipify.Services.Common\bin\Debug\net8.0\Recipify.Services.Common.deps.json
+D:\FinalProject_SoftUni\Recipify.Services.Common\bin\Debug\net8.0\Recipify.Services.Common.dll
+D:\FinalProject_SoftUni\Recipify.Services.Common\bin\Debug\net8.0\Recipify.Services.Common.pdb
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.AssemblyInfoInputs.cache
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.AssemblyInfo.cs
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.csproj.CoreCompileInputs.cache
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.sourcelink.json
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.dll
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\refint\Recipify.Services.Common.dll
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\Recipify.Services.Common.pdb
+D:\FinalProject_SoftUni\Recipify.Services.Common\obj\Debug\net8.0\ref\Recipify.Services.Common.dll

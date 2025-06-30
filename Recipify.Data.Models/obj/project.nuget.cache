@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bbiwz0VjSVo=",
-  "success": false,
-  "projectFilePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
+  "dgSpecHash": "0NzO1hFJebM=",
+  "success": true,
+  "projectFilePath": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.15\\microsoft.aspnetcore.cryptography.internal.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.15\\microsoft.aspnetcore.cryptography.keyderivation.8.0.15.nupkg.sha512",
@@ -23,28 +23,5 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
-      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
-      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj'. Check that the project reference is valid and that the project file exists.",
-      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
-      "filePath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Data.Models\\Recipify.Data.Models.csproj",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Data.Common\\AspNetCoreArchTemplate.Data.Common.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Data.Models\AspNetCoreArchTemplate.Data.Models.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.GCommon\AspNetCoreArchTemplate.GCommon.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Services.AutoMapping\AspNetCoreArchTemplate.Services.AutoMapping.csproj" />
+    <ProjectReference Include="..\Recipify.Data.Models\Recipify.Data.Models.csproj" />
+    <ProjectReference Include="..\Recipify.GCommon\Recipify.GCommon.csproj" />
+    <ProjectReference Include="..\Recipify.Services.AutoMapping\Recipify.Services.AutoMapping.csproj" />
   </ItemGroup>
 
 </Project>

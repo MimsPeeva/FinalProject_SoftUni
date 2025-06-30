@@ -1,4 +1,4 @@
-namespace AspNetCoreArchTemplate.Web.ViewModels
+namespace Recipify.Web.ViewModels
 {
     public class ErrorViewModel
     {

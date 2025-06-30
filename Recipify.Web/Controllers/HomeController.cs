@@ -1,4 +1,4 @@
-namespace AspNetCoreArchTemplate.Web.Controllers
+namespace Recipify.Web.Controllers
 {
     using System.Diagnostics;
 

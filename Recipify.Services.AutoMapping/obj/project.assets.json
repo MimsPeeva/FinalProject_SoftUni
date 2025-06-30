@@ -69,6 +69,26 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Recipify.GCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Recipify.GCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recipify.GCommon.dll": {}
+        }
+      },
+      "Recipify.Services.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Recipify.Services.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recipify.Services.Common.dll": {}
+        }
       }
     }
   },
@@ -196,13 +216,23 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Recipify.GCommon/1.0.0": {
+      "type": "project",
+      "path": "../Recipify.GCommon/Recipify.GCommon.csproj",
+      "msbuildProject": "../Recipify.GCommon/Recipify.GCommon.csproj"
+    },
+    "Recipify.Services.Common/1.0.0": {
+      "type": "project",
+      "path": "../Recipify.Services.Common/Recipify.Services.Common.csproj",
+      "msbuildProject": "../Recipify.Services.Common/Recipify.Services.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 14.0.0",
-      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
-      "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj"
+      "Recipify.GCommon >= 1.0.0",
+      "Recipify.Services.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -212,11 +242,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "projectUniqueName": "D:\\FinalProject_SoftUni\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
       "projectName": "Recipify.Services.AutoMapping",
-      "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
+      "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Services.AutoMapping\\Recipify.Services.AutoMapping.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\Final_Project_SoftUni\\Recipify\\Recipify.Services.AutoMapping\\obj\\",
+      "outputPath": "D:\\FinalProject_SoftUni\\Recipify.Services.AutoMapping\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -238,11 +268,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj": {
-              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj"
+            "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj": {
+              "projectPath": "D:\\FinalProject_SoftUni\\Recipify.GCommon\\Recipify.GCommon.csproj"
             },
-            "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj": {
-              "projectPath": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj"
+            "D:\\FinalProject_SoftUni\\Recipify.Services.Common\\Recipify.Services.Common.csproj": {
+              "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Services.Common\\Recipify.Services.Common.csproj"
             }
           }
         }
@@ -287,25 +317,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.Services.Common\\AspNetCoreArchTemplate.Services.Common.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\Final_Project_SoftUni\\Recipify\\AspNetCoreArchTemplate.GCommon\\AspNetCoreArchTemplate.GCommon.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

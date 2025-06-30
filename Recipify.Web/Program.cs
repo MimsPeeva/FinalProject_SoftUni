@@ -1,4 +1,4 @@
-namespace AspNetCoreArchTemplate.Web
+namespace Recipify.Web
 {
     using Data;
 

@@ -12,11 +12,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-AspNetCoreArchTemplate.Web-43fc014e-aaab-4ffa-b5aa-28ebf02721ff")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Recipify.Web-43fc014e-aaab-4ffa-b5aa-28ebf02721ff")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d19ca2e747924d1fc5a2a2554fda78ea1e5191b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ac736756854431d6603aa77df3cb95728c0aa07")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

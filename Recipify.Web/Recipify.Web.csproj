@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-AspNetCoreArchTemplate.Web-43fc014e-aaab-4ffa-b5aa-28ebf02721ff</UserSecretsId>
+    <UserSecretsId>aspnet-Recipify.Web-43fc014e-aaab-4ffa-b5aa-28ebf02721ff</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Data\AspNetCoreArchTemplate.Data.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.GCommon\AspNetCoreArchTemplate.GCommon.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Services.Core\AspNetCoreArchTemplate.Services.Core.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Web.Infrastructure\AspNetCoreArchTemplate.Web.Infrastructure.csproj" />
-    <ProjectReference Include="..\AspNetCoreArchTemplate.Web.ViewModels\AspNetCoreArchTemplate.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\Recipify.Data\Recipify.Data.csproj" />
+    <ProjectReference Include="..\Recipify.GCommon\Recipify.GCommon.csproj" />
+    <ProjectReference Include="..\Recipify.Services.Core\Recipify.Services.Core.csproj" />
+    <ProjectReference Include="..\Recipify.Web.Infrastructure\Recipify.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\Recipify.Web.ViewModels\Recipify.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
