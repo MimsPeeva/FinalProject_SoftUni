@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\recipify.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\recipify.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\recipify.services.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\recipify.services.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47C0B2FF-FF13-4D5E-A561-D6FEE0F4E9EE}|Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj|d:\\finalproject_softuni\\recipify.integrationtests\\recipify.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{47C0B2FF-FF13-4D5E-A561-D6FEE0F4E9EE}|Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj|solutionrelative:recipify.integrationtests\\recipify.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\recipify.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|solutionrelative:recipify.data\\recipify.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +39,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABEKAAAAAAAAAAAIwGEKAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-02T18:59:03.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Recipify.Services.Core.csproj",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Recipify.Services.Core.csproj",
+              "RelativeDocumentMoniker": "Recipify.Services.Core\\Recipify.Services.Core.csproj",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Recipify.Services.Core.csproj",
+              "RelativeToolTip": "Recipify.Services.Core\\Recipify.Services.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T19:29:17.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Recipify.Web.csproj",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Recipify.Web.csproj",
+              "RelativeDocumentMoniker": "Recipify.Web\\Recipify.Web.csproj",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Recipify.Web.csproj*",
+              "RelativeToolTip": "Recipify.Web\\Recipify.Web.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T19:24:31.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Recipify.IntegrationTests.csproj",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
+              "RelativeDocumentMoniker": "Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
+              "RelativeToolTip": "Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T19:23:52.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Recipify.Data.csproj",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
+              "RelativeDocumentMoniker": "Recipify.Data\\Recipify.Data.csproj",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
+              "RelativeToolTip": "Recipify.Data\\Recipify.Data.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T19:23:24.164Z",
+              "EditorCaption": ""
             }
           ]
         }
