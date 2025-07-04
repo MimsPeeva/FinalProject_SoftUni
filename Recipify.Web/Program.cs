@@ -4,6 +4,7 @@ namespace Recipify.Web
 
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Identity.Client;
 
     public class Program
     {
@@ -38,6 +39,8 @@ namespace Recipify.Web
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+              
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
