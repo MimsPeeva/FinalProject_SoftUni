@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\recipifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\recipifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\recipify.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\recipify.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\recipify.services.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\recipify.services.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|d:\\finalproject_softuni\\recipify.data.models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|solutionrelative:recipify.data.models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47C0B2FF-FF13-4D5E-A561-D6FEE0F4E9EE}|Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj|d:\\finalproject_softuni\\recipify.integrationtests\\recipify.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{47C0B2FF-FF13-4D5E-A561-D6FEE0F4E9EE}|Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj|solutionrelative:recipify.integrationtests\\recipify.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|d:\\finalproject_softuni\\recipify.data.models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|solutionrelative:recipify.data.models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\recipify.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|solutionrelative:recipify.data\\recipify.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|d:\\finalproject_softuni\\recipify.data.models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|solutionrelative:recipify.data.models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|d:\\finalproject_softuni\\recipify.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|solutionrelative:recipify.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|d:\\finalproject_softuni\\recipify.data.models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC10D63A-6958-4BA0-BFDC-8A28DD4CA8E3}|Recipify.Data.Models\\Recipify.Data.Models.csproj|solutionrelative:recipify.data.models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,66 +51,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAABEKAAAAAAAAAAAIwGEKAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-02T18:59:03.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Recipify.Services.Core.csproj",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Recipify.Services.Core.csproj",
-              "RelativeDocumentMoniker": "Recipify.Services.Core\\Recipify.Services.Core.csproj",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Recipify.Services.Core.csproj",
-              "RelativeToolTip": "Recipify.Services.Core\\Recipify.Services.Core.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T19:29:17.316Z",
+              "Title": "RecipifyController.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\RecipifyController.cs",
+              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\RecipifyController.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\RecipifyController.cs",
+              "RelativeToolTip": "Recipify.Web\\Controllers\\RecipifyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:18:12.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Recipify.Web.csproj",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Recipify.Web.csproj",
-              "RelativeDocumentMoniker": "Recipify.Web\\Recipify.Web.csproj",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Recipify.Web.csproj*",
-              "RelativeToolTip": "Recipify.Web\\Recipify.Web.csproj*",
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\BaseController.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Recipify.Web\\Controllers\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T19:24:31.251Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:17:55.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Recipify.IntegrationTests.csproj",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
-              "RelativeDocumentMoniker": "Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
-              "RelativeToolTip": "Recipify.IntegrationTests\\Recipify.IntegrationTests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T19:23:52.384Z",
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Recipify.Data.Models\\Comment.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Comment.cs",
+              "RelativeToolTip": "Recipify.Data.Models\\Comment.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:11:02.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Recipify.Data.csproj",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
-              "RelativeDocumentMoniker": "Recipify.Data\\Recipify.Data.csproj",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
-              "RelativeToolTip": "Recipify.Data\\Recipify.Data.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T19:23:24.164Z",
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\User.cs",
+              "RelativeDocumentMoniker": "Recipify.Data.Models\\User.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\User.cs",
+              "RelativeToolTip": "Recipify.Data.Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:10:02.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Recipify.Data.Models\\Ingredient.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Ingredient.cs",
+              "RelativeToolTip": "Recipify.Data.Models\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:08:50.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Category.cs",
+              "RelativeDocumentMoniker": "Recipify.Data.Models\\Category.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Category.cs",
+              "RelativeToolTip": "Recipify.Data.Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:07:09.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Recipify.Data.Models\\Recipe.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data.Models\\Recipe.cs",
+              "RelativeToolTip": "Recipify.Data.Models\\Recipe.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T19:04:24.171Z",
               "EditorCaption": ""
             }
           ]
