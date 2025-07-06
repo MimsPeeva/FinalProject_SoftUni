@@ -9,16 +9,18 @@ namespace Recipify.Data.Models
     public class Recipe
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Instructions { get; set; }
+        public string Title { get; set; }=null!;
+        public string Description { get; set; } = null!;
+        public string Instructions { get; set; } = null!;
+        public string? ImageUrl { get; set; }
+
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public List<Ingredient> Ingredients { get; set; }
-            //= new HashSet<Ingredient>();
+        public Category Category { get; set; } = null!;
+        public virtual ICollection<Ingredient> Ingredients { get; set; }
+            = new HashSet<Ingredient>();
        public List<Comment> Coments { get; set; }
         public int DifficultyId { get; set; }
-        public Difficulty Difficulty { get; set; }
+        public DifficultyLevel Difficulty { get; set; }
         public int CuisineId { get; set; }
         public Cuisine Cuisine { get; set; }
     }
