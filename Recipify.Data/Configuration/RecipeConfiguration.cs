@@ -55,6 +55,7 @@ namespace Recipify.Data.Configuration
                     Title = "Spaghetti Carbonara",
                     Description = "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
                     Instructions = "Cook spaghetti. In a bowl, mix eggs and cheese. Fry pancetta. Combine all with pepper.",
+                    ImageUrl ="https://leonardobansko.bg/wp-content/uploads/2020/08/2020-08-26_15h07_08.png",
                     CategoryId = 1,
                     DifficultyId = 1,
                     CuisineId = 1
@@ -65,6 +66,7 @@ namespace Recipify.Data.Configuration
                     Title = "Chicken Curry",
                     Description = "A spicy and flavorful chicken dish cooked in a rich curry sauce.",
                     Instructions = "Sauté onions, garlic, and ginger. Add spices and chicken. Simmer in coconut milk.",
+                    ImageUrl="https://gotvach.bg/files/lib/400x296/curry-chicken1.webp",
                     CategoryId = 2,
                     DifficultyId = 2,
                     CuisineId = 2
@@ -76,6 +78,7 @@ namespace Recipify.Data.Configuration
                     Description = "Easy homemade recipe for thick, fluffy and delicious pancakes.",
                     Instructions = "Combine flour, sugar, baking powder, and salt in a large bowl. Make a well in the center, and pour in milk, oil, and egg. Mix until smooth." +
                     "Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop batter onto the griddle. Cook until bubbles form and the edges are dry, 1 to 2 minutes. Flip and cook until browned on the other side. ",
+                    ImageUrl ="https://www.whiskware.com/cdn/shop/articles/yagv0pn15omlwkgpgrbk.jpg?v=1617665208&width=2000",
                     CategoryId = 3,
                     DifficultyId = 1,
                     CuisineId = 9

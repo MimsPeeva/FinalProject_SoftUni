@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FinalProject_SoftUni\\Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\configuration\\recipeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|solutionrelative:recipify.data\\configuration\\recipeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FinalProject_SoftUni\\Recipify.Data\\Migrations\\20250706090137_Initial_DB_Seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Recipify.Data\\Migrations\\20250706090137_Initial_DB_Seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\configuration\\ingredientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|solutionrelative:recipify.data\\configuration\\ingredientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\configuration\\recipeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|solutionrelative:recipify.data\\configuration\\recipeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF166E95-087A-402E-B880-F30C9EF294CB}|Recipify.Data\\Recipify.Data.csproj|d:\\finalproject_softuni\\recipify.data\\configuration\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,6 +70,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250706090835_ImagesSeed.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs",
+              "RelativeDocumentMoniker": "Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs",
+              "RelativeToolTip": "Recipify.Data\\Migrations\\20250706090835_ImagesSeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:08:35.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20250706090137_Initial_DB_Seed.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Migrations\\20250706090137_Initial_DB_Seed.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Migrations\\20250706090137_Initial_DB_Seed.cs",
@@ -78,20 +95,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "RecipeConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\RecipeConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\RecipeConfiguration.cs",
               "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\RecipeConfiguration.cs",
               "RelativeToolTip": "Recipify.Data\\Configuration\\RecipeConfiguration.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAYwEkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFAAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T08:15:00.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IngredientConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\IngredientConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\IngredientConfiguration.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DifficultyLevelConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\DifficultyLevelConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\DifficultyLevelConfiguration.cs",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CuisineConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\CuisineConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\CuisineConfiguration.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CommentConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\CommentConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\CommentConfiguration.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\CategoryConfiguration.cs",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Configuration\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Recipify.Data\\Configuration\\UserConfiguration.cs",
@@ -169,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Recipify.Web",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Recipify.Web.csproj",
               "RelativeDocumentMoniker": "Recipify.Web\\Recipify.Web.csproj",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Recipify.Data",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
               "RelativeDocumentMoniker": "Recipify.Data\\Recipify.Data.csproj",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
