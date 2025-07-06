@@ -25,7 +25,7 @@ namespace Recipify.Data.Configuration
                 .WithMany(r => r.Coments)
                 .HasForeignKey(c => c.RecipeId);
 
-            //builder.HasData(this.GenerateSeedComments());
+            builder.HasData(this.GenerateSeedComments());
 
         }
         private List<Comment> GenerateSeedComments()

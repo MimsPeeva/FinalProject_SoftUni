@@ -20,7 +20,7 @@ namespace Recipify.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(CategoryNameMaxLength);
 
-            //builder.HasData(this.GenerateSeedCategories());
+            builder.HasData(this.GenerateSeedCategories());
 
         }
         private List<Category> GenerateSeedCategories()

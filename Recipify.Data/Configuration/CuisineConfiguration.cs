@@ -18,7 +18,7 @@ namespace Recipify.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(CuisineNameMaxLength);
 
-            //builder.HasData(this.GenerateSeedCuisines());
+            builder.HasData(this.GenerateSeedCuisines());
 
         }
         private List<Cuisine> GenerateSeedCuisines()

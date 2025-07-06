@@ -16,8 +16,31 @@ namespace Recipify.Data.Configuration
 
             builder.Property(dl => dl.Level)
                 .IsRequired()
-                .HasMaxLength(DifficultyLevelMaxLength); 
-            
+                .HasMaxLength(DifficultyLevelMaxLength);
+
+            builder.HasData(this.GenerateSeedDifficultyLevels());
+
+        }
+        private List<DifficultyLevel> GenerateSeedDifficultyLevels()
+        {
+            return new List<DifficultyLevel>
+            {
+                new DifficultyLevel
+                {
+                    Id = 1,
+                    Level = "Easy"
+                },
+                new DifficultyLevel
+                {
+                    Id = 2,
+                    Level = "Medium"
+                },
+                new DifficultyLevel
+                {
+                    Id = 3,
+                    Level = "Hard"
+                }
+            };
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Recipify.Data.Configuration
             builder.HasIndex(u => u.Email)
                 .IsUnique();
 
-            //builder.HasData(this.GenerateSeedUsers());
+            builder.HasData(this.GenerateSeedUsers());
 
         }
         private List<User> GenerateSeedUsers()

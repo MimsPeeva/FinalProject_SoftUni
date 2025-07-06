@@ -25,7 +25,7 @@ namespace Recipify.Data.Configuration
                 .WithMany(r => r.Ingredients)
                 .HasForeignKey(i => i.RecipeId);
 
-            //builder.HasData(this.GenerateSeedIngredients());
+            builder.HasData(this.GenerateSeedIngredients());
         }
 
         private List<Ingredient> GenerateSeedIngredients()

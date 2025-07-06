@@ -41,7 +41,7 @@ namespace Recipify.Data.Configuration
                 .WithMany(c => c.Recipes)
                 .HasForeignKey(r => r.CuisineId);
 
-            //builder.HasData(this.GenerateSeedRecipes());
+            builder.HasData(this.GenerateSeedRecipes());
 
         }
 
@@ -71,7 +71,7 @@ namespace Recipify.Data.Configuration
                 },
                  new Recipe
                 {
-                    Id = 2,
+                    Id = 3,
                     Title = "Pancakes",
                     Description = "Easy homemade recipe for thick, fluffy and delicious pancakes.",
                     Instructions = "Combine flour, sugar, baking powder, and salt in a large bowl. Make a well in the center, and pour in milk, oil, and egg. Mix until smooth." +
