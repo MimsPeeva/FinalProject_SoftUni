@@ -22,7 +22,7 @@ namespace Recipify.Data.Configuration
                 .HasMaxLength(CommentAuthorMaxLength);
 
             builder.HasOne(c => c.Recipe)
-                .WithMany(r => r.Coments)
+                .WithMany(r => r.Comments)
                 .HasForeignKey(c => c.RecipeId);
 
             builder.HasData(this.GenerateSeedComments());

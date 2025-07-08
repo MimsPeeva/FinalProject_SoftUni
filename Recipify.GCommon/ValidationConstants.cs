@@ -12,7 +12,9 @@ namespace Recipify.GCommon
         {
             public const int RecipeTitleMinLength = 3;
             public const int RecipeTitleMaxLength = 100;
+            public const int RecipeDescriptionMinLength = 10;
             public const int RecipeDescriptionMaxLength = 500;
+            public const int RecipeInstructionsMinLength = 50;
             public const int RecipeInstructionsMaxLength = 2000;
         }
 

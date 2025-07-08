@@ -18,7 +18,7 @@ namespace Recipify.Data.Models
         public Category Category { get; set; } = null!;
         public virtual ICollection<Ingredient> Ingredients { get; set; }
             = new HashSet<Ingredient>();
-       public List<Comment> Coments { get; set; }
+       public List<Comment> Comments { get; set; }
         public int DifficultyId { get; set; }
         public DifficultyLevel Difficulty { get; set; }
         public int CuisineId { get; set; }
