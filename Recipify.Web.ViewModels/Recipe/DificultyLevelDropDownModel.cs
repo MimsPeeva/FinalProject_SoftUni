@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Recipify.Web.ViewModels.Recipe
 {
-    public class CategoriesDropdownViewModel
+    public class DificultyLevelDropDownModel
     {
         public int Id { get; set; }
         [Required]

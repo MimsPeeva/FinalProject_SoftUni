@@ -31,12 +31,12 @@ namespace Recipify.Web.ViewModels.Recipe
      
         public int CategoryId { get; set; }
 
-        public IEnumerable<CategoriesDropdownViewModel>? Categories { get; set; }
+        public IEnumerable<CategoriesDropdownModel>? Categories { get; set; }
         public int CuisineId { get; set; }
 
-        public IEnumerable<CuisinesDropDownViewModel>? Cuisines { get; set; }
+        public IEnumerable<CuisinesDropDownModel>? Cuisines { get; set; }
         public int DifficultyLevelId { get; set; }
 
-        public IEnumerable<DificultyLevelDropDownViewModel>? DificultyLevels { get; set; }
+        public IEnumerable<DificultyLevelDropDownModel>? DificultyLevels { get; set; }
     }
 }

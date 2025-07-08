@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Recipify.Web.ViewModels.Recipe
 {
-    public class CuisinesDropDownViewModel
+    public class CategoriesDropdownModel
     {
         public int Id { get; set; }
         [Required]
