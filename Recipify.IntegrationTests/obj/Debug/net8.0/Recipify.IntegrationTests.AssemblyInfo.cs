@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+280a43c6131315f897df4294a383096bedd63e9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4ff1be466d82a612dcb6a668a6dc58d21736a62")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
