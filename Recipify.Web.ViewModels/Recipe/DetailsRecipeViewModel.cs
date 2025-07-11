@@ -18,7 +18,7 @@ namespace Recipify.Web.ViewModels.Recipe
 
         public string CategoryName { get; set; } = null!;
 
-        public string Difficulty { get; set; } = null!;
-        public string Cuisine { get; set; }  = null!;
+        public string DifficultyLevel { get; set; } = null!;
+        public string CuisineName { get; set; }  = null!;
     }
 }

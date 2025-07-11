@@ -8,6 +8,8 @@ namespace Recipify.Web
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Identity.Client;
+    using Recipify.Services.Core;
+    using Recipify.Services.Core.Contracts;
 
     public class Program
     {
@@ -34,6 +36,11 @@ namespace Recipify.Web
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IRecipeService, RecipeService>();
+            builder.Services.AddScoped<ICuisinesService, CuisinesService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IDifficultyLevelService, DifficultyLevelService>();
 
             WebApplication? app = builder.Build();
             

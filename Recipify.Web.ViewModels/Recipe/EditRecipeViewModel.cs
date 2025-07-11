@@ -9,7 +9,11 @@ namespace Recipify.Web.ViewModels.Recipe
     public class EditRecipeViewModel:CreateRecipeInputModel
     {
         public int Id { get; set; }
-        public string AuthorId { get; set; } = null!;
+        public IEnumerable<CategoriesDropdownModel> Categories { get; set; }
+
+        public IEnumerable<CuisinesDropDownModel> Cuisines { get; set; }
+
+        public IEnumerable<DificultyLevelDropDownModel> DifficultyLevels { get; set; }
     }
   
 }

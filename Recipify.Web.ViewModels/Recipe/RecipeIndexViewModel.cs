@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recipify.Web.ViewModels.Recipe
 {
-    public class RecipeIndexViewModelcs:RecipeBaseViewModel
+    public class RecipeIndexViewModel:RecipeBaseViewModel
     {
         public IEnumerable<string> Categories { get; set; } = new List<string>(); 
         public IEnumerable<string> Cuisines { get; set; } = new List<string>(); 

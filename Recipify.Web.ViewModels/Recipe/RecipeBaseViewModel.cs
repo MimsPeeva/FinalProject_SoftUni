@@ -17,6 +17,11 @@ namespace Recipify.Web.ViewModels.Recipe
 
         public string? ImageUrl { get; set; }
 
-        public string CategoryName { get; set; } = null!;
+
+        public int CategoryId { get; set; }
+
+        public int CuisineId { get; set; }
+
+        public int DifficultyLevelId { get; set; }
     }
 }
