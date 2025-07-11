@@ -1,0 +1,39 @@
+﻿@model List<Recipify.Web.ViewModels.Admin.UserRoleViewModel>
+
+@{
+    ViewData["Title"] = "User Role Management";
+}
+
+<h2>User Role Management</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@string.Join(", ", user.Roles)</td>
+                <td>
+                    <form method="post" asp-action="AddToRole">
+                        <input type="hidden" name="userId" value="@user.UserId" />
+                        <input type="text" name="role" placeholder="Role name" />
+                        <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
+                    </form>
+
+                    <form method="post" asp-action="RemoveFromRole">
+                        <input type="hidden" name="userId" value="@user.UserId" />
+                        <input type="text" name="role" placeholder="Role name" />
+                        <button type="submit" class="btn btn-sm btn-danger">Remove Role</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -56,13 +56,35 @@ namespace Recipify.Services.Core
                      Title = r.Title,
                      ShortDescription = r.Description,
                      CategoryName = r.Category.Name,
-                     Cuisine = r.Cuisine.Name,
-                     Difficulty = r.Difficulty.ToString()
+                     CuisineName = r.Cuisine.Name,
+                     DifficultyLevel = r.Difficulty.ToString()
                  })
                  .FirstOrDefaultAsync();
         }
+        public async Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id)
+        {
+            var recipe = await dbContext.Recipes
+        .Where(r => r.Id == id)
+        .Select(r => new DetailsRecipeViewModel
+        {
+            Id = r.Id,
+            Title = r.Title,
+            ShortDescription = r.Description,
+            CategoryName = r.Category.Name,
+            CuisineName = r.Cuisine.Name,
+            DifficultyLevel = r.Difficulty.Level,
+            Comments = r.Comments.Select(c => new CommentViewModel
+            {
+                Id = c.Id,
+                Content = c.Content,
+                AuthorName = c.Author,
+            }).ToList()
+        })
+        .FirstOrDefaultAsync();
 
-       
+            return recipe;
+        }
+
         public async Task CreateRecipesAsync(CreateRecipeInputModel model)
         {
             var recipe = new Recipe
@@ -103,7 +125,5 @@ namespace Recipify.Services.Core
         }
 
        
-
-     
     }
 }

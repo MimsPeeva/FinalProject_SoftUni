@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
+using Recipify.Data.Seeding;
 namespace Recipify.Web
 {
     using Data;
@@ -8,13 +9,17 @@ namespace Recipify.Web
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Identity.Client;
+    using Recipify.Data.Seeding;
     using Recipify.Services.Core;
     using Recipify.Services.Core.Contracts;
+    using System.Threading.Tasks;
 
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
+
+
             WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
             
             string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -34,7 +39,10 @@ namespace Recipify.Web
                     options.Password.RequireUppercase = false;
                     options.Password.RequireLowercase = false;
                 })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<IRecipeService, RecipeService>();
@@ -54,7 +62,23 @@ namespace Recipify.Web
                 app.UseHsts();
             }
 
-              
+
+            using (var scope = app.Services.CreateScope())
+            {
+               var services = scope.ServiceProvider;
+                try
+                {
+                   
+                   await  IdentitySeeder.SeedRolesAsync(services);
+                    await IdentitySeeder.SeedAdminAsync(services);
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred seeding the DB.");
+                }
+            }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -67,6 +91,11 @@ namespace Recipify.Web
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=AdminPanel}/{action=Index}/{id?}");
+
             app.MapRazorPages();
 
             app.Run();

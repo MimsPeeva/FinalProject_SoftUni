@@ -17,7 +17,7 @@ namespace Recipify.Web.ViewModels.Recipe
 
         public string? ImageUrl { get; set; }
 
-
+        public string Comment { get; set; }
         public int CategoryId { get; set; }
 
         public int CuisineId { get; set; }

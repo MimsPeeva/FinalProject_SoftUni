@@ -11,6 +11,7 @@ namespace Recipify.Services.Core.Contracts
     {
         Task<IEnumerable<RecipeIndexViewModel>> GetAllRecipesAsync();
         Task<DetailsRecipeViewModel> GetRecipesByIdAsync(int id);
+        Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id);
         Task CreateRecipesAsync(CreateRecipeInputModel model);
         Task EditRecipesAsync(EditRecipeViewModel model);
         Task DeleteRecipesAsync(int id);
