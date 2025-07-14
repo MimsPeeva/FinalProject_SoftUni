@@ -124,6 +124,37 @@ namespace Recipify.Services.Core
             }
         }
 
-       
+        public async Task<IEnumerable<RecipeIndexViewModel>> SearchRecipesAsync(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return Enumerable.Empty<RecipeIndexViewModel>();
+            }
+
+            query = query.Trim().ToLower();
+
+            return await dbContext.Recipes
+                .AsNoTracking()
+                .Include(r => r.Category)
+                .Include(r => r.Cuisine)
+                .Include(r => r.Difficulty)
+                .Where(r =>
+                    r.Title.ToLower().Contains(query) ||
+                    r.Description.ToLower().Contains(query) ||
+                    r.Category.Name.ToLower().Contains(query) ||
+                    r.Cuisine.Name.ToLower().Contains(query) ||
+                    r.Difficulty.Level.ToLower().Contains(query)
+                )
+                .Select(r => new RecipeIndexViewModel
+                {
+                    Id = r.Id,
+                    Title = r.Title,
+                    CategoryId = r.Category.Id,
+                    CuisineId = r.Cuisine.Id,
+                    ShortDescription = r.Description,
+                    DifficultyLevelId = r.Difficulty.Id
+                })
+                .ToListAsync();
+        }
     }
 }

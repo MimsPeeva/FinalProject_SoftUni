@@ -1,5 +1,5 @@
-﻿@* Views/Recipe/Edit.cshtml
-@model Recipify.Web.ViewModels.Recipe.RecipeFormModel
+﻿@using Recipify.Web.ViewModels.Recipe
+@model EditRecipeViewModel
 
 @{
     ViewData["Title"] = "Edit Recipe";
@@ -8,8 +8,10 @@
 <h2>@ViewData["Title"]</h2>
 <hr />
 
+@await Html.PartialAsync("_ValidationSummary")
+
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Id" /> 
 
     <div class="mb-3">
         <label asp-for="Title" class="form-label"></label>
@@ -42,12 +44,11 @@
     </div>
 
      <div class="mb-3">
-        <label asp-for="DificultyId" class="form-label"></label>
-        <select asp-for="DificultyId" asp-items="Model.DificultyLevel" class="form-select"></select>
-        <span asp-validation-for="DificultyId" class="text-danger"></span>
+        <label asp-for="DifficultyLevelId" class="form-label"></label>
+        <select asp-for="DifficultyLevelId" asp-items="Model.DificultyLevels" class="form-select"></select>
+        <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-success">Save Changes</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
- *@

@@ -1,9 +1,12 @@
 ﻿@using Recipify.Web.ViewModels.Recipe
-@model Recipify.Web.ViewModels.Recipe.DeleteRecipeInputModel
+@model DeleteRecipeInputModel
 
 @{
     ViewData["Title"] = "Delete Recipe";
 }
+
+@await Html.PartialAsync("_ValidationSummary")
+
 
 <h2>Are you sure you want to delete this recipe?</h2>
 <div class="card mb-4">

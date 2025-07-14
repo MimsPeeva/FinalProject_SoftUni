@@ -8,6 +8,7 @@ namespace Recipify.Web.ViewModels.Recipe
 {
     public class RecipeIndexViewModel:RecipeBaseViewModel
     {
+        public List<RecipeIndexViewModel> Recipes { get; set; } = new List<RecipeIndexViewModel>();
         public IEnumerable<string> Categories { get; set; } = new List<string>(); 
         public IEnumerable<string> Cuisines { get; set; } = new List<string>(); 
         public IEnumerable<string> DifficultyLevels { get; set; } = new List<string>();

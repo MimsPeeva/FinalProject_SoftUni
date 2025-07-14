@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Recipify.Data.Models\Recipify.Data.Models.csproj" />
     <ProjectReference Include="..\Recipify.GCommon\Recipify.GCommon.csproj" />
     <ProjectReference Include="..\Recipify.Services.AutoMapping\Recipify.Services.AutoMapping.csproj" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -31,12 +32,12 @@ namespace Recipify.Web.ViewModels.Recipe
      
         public int CategoryId { get; set; }
 
-        public IEnumerable<CategoriesDropdownModel>? Categories { get; set; }
+        public IEnumerable<SelectListItem> Categories { get; set; }
         public int CuisineId { get; set; }
 
-        public IEnumerable<CuisinesDropDownModel>? Cuisines { get; set; }
+        public IEnumerable<SelectListItem> Cuisines { get; set; }
         public int DifficultyLevelId { get; set; }
 
-        public IEnumerable<DificultyLevelDropDownModel>? DificultyLevels { get; set; }
+        public IEnumerable<SelectListItem> DificultyLevels { get; set; }
     }
 }

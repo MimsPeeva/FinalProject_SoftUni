@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Recipify.Web.ViewModels\Recipify.Web.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
 </Project>
