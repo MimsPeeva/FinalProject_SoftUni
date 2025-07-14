@@ -46,7 +46,7 @@ namespace Recipify.Services.Core
                   .ToListAsync();
         }
 
-        public async Task<DetailsRecipeViewModel> GetRecipesByIdAsync(int id)
+        public async Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
         {
             return await dbContext.Recipes
                  .Where(r => r.Id == id)

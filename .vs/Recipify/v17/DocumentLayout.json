@@ -3,12 +3,15 @@
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\recipifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\recipifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ASP.NET-Fundamentals-\\Horizons\\Horizons.Web\\Controllers\\DestinationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\contracts\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\contracts\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +33,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRecipeService.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "RelativeDocumentMoniker": "Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "RelativeToolTip": "Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:04:58.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-11T18:51:21.352Z",
+              "Title": "DestinationController.cs",
+              "DocumentMoniker": "D:\\ASP.NET-Fundamentals-\\Horizons\\Horizons.Web\\Controllers\\DestinationController.cs",
+              "RelativeDocumentMoniker": "..\\ASP.NET-Fundamentals-\\Horizons\\Horizons.Web\\Controllers\\DestinationController.cs",
+              "ToolTip": "D:\\ASP.NET-Fundamentals-\\Horizons\\Horizons.Web\\Controllers\\DestinationController.cs",
+              "RelativeToolTip": "..\\ASP.NET-Fundamentals-\\Horizons\\Horizons.Web\\Controllers\\DestinationController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAUwEAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T16:50:33.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "bootstrap.min.css",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\bootstrap.min.css",
-              "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\bootstrap.min.css",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\bootstrap.min.css",
-              "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\bootstrap.min.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-11T18:51:07.757Z",
+              "Title": "RecipifyController.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\RecipifyController.cs",
+              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\RecipifyController.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\RecipifyController.cs",
+              "RelativeToolTip": "Recipify.Web\\Controllers\\RecipifyController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAuwJkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T16:46:30.909Z",
               "EditorCaption": ""
             }
           ]

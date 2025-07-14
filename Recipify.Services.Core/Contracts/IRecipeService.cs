@@ -10,10 +10,11 @@ namespace Recipify.Services.Core.Contracts
     public interface IRecipeService
     {
         Task<IEnumerable<RecipeIndexViewModel>> GetAllRecipesAsync();
-        Task<DetailsRecipeViewModel> GetRecipesByIdAsync(int id);
+        Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id);
         Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id);
         Task CreateRecipesAsync(CreateRecipeInputModel model);
         Task EditRecipesAsync(EditRecipeViewModel model);
         Task DeleteRecipesAsync(int id);
+        Task<IEnumerable<RecipeIndexViewModel>> SearchRecipesAsync(string query);
     }
 }
