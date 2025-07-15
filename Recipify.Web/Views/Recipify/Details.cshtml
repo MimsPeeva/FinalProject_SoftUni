@@ -1,0 +1,23 @@
+﻿@using Recipify.Web.ViewModels.Recipe
+@model DetailsRecipeViewModel
+
+@{
+    ViewData["Title"] = "Recipe Details";
+}
+
+<h2>@Model.Title</h2>
+<hr />
+@await Html.PartialAsync("_ValidationSummary")
+
+<div class="card mb-4">
+    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Title" />
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">@Model.ShortDescription</p>
+        <p class="card-text"><strong>Category:</strong> @Model.CategoryName</p>
+    </div>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+<a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Welcome Section -->
+<div class="container mt-5 p-5 rounded bg-light shadow-card text-center">
+    <h1 class="display-4 text-pink">Welcome to Recipify</h1>
+    <p class="lead">Discover and share delicious recipes from around the world</p>
+    <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-primary btn-lg mt-3">
+        Start Sharing Recipes
+    </a>
+</div>
+
+<!-- Explore Recipes Section -->
+<div class="container mt-5 explore-section shadow-card">
+    <h2 class="text-center text-pink section-title">Explore Recipes</h2>
+    <div class="row mt-4">
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-4">
+            <img src="~/images/softy/appetizer.jpg" asp-append-version="true" class="img-fluid rounded hover-zoom" alt="Appetizers">
+            <h5 class="mt-3">Tasty Appetizers</h5>
+            <p>Start your meal right with quick and easy appetizer ideas.</p>
+            <a href="@Url.Action("Index", "Recipe")" class="btn btn-outline-pink">Browse</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-4">
+            <img src="~/images/softy/main-course.jpg" asp-append-version="true" class="img-fluid rounded hover-zoom" alt="Main Dishes">
+            <h5 class="mt-3">Delicious Mains</h5>
+            <p>Try hearty mains from traditional classics to modern favorites.</p>
+            <a href="@Url.Action("Index", "Recipe")" class="btn btn-outline-pink">Browse</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-4">
+            <img src="~/images/softy/dessert.jpg" asp-append-version="true" class="img-fluid rounded hover-zoom" alt="Desserts">
+            <h5 class="mt-3">Sweet Desserts</h5>
+            <p>Indulge in cakes, cookies, and sweet treats for every occasion.</p>
+            <a href="@Url.Action("Index", "Recipe")" class="btn btn-outline-pink">Browse</a>
+        </div>
+    </div>
 </div>

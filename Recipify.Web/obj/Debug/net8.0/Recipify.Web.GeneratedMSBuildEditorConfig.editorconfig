@@ -64,40 +64,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXENyZWF0ZS5jc2h0bWw=
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXERlbGV0ZS5jc2h0bWw=
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXERldGFpbHMuY3NodG1s
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXEVkaXQuY3NodG1s
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXEluZGV4LmNzaHRtbA==
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/MyRecipes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXE15UmVjaXBlcy5jc2h0bWw=
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/MyRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcTXlSZWNpcGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipe/Search.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlXFNlYXJjaC5jc2h0bWw=
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Recipify/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBpZnlcU2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FinalProject_SoftUni/Recipify.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FinalProject_SoftUni/Recipify.Web/Views/Shared/ValidationSummary.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFZhbGlkYXRpb25TdW1tYXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FinalProject_SoftUni/Recipify.Web/Views/Shared/_LoginPartial.cshtml]
@@ -106,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FinalProject_SoftUni/Recipify.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FinalProject_SoftUni/Recipify.Web/Views/Shared/_ValidationSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FinalProject_SoftUni/Recipify.Web/Views/_ViewImports.cshtml]

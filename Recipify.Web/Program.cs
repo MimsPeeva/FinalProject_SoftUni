@@ -49,6 +49,7 @@ namespace Recipify.Web
             builder.Services.AddScoped<ICuisinesService, CuisinesService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IDifficultyLevelService, DifficultyLevelService>();
+            builder.Services.AddScoped<ICommentService, CommentService>();
 
             WebApplication? app = builder.Build();
             

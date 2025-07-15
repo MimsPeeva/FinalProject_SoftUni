@@ -13,7 +13,7 @@ namespace Recipify.Web.ViewModels.Recipe
         public string Title { get; set; } = null!;
 
         public string ShortDescription { get; set; } = null!;
-        public string Ingredients { get; set; } = null!;    
+        public List<string> Ingredients { get; set; } = new List<string>();
 
         public string? ImageUrl { get; set; }
 
@@ -22,6 +22,8 @@ namespace Recipify.Web.ViewModels.Recipe
         public string Instructions { get; set; } = null!;
 
         public string DifficultyLevel { get; set; } = null!;
+        public int DifficultyLevelId { get; set; }
+        public int CuisineId { get; set; } 
         public string CuisineName { get; set; }  = null!;
         public List<CommentViewModel> Comments { get; set; } = new List<CommentViewModel>();
     }

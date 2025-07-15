@@ -1,2 +1,0 @@
-D:\FinalProject_SoftUni\Recipify.Web\wwwroot\css\site.css
-D:\FinalProject_SoftUni\Recipify.Web\wwwroot\js\site.js

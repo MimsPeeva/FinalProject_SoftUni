@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d78f6efe433caf751249df2ba87cfb6504d988f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+396d0aece237746f01427e2f4e6ba6aedefd09de")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
