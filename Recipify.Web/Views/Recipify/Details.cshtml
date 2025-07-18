@@ -7,7 +7,7 @@
 
 <h2>@Model.Title</h2>
 <hr />
-@await Html.PartialAsync("_ValidationSummary")
+//@await Html.PartialAsync("_ValidationSummary")
 
 <div class="card mb-4">
     <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Title" />
@@ -15,15 +15,6 @@
         <h5 class="card-title">@Model.Title</h5>
         <p class="card-text">@Model.ShortDescription</p>
         <p class="card-text"><strong>Category:</strong> @Model.CategoryName</p>
-        <p class="card-text"><strong>Cuisine:</strong>@Model.CuisineName</p>
-        <p class="card-text"><strong>Difficulty Level:</strong>@Model.DifficultyLevel</p>
-        <h4>Ingredients</h4>
-        <ul>
-            @foreach (var ingredient in Model.Ingredients)
-            {
-                <li>@ingredient</li>
-            }
-        </ul>
     </div>
 </div>
 

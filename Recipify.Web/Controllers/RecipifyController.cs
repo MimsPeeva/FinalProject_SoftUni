@@ -213,15 +213,34 @@ namespace Recipify.Web.Controllers
                     Id = recipe.Id,
                     Title = recipe.Title,
                     ShortDescription = recipe.ShortDescription,
-                    //Instructions = recipe.Instructions,
                     ImageUrl = recipe.ImageUrl,
-                    Ingredients = recipe.Ingredients,
                     CategoryId = recipe.CategoryId,
-                    CuisineId = recipe.CuisineId,
-                    DifficultyLevelId = recipe.DifficultyLevelId,
-                    Categories = await categoryService.GetAllCategoriesDropDownAsync(),
-                    Cuisines = await cuisineService.GetAllCuisinesDropDownAsync(),
-                    DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync()
+                    //Ingredients = recipe.Ingredients.Split(',').ToList(),
+
+
+                    Categories = (await categoryService.GetAllCategoriesDropDownAsync())
+                        .Select(c => new SelectListItem
+                        {
+                            Text = c.Text,
+                            Value = c.Text.ToString()
+                        }),
+
+                    Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
+                    .Select(c => new SelectListItem
+                    {
+                        Text = c.Text,
+                        Value = c.Text.ToString()
+                    }),
+
+                 DifficultyLevelId = recipe.DifficultyLevelId,
+                    DificultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
+                        .Select(d => new SelectListItem
+                        {
+                            Text = d.Text,
+                            Value = d.Text.ToString()
+                        }),
+                    //Instructions = recipe.Instructions,
+                    //Ingredients = recipe.Ingredients.Split(',').ToList() // Assuming Ingredients is a comma-separated string
                 };
                 return View(inputModel);
             }
@@ -235,16 +254,28 @@ namespace Recipify.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(EditRecipeViewModel model)
         {
-            if (!ModelState.IsValid)
+            try
             {
+                if (!ModelState.IsValid)
+                {
+                    model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+                    model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+                    model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+                    return View(model);
+                }
+                await recipeService.EditRecipesAsync(model);
+                TempData["Success"] = "Recipe updated successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                ModelState.AddModelError(string.Empty, "An error occurred while updating the recipe.");
                 model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
                 model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
                 model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
                 return View(model);
             }
-
-            await recipeService.EditRecipesAsync(model);
-            return RedirectToAction("Index");
         }
 
 
