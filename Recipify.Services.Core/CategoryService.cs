@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Services.Core.Contracts;
 using Recipify.Web.ViewModels.Recipe;
@@ -19,18 +20,26 @@ namespace Recipify.Services.Core
             this.dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<CategoriesDropdownModel>> GetAllCategoriesDropDownAsync()
+        public async Task<IEnumerable<SelectListItem>> GetAllCategoriesDropDownAsync()
         {
-            IEnumerable<CategoriesDropdownModel> recipesAsDropDown = await this.dbContext
-                   .Recipes
-                   .AsNoTracking()
-                   .Select(t => new CategoriesDropdownModel()
-                   {
-                       Id = t.Id,
-                       Name = t.Category.Name
-                   })
-                   .ToArrayAsync();
-            return recipesAsDropDown;
+            return await this.dbContext
+        .Categories
+        .AsNoTracking()
+        .Select(c => new SelectListItem
+        {
+            Value = c.Id.ToString(),
+            Text = c.Name
+        })
+        .ToListAsync();
+            //    return await dbContext
+            //.Categories
+            //.AsNoTracking()
+            //.Select(c => new CategoriesDropdownModel
+            //{
+            //    Id = c.Id,
+            //    Name = c.Name
+            //})
+            //.ToListAsync();
         }
     }
 }

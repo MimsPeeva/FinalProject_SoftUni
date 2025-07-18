@@ -32,21 +32,24 @@
     </div>
 
     <div class="mb-3">
-        <label asp-for="CategoryId" class="form-label"></label>
-        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>
-        <span asp-validation-for="CategoryId" class="text-danger"></span>
+        <label asp-for="@Model.CategoryId" class="form-label-add-edit">Select Category</label>
+        <select asp-for="@Model.CategoryId" class="form-control" aria-required="true" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+            <option value="">...</option>
+        </select>
     </div>
 
      <div class="mb-3">
-        <label asp-for="CuisineId" class="form-label"></label>
-        <select asp-for="CuisineId" asp-items="Model.Cuisines" class="form-select"></select>
-        <span asp-validation-for="CuisineId" class="text-danger"></span>
+        <label asp-for="@Model.CategoryId" class="form-label-add-edit">Select Category</label>
+        <select asp-for="@Model.CategoryId" class="form-control" aria-required="true" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+            <option value="">...</option>
+        </select>
     </div>
 
      <div class="mb-3">
-        <label asp-for="DifficultyLevelId" class="form-label"></label>
-        <select asp-for="DifficultyLevelId" asp-items="Model.DificultyLevels" class="form-select"></select>
-        <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>
+        <label asp-for="@Model.CategoryId" class="form-label-add-edit">Select Category</label>
+        <select asp-for="@Model.CategoryId" class="form-control" aria-required="true" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+            <option value="">...</option>
+        </select>
     </div>
 
     <button type="submit" class="btn btn-success">Save Changes</button>

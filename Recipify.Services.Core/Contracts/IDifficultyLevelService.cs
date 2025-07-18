@@ -1,4 +1,5 @@
-﻿using Recipify.Web.ViewModels.Recipe;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Recipify.Web.ViewModels.Recipe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Recipify.Services.Core.Contracts
 {
     public interface IDifficultyLevelService
     {
-        Task<IEnumerable<DificultyLevelDropDownModel>> GetAllDifficultyLevelsDropDownAsync();
+        Task<IEnumerable<SelectListItem>> GetAllDifficultyLevelsDropDownAsync();
 
     }
 }

@@ -100,21 +100,6 @@ namespace Recipify.Web.Areas.Identity.Pages.Account
             return Page();
         }
 
-        public async Task<List<Category>> GetCategoriesAsync()
-        {
-            var categoriesDropdown = await _categoryService.GetAllCategoriesDropDownAsync();
-            if (categoriesDropdown == null)
-            {
-                return new List<Category>();
-            }
-
-            // Assuming you need to map CategoriesDropdownModel to Category
-            return categoriesDropdown.Select(c => new Category
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Recipes = new List<Recipe>() // Initialize Recipes as empty or map if needed
-            }).ToList();
-        }
+      
     }
 }

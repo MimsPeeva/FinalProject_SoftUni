@@ -46,21 +46,44 @@ namespace Recipify.Services.Core
                   .ToListAsync();
         }
 
-        public async Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
+        public async Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int? id)
         {
-            return await dbContext.Recipes
-                 .Where(r => r.Id == id)
-                 .Select(r => new DetailsRecipeViewModel
-                 {
-                     Id = r.Id,
-                     Title = r.Title,
-                     ShortDescription = r.Description,
-                     CategoryName = r.Category.Name,
-                     CuisineName = r.Cuisine.Name,
-                     DifficultyLevel = r.Difficulty.ToString()
-                 })
-                 .FirstOrDefaultAsync();
+            if (!id.HasValue)
+            {
+                return null;
+            }
+
+            var recipeModel = await dbContext.Recipes
+                .AsNoTracking()
+                .Include(r => r.Category)
+                .Include(r => r.Cuisine)
+                .Include(r => r.Difficulty)
+                .SingleOrDefaultAsync(r => r.Id == id.Value);
+
+            if (recipeModel == null)
+            {
+                return null;
+            }
+
+            var recipeDetails = new DetailsRecipeViewModel
+            {
+                Id = recipeModel.Id,
+                Title = recipeModel.Title,
+                ShortDescription = recipeModel.Description,
+                CategoryName = recipeModel.Category?.Name,
+                CuisineName = recipeModel.Cuisine?.Name,
+                DifficultyLevel = recipeModel.Difficulty?.Level,
+                CategoryId = recipeModel.CategoryId,
+                CuisineId = recipeModel.CuisineId,
+                DifficultyLevelId = recipeModel.DifficultyId,
+                Comments = new List<CommentViewModel>() 
+            };
+
+            return recipeDetails;
         }
+                
+          
+        
         public async Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id)
         {
             var recipe = await dbContext.Recipes
@@ -93,8 +116,15 @@ namespace Recipify.Services.Core
                 Description = model.ShortDescription,
                 CategoryId = model.CategoryId,
                 CuisineId = model.CuisineId,
-                DifficultyId = model.DifficultyLevelId
+                DifficultyId = model.DifficultyLevelId,
             };
+
+            var ingredientList = (model.Ingredients ?? new List<string>())
+                .Where(i => !string.IsNullOrWhiteSpace(i))
+                .Select(name => new Ingredient { Name = name.Trim() })
+                .ToList();
+
+            recipe.Ingredients = ingredientList;
 
             dbContext.Recipes.Add(recipe);
             await dbContext.SaveChangesAsync();
@@ -155,6 +185,11 @@ namespace Recipify.Services.Core
                     DifficultyLevelId = r.Difficulty.Id
                 })
                 .ToListAsync();
+        }
+
+        public Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

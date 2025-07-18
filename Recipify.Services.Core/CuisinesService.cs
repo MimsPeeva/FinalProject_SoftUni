@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Services.Core.Contracts;
 using Recipify.Web.ViewModels.Recipe;
@@ -18,18 +19,40 @@ namespace Recipify.Services.Core
             this.dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<CuisinesDropDownModel>> GetAllCuisinesDropDownAsync()
+        public async Task<IEnumerable<SelectListItem>> GetAllCuisinesDropDownAsync()
         {
-            IEnumerable<CuisinesDropDownModel> recipesAsDropDown = await this.dbContext
-                   .Recipes
-                   .AsNoTracking()
-                   .Select(t => new CuisinesDropDownModel()
-                   {
-                       Id = t.Id,
-                       Name = t.Cuisine.Name
-                   })
-                   .ToArrayAsync();
-            return recipesAsDropDown;
+
+            return await this.dbContext
+       .Cuisines
+       .AsNoTracking()
+       .Select(c => new SelectListItem
+       {
+           Value = c.Id.ToString(),
+           Text = c.Name
+       })
+       .ToListAsync();
+            //IEnumerable<CuisinesDropDownModel> cuisinesAsDropDown = await this.dbContext
+            //   .Cuisines
+            //   .AsNoTracking()
+            //   .Select(c => new CuisinesDropDownModel
+            //   {
+            //       Id = c.Id,
+            //       Name = c.Name
+            //   })
+            //   .ToArrayAsync();
+
+            //return cuisinesAsDropDown;
+
+
+            //    return await dbContext
+            //.Cuisines
+            //.AsNoTracking()
+            //.Select(c => new CuisinesDropDownModel
+            //{
+            //    Id = c.Id,
+            //    Name = c.Name
+            //})
+            //.ToListAsync();
         }
     }
    

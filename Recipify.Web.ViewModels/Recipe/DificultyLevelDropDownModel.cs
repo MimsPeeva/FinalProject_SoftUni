@@ -10,7 +10,6 @@ namespace Recipify.Web.ViewModels.Recipe
     public class DificultyLevelDropDownModel
     {
         public int Id { get; set; }
-        [Required]
-        public string Name { get; set; } = null!;
+        public string levelName { get; set; } = null!;
     }
 }

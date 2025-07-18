@@ -117,25 +117,86 @@ namespace Recipify.Web.Controllers
         {
             try
             {
-                CreateRecipeInputModel inputModel = new CreateRecipeInputModel
+                var model = new CreateRecipeInputModel
                 {
-                    Categories = (await categoryService.GetAllCategoriesDropDownAsync())
-                        .Select(c => new SelectListItem { Text = c.Name, Value = c.Id.ToString() }),
-                    Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
-                        .Select(c => new SelectListItem { Text = c.Name, Value = c.Id.ToString() }),
-                    DificultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
-                        .Select(d => new SelectListItem { Text = d.Name, Value = d.Id.ToString() }) // Explicit conversion added here
+                    Categories = await categoryService.GetAllCategoriesDropDownAsync(),
+                    Cuisines = await cuisineService.GetAllCuisinesDropDownAsync(),
+                    DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync()
                 };
-                return View(inputModel);
+
+                return View(model);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
+                TempData["Error"] = "An error occurred while loading the form.";
                 return RedirectToAction(nameof(Index));
             }
-        }
 
-     
+
+        }
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(CreateRecipeInputModel model)
+        {
+
+
+            //try
+            //{
+            //    if (!ModelState.IsValid)
+            //    {
+            //        // Re-populate dropdowns
+            //        model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+            //        model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+            //        model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+
+            //        return View(model);
+            //    }
+
+            //    await recipeService.CreateRecipesAsync(model);
+
+            //    return RedirectToAction("Index");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex);
+            //    ModelState.AddModelError("", "Something went wrong.");
+
+            //    model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+            //    model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+            //    model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+
+            //    return View(model);
+            //}
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+                    model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+                    model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+
+                    return View(model);
+                }
+
+                await recipeService.CreateRecipesAsync(model);
+                TempData["Success"] = "Recipe created successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ModelState.AddModelError("", "An error occurred while creating the recipe.");
+
+                // Refill dropdowns before returning the view again
+                model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+                model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+                model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+
+                return View(model);
+            }    }
+
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Edit(int id)
@@ -158,9 +219,9 @@ namespace Recipify.Web.Controllers
                     CategoryId = recipe.CategoryId,
                     CuisineId = recipe.CuisineId,
                     DifficultyLevelId = recipe.DifficultyLevelId,
-                    Categories = (IEnumerable<SelectListItem>)await categoryService.GetAllCategoriesDropDownAsync(),
-                    Cuisines = (IEnumerable<SelectListItem>)await cuisineService.GetAllCuisinesDropDownAsync(),
-                    DificultyLevels = (IEnumerable<SelectListItem>)await difficultyService.GetAllDifficultyLevelsDropDownAsync()
+                    Categories = await categoryService.GetAllCategoriesDropDownAsync(),
+                    Cuisines = await cuisineService.GetAllCuisinesDropDownAsync(),
+                    DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync()
                 };
                 return View(inputModel);
             }
@@ -176,9 +237,9 @@ namespace Recipify.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                model.Categories = (IEnumerable<SelectListItem>)await categoryService.GetAllCategoriesDropDownAsync();
-                model.Cuisines = (IEnumerable<SelectListItem>)await cuisineService.GetAllCuisinesDropDownAsync();
-                model.DificultyLevels = (IEnumerable<SelectListItem>)await difficultyService.GetAllDifficultyLevelsDropDownAsync();
+                model.Categories = await categoryService.GetAllCategoriesDropDownAsync();
+                model.Cuisines = await cuisineService.GetAllCuisinesDropDownAsync();
+                model.DificultyLevels = await difficultyService.GetAllDifficultyLevelsDropDownAsync();
                 return View(model);
             }
 
@@ -186,16 +247,20 @@ namespace Recipify.Web.Controllers
             return RedirectToAction("Index");
         }
 
+
+
         [HttpGet]
-        [Authorize(Roles = "Administrator")]
-        public async Task<IActionResult> Delete (int? id )
-    {
-            try { 
-                if (id == null)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
-                var recipe = await recipeService.GetByIdWithCommentsAsync(id.Value);
+        // [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            try
+            {
+                var recipe = await recipeService.GetRecipesDetailsAsync(id.Value);
                 if (recipe == null)
                 {
                     return RedirectToAction(nameof(Index));
@@ -208,13 +273,10 @@ namespace Recipify.Web.Controllers
                 ModelState.AddModelError(string.Empty, "An error occurred while loading the recipe for deletion.");
                 return RedirectToAction(nameof(Index));
             }
-
         }
-
-
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
-        public async Task<IActionResult> Delete(int id)
+        // [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             try
             {
@@ -228,6 +290,7 @@ namespace Recipify.Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Search(string query)

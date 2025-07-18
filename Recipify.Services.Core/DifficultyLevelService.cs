@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Services.Core.Contracts;
 using Recipify.Web.ViewModels.Recipe;
@@ -18,18 +19,28 @@ namespace Recipify.Services.Core
             this.dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<DificultyLevelDropDownModel>> GetAllDifficultyLevelsDropDownAsync()
+        public async Task<IEnumerable<SelectListItem>> GetAllDifficultyLevelsDropDownAsync()
         {
-            IEnumerable<DificultyLevelDropDownModel> recipesAsDropDown = await this.dbContext
-                   .Recipes
-                   .AsNoTracking()
-                   .Select(t => new DificultyLevelDropDownModel()
-                   {
-                       Id = t.Id,
-                       Name = t.Difficulty.Level
-                   })
-                   .ToArrayAsync();
-            return recipesAsDropDown;
+
+            return await this.dbContext
+           .Difficulties
+           .AsNoTracking()
+           .Select(c => new SelectListItem
+           {
+               Value = c.Id.ToString(),
+               Text = c.Level
+           })
+           .ToListAsync();
+            //{
+            //    return await dbContext
+            //.Difficulties
+            //.AsNoTracking()
+            //.Select(c => new DificultyLevelDropDownModel
+            //{
+            //    Id = c.Id,
+            //    Name = c.Level
+            //})
+            //.ToListAsync();
         }
     }
 }
