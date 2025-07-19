@@ -12,7 +12,7 @@ namespace Recipify.Services.Core.Contracts
         Task<IEnumerable<RecipeIndexViewModel>> GetAllRecipesAsync();
         Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int? id);
         Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id);
-        Task CreateRecipesAsync(CreateRecipeInputModel model);
+        Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model);
         Task EditRecipesAsync(EditRecipeViewModel model);
         Task DeleteRecipesAsync(int id);
         Task<IEnumerable<RecipeIndexViewModel>> SearchRecipesAsync(string query);

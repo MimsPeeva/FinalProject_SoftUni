@@ -19,29 +19,29 @@ namespace Recipify.Services.Core
             this.dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<SelectListItem>> GetAllCuisinesDropDownAsync()
+        public async Task<IEnumerable<CuisinesDropDownModel>> GetAllCuisinesDropDownAsync()
         {
 
-            return await this.dbContext
-       .Cuisines
-       .AsNoTracking()
-       .Select(c => new SelectListItem
-       {
-           Value = c.Id.ToString(),
-           Text = c.Name
-       })
-       .ToListAsync();
-            //IEnumerable<CuisinesDropDownModel> cuisinesAsDropDown = await this.dbContext
-            //   .Cuisines
-            //   .AsNoTracking()
-            //   .Select(c => new CuisinesDropDownModel
-            //   {
-            //       Id = c.Id,
-            //       Name = c.Name
-            //   })
-            //   .ToArrayAsync();
+            //     return await this.dbContext
+            //.Cuisines
+            //.AsNoTracking()
+            //.Select(c => new SelectListItem
+            //{
+            //    Value = c.Id.ToString(),
+            //    Text = c.Name
+            //})
+            //.ToListAsync();
+            IEnumerable<CuisinesDropDownModel> cuisinesAsDropDown = await this.dbContext
+               .Cuisines
+               .AsNoTracking()
+               .Select(c => new CuisinesDropDownModel
+               {
+                   Id = c.Id,
+                   Name = c.Name
+               })
+               .ToArrayAsync();
 
-            //return cuisinesAsDropDown;
+            return cuisinesAsDropDown;
 
 
             //    return await dbContext

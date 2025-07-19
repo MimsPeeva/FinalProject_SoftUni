@@ -7,14 +7,17 @@
 
 <h2>@Model.Title</h2>
 <hr />
-//@await Html.PartialAsync("_ValidationSummary")
+@await Html.PartialAsync("_ValidationSummary")
 
 <div class="card mb-4">
-    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Title" />
+    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.ImageUrl" />
     <div class="card-body">
-        <h5 class="card-title">@Model.Title</h5>
-        <p class="card-text">@Model.ShortDescription</p>
+        <h5 class="card-title"><strong>Recipe Name:</strong>@Model.Title</h5>
+        <p class="card-text"><strong>Description:</strong>@Model.ShortDescription</p>
         <p class="card-text"><strong>Category:</strong> @Model.CategoryName</p>
+        <p class="card-text"><strong>Cuisine:</strong>@Model.CuisineName</p>
+        <p class="card-text"><strong>Difficulty Level:</strong>@Model.DifficultyLevel</p>
+
     </div>
 </div>
 

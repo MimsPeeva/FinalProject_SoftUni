@@ -11,7 +11,7 @@ namespace Recipify.Data.Models
         public int Id { get; set; }
         public string Title { get; set; }=null!;
         public string Description { get; set; } = null!;
-        public string Instructions { get; set; } = null!;
+       public string Instructions { get; set; } = null!;
         public string? ImageUrl { get; set; }
 
         public int CategoryId { get; set; }

@@ -70,6 +70,7 @@ namespace Recipify.Services.Core
                 Id = recipeModel.Id,
                 Title = recipeModel.Title,
                 ShortDescription = recipeModel.Description,
+                Instructions = recipeModel.Instructions,
                 CategoryName = recipeModel.Category?.Name,
                 CuisineName = recipeModel.Cuisine?.Name,
                 DifficultyLevel = recipeModel.Difficulty?.Level,
@@ -93,6 +94,7 @@ namespace Recipify.Services.Core
             Id = r.Id,
             Title = r.Title,
             ShortDescription = r.Description,
+            Instructions = r.Instructions,
             CategoryName = r.Category.Name,
             CuisineName = r.Cuisine.Name,
             DifficultyLevel = r.Difficulty.Level,
@@ -108,26 +110,40 @@ namespace Recipify.Services.Core
             return recipe;
         }
 
-        public async Task CreateRecipesAsync(CreateRecipeInputModel model)
+        public async Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model)
         {
-            var recipe = new Recipe
+          //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
+            Category? categoryRef = await this.dbContext.Categories.FirstAsync(c => c.Id == model.CategoryId);
+            Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstAsync(c => c.Id == model.CuisineId);
+            DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevelId);
+            if (categoryRef != null && cuisineRef != null && difficultyRef != null /*&& user!=null*/)
             {
-                Title = model.Title,
-                Description = model.ShortDescription,
-                CategoryId = model.CategoryId,
-                CuisineId = model.CuisineId,
-                DifficultyId = model.DifficultyLevelId,
-            };
+                Recipe recipe = new Recipe
+                {
+                    Title = model.Title,
+                    Description = model.ShortDescription,
+                    Instructions=model.Instructions,
+                    ImageUrl = model.ImageUrl,
+                    CategoryId = model.CategoryId,
+                    CuisineId = model.CuisineId,
+                    DifficultyId = model.DifficultyLevelId,
+                    Category = categoryRef,
+                    Cuisine = cuisineRef,
+                    Difficulty = difficultyRef
+                };
+               await dbContext.Recipes.AddAsync(recipe);
+              await  dbContext.SaveChangesAsync();
+            }
 
-            var ingredientList = (model.Ingredients ?? new List<string>())
-                .Where(i => !string.IsNullOrWhiteSpace(i))
-                .Select(name => new Ingredient { Name = name.Trim() })
-                .ToList();
+            throw new ArgumentException("Invalid category, cuisine or difficulty level.");
 
-            recipe.Ingredients = ingredientList;
+            //var ingredientList = (model.Ingredients ?? new List<string>())
+            //    .Where(i => !string.IsNullOrWhiteSpace(i))
+            //    .Select(name => new Ingredient { Name = name.Trim() })
+            //    .ToList();
 
-            dbContext.Recipes.Add(recipe);
-            await dbContext.SaveChangesAsync();
+            //  recipe.Ingredients = ingredientList;
+
         }
         public async Task EditRecipesAsync(EditRecipeViewModel model)
         {

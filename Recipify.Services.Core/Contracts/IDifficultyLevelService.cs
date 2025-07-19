@@ -10,7 +10,7 @@ namespace Recipify.Services.Core.Contracts
 {
     public interface IDifficultyLevelService
     {
-        Task<IEnumerable<SelectListItem>> GetAllDifficultyLevelsDropDownAsync();
+        Task<IEnumerable<DificultyLevelDropDownModel>> GetAllDifficultyLevelsDropDownAsync();
 
     }
 }

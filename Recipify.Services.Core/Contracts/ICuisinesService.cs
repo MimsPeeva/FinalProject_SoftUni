@@ -10,7 +10,7 @@ namespace Recipify.Services.Core.Contracts
 {
     public interface ICuisinesService
     {
-        Task<IEnumerable<SelectListItem>> GetAllCuisinesDropDownAsync();
+        Task<IEnumerable<CuisinesDropDownModel>> GetAllCuisinesDropDownAsync();
 
     }
 }

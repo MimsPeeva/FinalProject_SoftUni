@@ -18,23 +18,26 @@ namespace Recipify.Web.ViewModels.Recipe
         [MinLength(RecipeDescriptionMinLength)]
         [MaxLength(RecipeDescriptionMaxLength)]
         public string ShortDescription { get; set; } = null!;
-      
+        [Required]
+        [MinLength(RecipeInstructionsMinLength)]
+        [MaxLength(RecipeInstructionsMaxLength)]
+        public string Instructions { get; set; } = null!;
         public string? ImageUrl { get; set; }
         //[Required]
 
-       public string CategoryName { get; set; } = null!;
+     //  public string CategoryName { get; set; } = null!;
         [Required]
 
-        public List<string>? Ingredients { get; set; } = new List<string>();
+       // public List<string>? Ingredients { get; set; } = new List<string>();
      
         public int CategoryId { get; set; }
 
-        public IEnumerable<SelectListItem>? Categories { get; set; } = null!;
+        public IEnumerable<SelectListItem> Categories { get; set; } = new List<SelectListItem>();
         public int CuisineId { get; set; }
 
-         public IEnumerable<SelectListItem>? Cuisines { get; set; } = null!;
+         public IEnumerable<SelectListItem> Cuisines { get; set; } = new List<SelectListItem>();
         public int DifficultyLevelId { get; set; }
 
-        public IEnumerable<SelectListItem>? DificultyLevels { get; set; } = null!;
+        public IEnumerable<SelectListItem>? DifficultyLevels { get; set; } = new List<SelectListItem>();
     }
 }

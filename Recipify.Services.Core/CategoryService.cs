@@ -20,17 +20,18 @@ namespace Recipify.Services.Core
             this.dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<SelectListItem>> GetAllCategoriesDropDownAsync()
+        public async Task<IEnumerable<CategoriesDropdownModel>> GetAllCategoriesDropDownAsync()
         {
-            return await this.dbContext
-        .Categories
-        .AsNoTracking()
-        .Select(c => new SelectListItem
-        {
-            Value = c.Id.ToString(),
-            Text = c.Name
-        })
-        .ToListAsync();
+            //    return await this.dbContext
+            //.Categories
+            //.AsNoTracking()
+            //.Select(c => new SelectListItem
+            //{
+            //    Value = c.Id.ToString(),
+            //    Text = c.Name
+            //})
+            //.ToListAsync();
+
             //    return await dbContext
             //.Categories
             //.AsNoTracking()
@@ -40,6 +41,17 @@ namespace Recipify.Services.Core
             //    Name = c.Name
             //})
             //.ToListAsync();
+
+            IEnumerable<CategoriesDropdownModel> recipesAsDropDown = await this.dbContext
+                  .Categories
+                  .AsNoTracking()
+                  .Select(t => new CategoriesDropdownModel()
+                  {
+                      Id = t.Id,
+                      Name = t.Name
+                  })
+                  .ToArrayAsync();
+            return recipesAsDropDown;
         }
     }
 }
