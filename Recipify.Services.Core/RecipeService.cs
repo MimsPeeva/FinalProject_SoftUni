@@ -187,9 +187,8 @@ namespace Recipify.Services.Core
                 .ToListAsync();
         }
 
-        public Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
+        //{
+        //}
     }
 }

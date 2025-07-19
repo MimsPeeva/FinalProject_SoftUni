@@ -56,11 +56,12 @@ namespace Recipify.Web.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             try
-            {
-                if (id == null)
-                {
-                    return this.RedirectToAction(nameof(Index));
-                }
+            //{
+            //    if (id == null)
+            //    {
+            //        return this.RedirectToAction(nameof(Index));
+            //    }
+            { 
                 DetailsRecipeViewModel? recipeDetails = await recipeService.GetRecipesDetailsAsync(id.Value);
                 if (recipeDetails == null)
                 {
@@ -74,6 +75,7 @@ namespace Recipify.Web.Controllers
                 return this.RedirectToAction(nameof(Index), "Home");
             }
         }
+      
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddComment(int recipeId, string content)

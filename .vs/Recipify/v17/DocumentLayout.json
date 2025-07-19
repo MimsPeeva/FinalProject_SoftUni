@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\recipifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\contracts\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\contracts\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\recipify\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\recipify\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +46,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "IRecipeService.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "RelativeDocumentMoniker": "Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "RelativeToolTip": "Recipify.Services.Core\\Contracts\\IRecipeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:52:32.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeService.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
+              "RelativeDocumentMoniker": "Recipify.Services.Core\\RecipeService.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
+              "RelativeToolTip": "Recipify.Services.Core\\RecipeService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwL8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:51:35.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\CategoryService.cs",
               "RelativeDocumentMoniker": "Recipify.Services.Core\\CategoryService.cs",
@@ -50,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Details.cshtml",
               "RelativeDocumentMoniker": "Recipify.Web\\Views\\Recipify\\Details.cshtml",
@@ -62,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Create.cshtml",
               "RelativeDocumentMoniker": "Recipify.Web\\Views\\Recipify\\Create.cshtml",
@@ -80,7 +114,7 @@
               "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\RecipifyController.cs",
               "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\RecipifyController.cs",
               "RelativeToolTip": "Recipify.Web\\Controllers\\RecipifyController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAcwEoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAuwEYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T17:24:39.838Z",
               "EditorCaption": ""
