@@ -25,6 +25,9 @@
         {
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            builder.Entity<Recipe>()
+                .HasQueryFilter(r => !r.IsDeleted);
+
         }
     }
 }

@@ -10,12 +10,15 @@ namespace Recipify.Web.ViewModels.Recipe
     {
         public int Id { get; set; }
 
-        public string Title { get; set; } = null!;
+        public string? Title { get; set; } 
 
-        public string ShortDescription { get; set; } = null!;
+        public string? ShortDescription { get; set; } 
+        public string? Instructions { get; set; }  
 
         public string? ImageUrl { get; set; }
 
-        public string CategoryName { get; set; } = null!;
+        public string? Category { get; set; } 
+        public string? Cuisine { get; set; } 
+        public string? DifficultyLevel { get; set; } 
     }
 }

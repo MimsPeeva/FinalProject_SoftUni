@@ -23,5 +23,6 @@ namespace Recipify.Data.Models
         public DifficultyLevel Difficulty { get; set; }
         public int CuisineId { get; set; }
         public Cuisine Cuisine { get; set; }
+        public bool IsDeleted { get; set; } = false;
     }
 }

@@ -183,46 +183,7 @@ namespace Recipify.Web.Controllers
         {
             try
             {
-                //var recipe = await recipeService.GetByIdWithCommentsAsync(id);
-                //if (recipe == null)
-                //{
-                //    return RedirectToAction(nameof(Index));
-                //}
-                //var inputModel = new EditRecipeViewModel
-                //{
-                //    Id = recipe.Id,
-                //    Title = recipe.Title,
-                //    ShortDescription = recipe.ShortDescription,
-                //    ImageUrl = recipe.ImageUrl,
-                //   // CategoryId = recipe.CategoryId,
-                //    //Ingredients = recipe.Ingredients.Split(',').ToList(),
-
-
-                //    Categories = (await categoryService.GetAllCategoriesDropDownAsync())
-                //        .Select(c => new SelectListItem
-                //        {
-                //            Text = c.Text,
-                //            Value = c.Text.ToString()
-                //        }),
-
-                //    Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
-                //    .Select(c => new SelectListItem
-                //    {
-                //        Text = c.Text,
-                //        Value = c.Text.ToString()
-                //    }),
-
-                // DifficultyLevelId = recipe.DifficultyLevelId,
-                //    DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
-                //        .Select(d => new SelectListItem
-                //        {
-                //            Text = d.Text,
-                //            Value = d.Text.ToString()
-                //        }),
-                //Instructions = recipe.Instructions,
-                //Ingredients = recipe.Ingredients.Split(',').ToList() // Assuming Ingredients is a comma-separated string
-                // };
-               // return View(inputModel);
+               
 
                 var recipe = await recipeService.GetByIdWithCommentsAsync(id);
                 if (recipe == null)
@@ -273,52 +234,10 @@ namespace Recipify.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(EditRecipeViewModel model)
         {
-            //try
-            //{
-            //    var recipe = await recipeService.GetByIdWithCommentsAsync(model.Id);
-            //    if (recipe == null)
-            //    {
-            //        return RedirectToAction(nameof(Index));
-            //    }
-            //    var inputModel = new EditRecipeViewModel
-            //    {
-            //        Id = recipe.Id,
-            //        Title = recipe.Title,
-            //        ShortDescription = recipe.ShortDescription,
-            //        Instructions = recipe.Instructions,
-            //        ImageUrl = recipe.ImageUrl,
-            //        CategoryId = recipe.CategoryId,
-            //        // Ingredients = recipe.Ingredients.Split(',').ToList(),
-
-
-            //        Categories = (await categoryService.GetAllCategoriesDropDownAsync())
-            //            .Select(c => new SelectListItem
-            //            {
-            //                Text = c.Name,
-            //                Value = c.Id.ToString()
-            //            }),
-
-            //        Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
-            //        .Select(c => new SelectListItem
-            //        {
-            //            Text = c.Name,
-            //            Value = c.Id.ToString()
-            //        }),
-
-            //        DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
-            //            .Select(d => new SelectListItem { Text = d.levelName, Value = d.Id.ToString() })
-            //    };
-            //    return View(inputModel);
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //    return RedirectToAction(nameof(Index));
-            //}
+            
 
             if (!ModelState.IsValid)
             {
-                // Re-populate dropdowns if model state is invalid
                 model.Categories = (await categoryService.GetAllCategoriesDropDownAsync())
                     .Select(c => new SelectListItem
                     {
@@ -374,41 +293,86 @@ namespace Recipify.Web.Controllers
         // [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+
+            //    var recipe = await dbContext.Recipes
+            //.Include(r => r.Category)
+            //.FirstOrDefaultAsync(r => r.Id == id);
+
+            //    if (recipe == null)
+            //    {
+            //        return NotFound();
+            //    }
+
+            //    var viewModel = new DeleteRecipeInputModel
+            //    {
+            //        Id = recipe.Id,
+            //        Title = recipe.Title,
+            //        ShortDescription = recipe.Description,
+            //        Instructions = recipe.Instructions,
+            //        ImageUrl = recipe.ImageUrl,
+            //        Category = recipe.Category.Name ?? "Unknown",
+            //        Cuisine = recipe.Cuisine?.Name ?? "Unknown",
+            //        DifficultyLevel = recipe.Difficulty?.Level ?? "Unknown"
+            //    };
+
+            //    return View(viewModel);
+            var recipe = await recipeService.GetByIdAsync(id);
+            if (recipe == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
+            }
+
+            var model = new DeleteRecipeInputModel
+            {
+                Id = recipe.Id,
+                Title = recipe.Title,
+                ShortDescription = recipe.ShortDescription,
+                Instructions = recipe.Instructions,
+                ImageUrl = recipe.ImageUrl,
+                Category = recipe.Category,            
+                Cuisine = recipe.Cuisine,              
+                DifficultyLevel = recipe.DifficultyLevel 
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        // [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> Delete(DeleteRecipeInputModel inputModel)
+        {
+            //try
+            //{
+            //    await recipeService.DeleteRecipesAsync(id);
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    ModelState.AddModelError(string.Empty, "An error occurred while deleting the recipe.");
+            //    return RedirectToAction(nameof(Index));
+            //}
+            if (!ModelState.IsValid)
+            {
+                return View("Delete", inputModel);
+            }
+
+            var recipe = await recipeService.GetByIdAsync(inputModel.Id);
+            if (recipe == null)
+            {
+                return NotFound();
             }
 
             try
             {
-                var recipe = await recipeService.GetRecipesDetailsAsync(id.Value);
-                if (recipe == null)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
-                return View(recipe);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                ModelState.AddModelError(string.Empty, "An error occurred while loading the recipe for deletion.");
+                await recipeService.SoftDeleteRecipeAsync(inputModel.Id);
+                TempData["SuccessMessage"] = "Recipe deleted successfully.";
                 return RedirectToAction(nameof(Index));
             }
-        }
-        [HttpPost]
-        // [Authorize(Roles = "Administrator")]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            try
+            catch (Exception ex)
             {
-                await recipeService.DeleteRecipesAsync(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                ModelState.AddModelError(string.Empty, "An error occurred while deleting the recipe.");
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("", "An error occurred while deleting the recipe.");
+                Console.WriteLine(ex.Message);
+                return View("Delete", inputModel);
             }
         }
 

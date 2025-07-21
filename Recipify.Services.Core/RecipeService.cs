@@ -38,9 +38,9 @@ namespace Recipify.Services.Core
                       Title = r.Title,
                       CategoryId = r.Category.Id,
                       CuisineId = r.Cuisine.Id,
-                        ShortDescription = r.Description,
-                        DifficultyLevelId = r.Difficulty.Id,
-                        //Comments
+                      ShortDescription = r.Description,
+                      DifficultyLevelId = r.Difficulty.Id,
+                      //Comments
 
                   })
                   .ToListAsync();
@@ -77,14 +77,14 @@ namespace Recipify.Services.Core
                 CategoryId = recipeModel.CategoryId,
                 CuisineId = recipeModel.CuisineId,
                 DifficultyLevelId = recipeModel.DifficultyId,
-                Comments = new List<CommentViewModel>() 
+                Comments = new List<CommentViewModel>()
             };
 
             return recipeDetails;
         }
-                
-          
-        
+
+
+
         public async Task<DetailsRecipeViewModel> GetByIdWithCommentsAsync(int id)
         {
             var recipe = await dbContext.Recipes
@@ -112,7 +112,7 @@ namespace Recipify.Services.Core
 
         public async Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model)
         {
-          //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
+            //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
             Category? categoryRef = await this.dbContext.Categories.FirstAsync(c => c.Id == model.CategoryId);
             Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstAsync(c => c.Id == model.CuisineId);
             DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevelId);
@@ -122,7 +122,7 @@ namespace Recipify.Services.Core
                 {
                     Title = model.Title,
                     Description = model.ShortDescription,
-                    Instructions=model.Instructions,
+                    Instructions = model.Instructions,
                     ImageUrl = model.ImageUrl,
                     CategoryId = model.CategoryId,
                     CuisineId = model.CuisineId,
@@ -131,8 +131,8 @@ namespace Recipify.Services.Core
                     Cuisine = cuisineRef,
                     Difficulty = difficultyRef
                 };
-               await dbContext.Recipes.AddAsync(recipe);
-              await  dbContext.SaveChangesAsync();
+                await dbContext.Recipes.AddAsync(recipe);
+                await dbContext.SaveChangesAsync();
             }
 
             throw new ArgumentException("Invalid category, cuisine or difficulty level.");
@@ -209,7 +209,7 @@ namespace Recipify.Services.Core
             var recipe = await dbContext.Recipes.FirstOrDefaultAsync(r => r.Id == model.Id);
             if (recipe == null)
             {
-                return false; 
+                return false;
             }
 
             recipe.Title = model.Title;
@@ -231,7 +231,39 @@ namespace Recipify.Services.Core
                 return false;
             }
         }
+        public async Task<bool> SoftDeleteRecipeAsync(int id)
+        {
+            var recipe = await dbContext.Recipes.FirstOrDefaultAsync(r => r.Id == id);
+
+            if (recipe == null || recipe.IsDeleted)
+            {
+                return false;
+            }
+
+            recipe.IsDeleted = true;
+
+            await dbContext.SaveChangesAsync();
+            return true;
+        }
 
 
+        public async Task<DeleteRecipeInputModel?> GetByIdAsync(int? id)
+        {
+            return await dbContext.Recipes
+                .Where(r => r.Id == id && !r.IsDeleted)
+                .Select(r => new DeleteRecipeInputModel
+                {
+                    Id = r.Id,
+                    Title = r.Title,
+                    ShortDescription = r.Description,
+                    Instructions = r.Instructions,
+                    ImageUrl = r.ImageUrl,
+                    Category = r.Category.Name,
+                    Cuisine = r.Cuisine.Name,
+                    DifficultyLevel = r.Difficulty.Level
+                })
+                .FirstOrDefaultAsync();
+        }
     }
+    
 }
