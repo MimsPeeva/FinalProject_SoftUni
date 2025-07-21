@@ -16,5 +16,6 @@ namespace Recipify.Services.Core.Contracts
         Task EditRecipesAsync(EditRecipeViewModel model);
         Task DeleteRecipesAsync(int id);
         Task<IEnumerable<RecipeIndexViewModel>> SearchRecipesAsync(string query);
+        Task<bool> UpdateAsync(EditRecipeViewModel model);
     }
 }

@@ -153,6 +153,7 @@ namespace Recipify.Services.Core
 
             recipe.Title = model.Title;
             recipe.Description = model.ShortDescription;
+            recipe.Instructions = model.Instructions;
             recipe.CategoryId = model.CategoryId;
             recipe.CuisineId = model.CuisineId;
             recipe.DifficultyId = model.DifficultyLevelId;
@@ -203,8 +204,34 @@ namespace Recipify.Services.Core
                 .ToListAsync();
         }
 
-        //public Task<DetailsRecipeViewModel> GetRecipesDetailsAsync(int id)
-        //{
-        //}
+        public async Task<bool> UpdateAsync(EditRecipeViewModel model)
+        {
+            var recipe = await dbContext.Recipes.FirstOrDefaultAsync(r => r.Id == model.Id);
+            if (recipe == null)
+            {
+                return false; 
+            }
+
+            recipe.Title = model.Title;
+            recipe.Description = model.ShortDescription;
+            recipe.ImageUrl = model.ImageUrl;
+            recipe.Instructions = model.Instructions;
+            recipe.CategoryId = model.CategoryId;
+            recipe.CuisineId = model.CuisineId;
+            recipe.DifficultyId = model.DifficultyLevelId;
+
+            try
+            {
+                await dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+
     }
 }

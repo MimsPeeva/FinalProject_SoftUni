@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Services.Core.Contracts;
 using Recipify.Web.ViewModels.Recipe;
@@ -16,14 +17,14 @@ namespace Recipify.Web.Controllers
         private readonly IDifficultyLevelService difficultyService;
         private readonly ICommentService commentService;
         private readonly UserManager<IdentityUser> userManager;
-
+        private readonly ApplicationDbContext dbContext;
         public RecipifyController(
             IRecipeService recipeService,
             ICategoryService categoryService,
             ICuisinesService cuisineService,
             IDifficultyLevelService difficultyService,
             ICommentService commentService,
-            UserManager<IdentityUser> userManager)
+            UserManager<IdentityUser> userManager,ApplicationDbContext dbContext)
         {
             this.recipeService = recipeService;
             this.categoryService = categoryService;
@@ -31,6 +32,7 @@ namespace Recipify.Web.Controllers
             this.difficultyService = difficultyService;
             this.commentService = commentService;
             this.userManager = userManager;
+            this.dbContext = dbContext;
         }
         [HttpGet]
         [AllowAnonymous]
@@ -234,27 +236,27 @@ namespace Recipify.Web.Controllers
                     Title = recipe.Title ?? string.Empty,
                     ShortDescription = recipe.ShortDescription ?? string.Empty,
                     ImageUrl = recipe.ImageUrl ?? string.Empty,
-                   // Instructions = recipe.Instructions ?? string.Empty,
+                   Instructions = recipe.Instructions ?? string.Empty,
                     CategoryId = recipe.CategoryId,
                     CuisineId = recipe.CuisineId,
                     DifficultyLevelId = recipe.DifficultyLevelId,
                     Categories = (await categoryService.GetAllCategoriesDropDownAsync())
                         .Select(c => new SelectListItem
                         {
-                            Text = c.Name, // Assuming CategoriesDropdownModel has a property 'Name'
-                            Value = c.Id.ToString() // Assuming CategoriesDropdownModel has a property 'Id'
+                            Text = c.Name, 
+                            Value = c.Id.ToString() 
                         }),
                     Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
                         .Select(c => new SelectListItem
                         {
-                            Text = c.Name, // Assuming CuisinesDropDownModel has a property 'Name'
-                            Value = c.Id.ToString() // Assuming CuisinesDropDownModel has a property 'Id'
+                            Text = c.Name, 
+                            Value = c.Id.ToString() 
                         }),
                     DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
                         .Select(d => new SelectListItem
                         {
-                            Text = d.levelName, // Assuming DificultyLevelDropDownModel has a property 'LevelName'
-                            Value = d.Id.ToString() // Assuming DificultyLevelDropDownModel has a property 'Id'
+                            Text = d.levelName, 
+                            Value = d.Id.ToString() 
                         })
                 };
 
@@ -271,48 +273,101 @@ namespace Recipify.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(EditRecipeViewModel model)
         {
-            try
+            //try
+            //{
+            //    var recipe = await recipeService.GetByIdWithCommentsAsync(model.Id);
+            //    if (recipe == null)
+            //    {
+            //        return RedirectToAction(nameof(Index));
+            //    }
+            //    var inputModel = new EditRecipeViewModel
+            //    {
+            //        Id = recipe.Id,
+            //        Title = recipe.Title,
+            //        ShortDescription = recipe.ShortDescription,
+            //        Instructions = recipe.Instructions,
+            //        ImageUrl = recipe.ImageUrl,
+            //        CategoryId = recipe.CategoryId,
+            //        // Ingredients = recipe.Ingredients.Split(',').ToList(),
+
+
+            //        Categories = (await categoryService.GetAllCategoriesDropDownAsync())
+            //            .Select(c => new SelectListItem
+            //            {
+            //                Text = c.Name,
+            //                Value = c.Id.ToString()
+            //            }),
+
+            //        Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
+            //        .Select(c => new SelectListItem
+            //        {
+            //            Text = c.Name,
+            //            Value = c.Id.ToString()
+            //        }),
+
+            //        DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
+            //            .Select(d => new SelectListItem { Text = d.levelName, Value = d.Id.ToString() })
+            //    };
+            //    return View(inputModel);
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    return RedirectToAction(nameof(Index));
+            //}
+
+            if (!ModelState.IsValid)
             {
-                var recipe = await recipeService.GetByIdWithCommentsAsync(model.Id);
-                if (recipe == null)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
-                var inputModel = new EditRecipeViewModel
-                {
-                    Id = recipe.Id,
-                    Title = recipe.Title,
-                    ShortDescription = recipe.ShortDescription,
-                    ImageUrl = recipe.ImageUrl,
-                    CategoryId = recipe.CategoryId,
-                    // Ingredients = recipe.Ingredients.Split(',').ToList(),
-
-
-                    Categories = (await categoryService.GetAllCategoriesDropDownAsync())
-                        .Select(c => new SelectListItem
-                        {
-                            Text = c.Name,
-                            Value = c.Id.ToString()
-                        }),
-
-                    Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
+                // Re-populate dropdowns if model state is invalid
+                model.Categories = (await categoryService.GetAllCategoriesDropDownAsync())
                     .Select(c => new SelectListItem
                     {
                         Text = c.Name,
                         Value = c.Id.ToString()
-                    }),
+                    });
 
-                    DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
-                        .Select(d => new SelectListItem { Text = d.levelName, Value = d.Id.ToString() })
-                };
-                return View(inputModel);
+                model.Cuisines = (await cuisineService.GetAllCuisinesDropDownAsync())
+                    .Select(c => new SelectListItem
+                    {
+                        Text = c.Name,
+                        Value = c.Id.ToString()
+                    });
+
+                model.DifficultyLevels = (await difficultyService.GetAllDifficultyLevelsDropDownAsync())
+                    .Select(d => new SelectListItem
+                    {
+                        Text = d.levelName,
+                        Value = d.Id.ToString()
+                    });
+
+                return View(model);
             }
-            catch (Exception e)
+
+            var recipe = await dbContext.Recipes.FindAsync(model.Id);
+            if (recipe == null)
             {
-                Console.WriteLine(e.Message);
+                return NotFound();
+            }
+
+            recipe.Title = model.Title;
+            recipe.Description = model.ShortDescription;
+            recipe.ImageUrl = model.ImageUrl;
+            recipe.Instructions = model.Instructions;
+            recipe.CategoryId = model.CategoryId;
+            recipe.CuisineId = model.CuisineId;
+            recipe.DifficultyId = model.DifficultyLevelId;
+
+            try
+            {
+                await dbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Something went wrong while saving.");
+                Console.WriteLine(ex.Message);
+                return View(model);
+            }
         }
 
         [HttpGet]
