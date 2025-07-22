@@ -59,10 +59,16 @@ namespace Recipify.Web
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+                app.UseExceptionHandler("/Error/500");
+               app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Error/500");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
 
             using (var scope = app.Services.CreateScope())
             {
@@ -88,6 +94,8 @@ namespace Recipify.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+           // app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
             app.MapControllerRoute(
                 name: "default",

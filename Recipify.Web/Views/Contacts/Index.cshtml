@@ -1,0 +1,41 @@
+﻿@using Recipify.Web.ViewModels.Contacts
+@model ContactFormViewModel
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+<div class="container mt-5 p-5 rounded bg-light shadow-card text-center">
+    <h1 class="display-4 text-pink">Contact Us</h1>
+    <p class="lead">We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+    <h4 class="mt-4">Contact Us</h4>
+    <p>Email: support@recipify.com</p>
+    <p>Phone: +123 456 7890</p>
+
+    <form asp-action="SendMessage" method="post" class="mt-4">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Message" class="form-label"></label>
+            <textarea asp-for="Message" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
+    }
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,10 +1,9 @@
 namespace Recipify.Web.Controllers
 {
-    using System.Diagnostics;
-
-    using ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using Recipify.Web.ViewModels.Contacts;
+    using System.Diagnostics;
+    using ViewModels;
 
     public class HomeController : Controller
     {
@@ -27,6 +26,25 @@ namespace Recipify.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public IActionResult Contacts()
+        {
+            return View(new ContactFormViewModel());
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage(ContactFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Contacts", model);
+            }
+
+            // TODO: Add logic to save message to DB or send email
+            TempData["SuccessMessage"] = "Your message has been sent successfully!";
+            return RedirectToAction("Contacts");
         }
     }
 }
