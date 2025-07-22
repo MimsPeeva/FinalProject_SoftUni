@@ -11,7 +11,7 @@
     <p>Email: support@recipify.com</p>
     <p>Phone: +123 456 7890</p>
 
-    <form asp-action="SendMessage" method="post" class="mt-4">
+    <form asp-action="SendMessage" sp-controller="Contacts" method="post" class="mt-4">
         <div class="mb-3">
             <label asp-for="Name" class="form-label"></label>
             <input asp-for="Name" class="form-control" />
@@ -34,6 +34,7 @@
     {
         <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
     }
+   // @TempData["SuccessMessage"] = "Your message has been sent!";
 </div>
 
 @section Scripts {

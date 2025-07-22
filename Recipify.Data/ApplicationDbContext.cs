@@ -20,6 +20,7 @@
         public virtual DbSet<Comment> Comments { get; set; } = null!;
         public virtual DbSet<DifficultyLevel> Difficulties { get; set; } = null!;
         public virtual DbSet<Cuisine> Cuisines { get; set; } = null!;
+        public virtual DbSet<ContactMessage> ContactMessages { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

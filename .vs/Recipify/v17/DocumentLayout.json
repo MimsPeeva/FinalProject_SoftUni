@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EBC5652B-743C-44B5-AA37-9E9766564E9C}|Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj|d:\\finalproject_softuni\\recipify.web.viewmodels\\recipe\\recipebaseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC5652B-743C-44B5-AA37-9E9766564E9C}|Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj|solutionrelative:recipify.web.viewmodels\\recipe\\recipebaseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\aboutuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\aboutuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EBC5652B-743C-44B5-AA37-9E9766564E9C}|Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj|d:\\finalproject_softuni\\recipify.web.viewmodels\\recipe\\ingredientinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC5652B-743C-44B5-AA37-9E9766564E9C}|Recipify.Web.ViewModels\\Recipify.Web.ViewModels.csproj|solutionrelative:recipify.web.viewmodels\\recipe\\ingredientinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\recipify\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\recipify\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\adminpanel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\adminpanel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\recipify\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\recipify\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|d:\\finalproject_softuni\\recipify.services.core\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C84DBE-1495-4B25-9650-835780D83CD2}|Recipify.Services.Core\\Recipify.Services.Core.csproj|solutionrelative:recipify.services.core\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,132 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Recipify.Web\\Program.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Program.cs",
-              "RelativeToolTip": "Recipify.Web\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwD8AAAAPAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RecipeBaseViewModel.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web.ViewModels\\Recipe\\RecipeBaseViewModel.cs",
+              "RelativeDocumentMoniker": "Recipify.Web.ViewModels\\Recipe\\RecipeBaseViewModel.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web.ViewModels\\Recipe\\RecipeBaseViewModel.cs",
+              "RelativeToolTip": "Recipify.Web.ViewModels\\Recipe\\RecipeBaseViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T18:34:58.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ContactsController.cs",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\ContactsController.cs",
-              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\ContactsController.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\ContactsController.cs",
-              "RelativeToolTip": "Recipify.Web\\Controllers\\ContactsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T18:33:12.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Recipify.Web\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T18:08:08.65Z",
+              "WhenOpened": "2025-07-22T19:19:54.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AboutUsController.cs",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\AboutUsController.cs",
-              "RelativeDocumentMoniker": "Recipify.Web\\Controllers\\AboutUsController.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Controllers\\AboutUsController.cs",
-              "RelativeToolTip": "Recipify.Web\\Controllers\\AboutUsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Title": "IngredientInputModel.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web.ViewModels\\Recipe\\IngredientInputModel.cs",
+              "RelativeDocumentMoniker": "Recipify.Web.ViewModels\\Recipe\\IngredientInputModel.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web.ViewModels\\Recipe\\IngredientInputModel.cs",
+              "RelativeToolTip": "Recipify.Web.ViewModels\\Recipe\\IngredientInputModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T18:07:40.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\AboutUs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\AboutUs\\Index.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\AboutUs\\Index.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\AboutUs\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T18:04:33.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\AdminPanel\\Index.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\AdminPanel\\Index.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\AdminPanel\\Index.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\AdminPanel\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T18:04:41.905Z",
+              "WhenOpened": "2025-07-22T19:18:27.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Contacts\\Index.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\Contacts\\Index.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Contacts\\Index.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\Contacts\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Create.cshtml",
+              "RelativeDocumentMoniker": "Recipify.Web\\Views\\Recipify\\Create.cshtml",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Create.cshtml",
+              "RelativeToolTip": "Recipify.Web\\Views\\Recipify\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T18:01:25.255Z",
+              "WhenOpened": "2025-07-22T19:14:16.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T17:46:57.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T17:43:34.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Recipify.Web\\Views\\Recipify\\Delete.cshtml",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Recipify\\Delete.cshtml",
-              "RelativeToolTip": "Recipify.Web\\Views\\Recipify\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-21T19:44:33.678Z",
+              "DocumentIndex": 3,
+              "Title": "RecipeService.cs",
+              "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
+              "RelativeDocumentMoniker": "Recipify.Services.Core\\RecipeService.cs",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
+              "RelativeToolTip": "Recipify.Services.Core\\RecipeService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T19:12:33.11Z",
               "EditorCaption": ""
             }
           ]

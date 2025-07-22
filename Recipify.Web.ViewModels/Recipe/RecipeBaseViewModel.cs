@@ -14,7 +14,7 @@ namespace Recipify.Web.ViewModels.Recipe
         public string Title { get; set; } = null!;
 
         public string ShortDescription { get; set; } = null!;
-
+        public List<IngredientInputModel> Ingredients { get; set; } = new List<IngredientInputModel>();
         public string? ImageUrl { get; set; }
 
         public string Comment { get; set; }

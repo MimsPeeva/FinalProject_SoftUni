@@ -40,6 +40,7 @@ namespace Recipify.Services.Core
                       CuisineId = r.Cuisine.Id,
                       ShortDescription = r.Description,
                       DifficultyLevelId = r.Difficulty.Id,
+                      //Ingredients = r.Ingredients.Select(i => i.Name).ToList(),
                       //Comments
 
                   })
