@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
+using Recipify.Data.Models;
 using Recipify.Services.Core.Contracts;
 using Recipify.Web.ViewModels.Recipe;
 
@@ -239,8 +240,6 @@ namespace Recipify.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(EditRecipeViewModel model)
         {
-            
-
             if (!ModelState.IsValid)
             {
                 model.Categories = (await categoryService.GetAllCategoriesDropDownAsync())
@@ -270,7 +269,7 @@ namespace Recipify.Web.Controllers
             var recipe = await dbContext
                 .Recipes
                 .Include(r => r.Ingredients)
-                .FirstOrDefaultAsync(r=>r.Id==model.Id);
+                .FirstOrDefaultAsync(r => r.Id == model.Id);
             if (recipe == null)
             {
                 return NotFound();
@@ -284,7 +283,29 @@ namespace Recipify.Web.Controllers
             recipe.CuisineId = model.CuisineId;
             recipe.DifficultyId = model.DifficultyLevelId;
 
+            var modelIngredientNames = model.Ingredients.Select(i => i.Name).ToList();
+
+
+            foreach (var input in model.Ingredients)
+            {
+                var existing = recipe.Ingredients.FirstOrDefault(i => i.Name == input.Name);
+                if (existing != null)
+                {
+                    existing.Quantity = input.Quantity;
+                }
+                else
+                {
+                    recipe.Ingredients.Add(new Ingredient
+                    {
+                        Name = input.Name,
+                        Quantity = input.Quantity
+                    });
+                }
+            }
+
             
+
+
             try
             {
                 await dbContext.SaveChangesAsync();
