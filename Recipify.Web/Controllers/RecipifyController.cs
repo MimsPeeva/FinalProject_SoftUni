@@ -198,6 +198,11 @@ namespace Recipify.Web.Controllers
                     ShortDescription = recipe.ShortDescription ?? string.Empty,
                     ImageUrl = recipe.ImageUrl ?? string.Empty,
                    Instructions = recipe.Instructions ?? string.Empty,
+                   Ingredients=recipe.Ingredients.Select(i => new IngredientInputModel
+                    {
+                        Name = i.Name ?? string.Empty,
+                        Quantity = i.Quantity ?? string.Empty,
+                    }).ToList(),
                     CategoryId = recipe.CategoryId,
                     CuisineId = recipe.CuisineId,
                     DifficultyLevelId = recipe.DifficultyLevelId,
@@ -262,7 +267,10 @@ namespace Recipify.Web.Controllers
                 return View(model);
             }
 
-            var recipe = await dbContext.Recipes.FindAsync(model.Id);
+            var recipe = await dbContext
+                .Recipes
+                .Include(r => r.Ingredients)
+                .FirstOrDefaultAsync(r=>r.Id==model.Id);
             if (recipe == null)
             {
                 return NotFound();
@@ -276,6 +284,7 @@ namespace Recipify.Web.Controllers
             recipe.CuisineId = model.CuisineId;
             recipe.DifficultyId = model.DifficultyLevelId;
 
+            
             try
             {
                 await dbContext.SaveChangesAsync();

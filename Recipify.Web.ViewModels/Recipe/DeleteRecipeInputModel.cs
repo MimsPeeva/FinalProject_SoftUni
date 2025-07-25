@@ -20,5 +20,6 @@ namespace Recipify.Web.ViewModels.Recipe
         public string? Category { get; set; } 
         public string? Cuisine { get; set; } 
         public string? DifficultyLevel { get; set; } 
+        public List<IngredientInputModel> Ingredients { get; set; } = new List<IngredientInputModel>();
     }
 }

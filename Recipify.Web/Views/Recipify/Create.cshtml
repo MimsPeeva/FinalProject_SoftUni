@@ -1,57 +1,108 @@
-﻿@using Recipify.Web.ViewModels.Recipe
-@model CreateRecipeInputModel
+﻿@using Recipify.Web.ViewModels.Recipe  
+@model CreateRecipeInputModel  
 
-@{
-    ViewData["Title"] = "Create Recipe";
-}
+@{  
+    ViewData["Title"] = "Create Recipe";  
+}  
 
-<h2>@ViewData["Title"]</h2>
-<hr />
+<h2>@ViewData["Title"]</h2>  
+<hr />  
 
-@await Html.PartialAsync("_ValidationSummary")
+@await Html.PartialAsync("_ValidationSummary")  
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
+<form asp-action="Create" method="post" enctype="multipart/form-data">  
+    <div class="mb-3">  
+        <label asp-for="Title" class="form-label"></label>  
+        <input asp-for="Title" class="form-control" />  
+        <span asp-validation-for="Title" class="text-danger"></span>  
+    </div>  
+
+    <div class="mb-3">  
+        <label asp-for="ShortDescription" class="form-label"></label>  
+        <textarea asp-for="ShortDescription" class="form-control"></textarea>  
+        <span asp-validation-for="ShortDescription" class="text-danger"></span>  
+    </div>
     <div class="mb-3">
-        <label asp-for="Title" class="form-label"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
+        <label class="form-label">Ingredients</label>
+        <div id="ingredient-list">
+            @for (int i = 0; i < Model.Ingredients.Count; i++)
+            {
+                <div class="row mb-2 ingredient-item">
+                    <div class="col-md-5">
+                        <input asp-for="Ingredients[@i].Name" class="form-control" placeholder="Ingredient Name" />
+                        <span asp-validation-for="Ingredients[@i].Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="Ingredients[@i].Quantity" class="form-control" placeholder="Quantity (optional)" />
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-danger remove-ingredient">X</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <button type="button" id="add-ingredient" class="btn btn-secondary mt-2">Add Ingredient</button>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="ShortDescription" class="form-label"></label>
-        <textarea asp-for="ShortDescription" class="form-control"></textarea>
-        <span asp-validation-for="ShortDescription" class="text-danger"></span>
-    </div>
+    <div class="mb-3">  
+        <label asp-for="Instructions" class="form-label"></label>  
+        <textarea asp-for="Instructions" class="form-control"></textarea>  
+        <span asp-validation-for="Instructions" class="text-danger"></span>  
+    </div>  
 
-    <div class="mb-3">
-        <label asp-for="Instructions" class="form-label"></label>
-        <textarea asp-for="Instructions" class="form-control"></textarea>
-        <span asp-validation-for="Instructions" class="text-danger"></span>
-    </div>
+    <div class="mb-3">  
+        <label asp-for="ImageUrl" class="form-label"></label>  
+        <input asp-for="ImageUrl" class="form-control" />  
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>  
+    </div>  
 
-    <div class="mb-3">
-        <label asp-for="ImageUrl" class="form-label"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
-    </div>
+    <div class="mb-3">  
+        <label asp-for="CategoryId" class="form-label"></label>  
+        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>  
+        <span asp-validation-for="CategoryId" class="text-danger"></span>  
+    </div>  
 
-    <div class="mb-3">
-        <label asp-for="CategoryId" class="form-label"></label>
-        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>
-        <span asp-validation-for="CategoryId" class="text-danger"></span>
-    </div>
+    <div class="mb-3">  
+        <label asp-for="CuisineId" class="form-label"></label>  
+        <select asp-for="CuisineId" asp-items="Model.Cuisines" class="form-select"></select>  
+        <span asp-validation-for="CuisineId" class="text-danger"></span>  
+    </div>  
 
-    <div class="mb-3">
-        <label asp-for="CuisineId" class="form-label"></label>
-        <select asp-for="CuisineId" asp-items="Model.Cuisines" class="form-select"></select>
-        <span asp-validation-for="CuisineId" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label asp-for="DifficultyLevelId" class="form-label"></label>
-        <select asp-for="DifficultyLevelId" asp-items="Model.DifficultyLevels" class="form-select"></select>
-        <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>
-    </div>
+    <div class="mb-3">  
+        <label asp-for="DifficultyLevelId" class="form-label"></label>  
+        <select asp-for="DifficultyLevelId" asp-items="Model.DifficultyLevels" class="form-select"></select>  
+        <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>  
+    </div>  
 
     <button type="submit" class="btn btn-primary">Create</button>
+    
+
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById("add-ingredient").addEventListener("click", function () {
+            const index = document.querySelectorAll(".ingredient-item").length;
+            const container = document.createElement("div");
+            container.className = "row mb-2 ingredient-item";
+            container.innerHTML = `
+                <div class="col-md-5">
+                    <input name="Ingredients[${index}].Name" class="form-control" placeholder="Ingredient Name" />
+                </div>
+                <div class="col-md-5">
+                    <input name="Ingredients[${index}].Quantity" class="form-control" placeholder="Quantity (optional)" />
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-danger remove-ingredient">X</button>
+                </div>`;
+            document.getElementById("ingredient-list").appendChild(container);
+        });
+
+        document.addEventListener("click", function (e) {
+            if (e.target && e.target.classList.contains("remove-ingredient")) {
+                e.target.closest(".ingredient-item").remove();
+            }
+        });
+    </script>
+}

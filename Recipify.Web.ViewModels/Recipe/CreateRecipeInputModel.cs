@@ -28,7 +28,7 @@ namespace Recipify.Web.ViewModels.Recipe
      //  public string CategoryName { get; set; } = null!;
         [Required]
 
-       // public List<string>? Ingredients { get; set; } = new List<string>();
+       public List<IngredientInputModel>? Ingredients { get; set; } = new List<IngredientInputModel>();
      
         public int CategoryId { get; set; }
 

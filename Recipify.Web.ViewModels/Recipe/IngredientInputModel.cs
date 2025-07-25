@@ -9,10 +9,10 @@ namespace Recipify.Web.ViewModels.Recipe
 {
     public class IngredientInputModel
     {
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; } = null!;
 
-        [Required]
-        public string Quantity { get; set; } = null!;
+        public string? Quantity { get; set; } 
     }
 }

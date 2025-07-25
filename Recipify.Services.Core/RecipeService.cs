@@ -59,6 +59,7 @@ namespace Recipify.Services.Core
                 .Include(r => r.Category)
                 .Include(r => r.Cuisine)
                 .Include(r => r.Difficulty)
+                .Include(r => r.Ingredients)
                 .SingleOrDefaultAsync(r => r.Id == id.Value);
 
             if (recipeModel == null)
@@ -72,6 +73,13 @@ namespace Recipify.Services.Core
                 Title = recipeModel.Title,
                 ShortDescription = recipeModel.Description,
                 Instructions = recipeModel.Instructions,
+                Ingredients = recipeModel.Ingredients
+                    .Select(i => new IngredientInputModel
+                    {
+                        Name = i.Name,
+                        Quantity = i.Quantity
+                    })
+                    .ToList(),
                 CategoryName = recipeModel.Category?.Name,
                 CuisineName = recipeModel.Cuisine?.Name,
                 DifficultyLevel = recipeModel.Difficulty?.Level,
@@ -119,11 +127,21 @@ namespace Recipify.Services.Core
             DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevelId);
             if (categoryRef != null && cuisineRef != null && difficultyRef != null /*&& user!=null*/)
             {
+
+                var ingredients = model.Ingredients?
+       .Where(i => !string.IsNullOrWhiteSpace(i.Name))
+       .Select(i => new Ingredient
+       {
+           Name = i.Name.Trim(),
+           Quantity = i.Quantity?.Trim() ?? string.Empty
+       }).ToList() ?? new List<Ingredient>();
+
                 Recipe recipe = new Recipe
                 {
                     Title = model.Title,
                     Description = model.ShortDescription,
                     Instructions = model.Instructions,
+                    Ingredients = ingredients,
                     ImageUrl = model.ImageUrl,
                     CategoryId = model.CategoryId,
                     CuisineId = model.CuisineId,
@@ -154,6 +172,14 @@ namespace Recipify.Services.Core
 
             recipe.Title = model.Title;
             recipe.Description = model.ShortDescription;
+            recipe.Ingredients = model.Ingredients
+                .Where(i => !string.IsNullOrWhiteSpace(i.Name))
+                .Select(i => new Ingredient
+                {
+                    Name = i.Name.Trim(),
+                    Quantity = i.Quantity?.Trim() ?? string.Empty
+                })
+                .ToList();
             recipe.Instructions = model.Instructions;
             recipe.CategoryId = model.CategoryId;
             recipe.CuisineId = model.CuisineId;

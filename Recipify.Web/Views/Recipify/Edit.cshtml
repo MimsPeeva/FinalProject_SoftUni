@@ -23,6 +23,31 @@
         <textarea asp-for="ShortDescription" class="form-control"></textarea>
         <span asp-validation-for="ShortDescription" class="text-danger"></span>
     </div>
+    <div class="mb-3">
+        <label class="form-label">Ingredients</label>
+        <div id="ingredients-list">
+            @if (Model.Ingredients != null)
+            {
+                @for (int i = 0; i < Model.Ingredients.Count; i++)
+                {
+                    <div class="ingredient-row row mb-2" data-index="@i">
+                        <input type="hidden" name="Ingredients[@i].Id" value="@Model.Ingredients[i].Id" />
+
+                        <div class="col">
+                            <input class="form-control" name="Ingredients[@i].Name" value="@Model.Ingredients[i].Name" placeholder="Name" />
+                        </div>
+                        <div class="col">
+                            <input class="form-control" name="Ingredients[@i].Quantity" value="@Model.Ingredients[i].Quantity" placeholder="Quantity" />
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-danger remove-ingredient">×</button>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <button type="button" id="add-ingredient" class="btn btn-secondary mt-2">Add Ingredient</button>
+    </div>
 
     <div class="mb-3">
         <label asp-for="Instructions" class="form-label"></label>
@@ -53,8 +78,43 @@
         <select asp-for="DifficultyLevelId" asp-items="Model.DifficultyLevels" class="form-select"></select>
         <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>
     </div>
-  
 
     <button type="submit" class="btn btn-success">Save Changes</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
+
+@section Scripts {
+    <script>
+        let ingredientIndex = @Model.Ingredients?.Count ?? 0;
+
+        document.getElementById('add-ingredient').addEventListener('click', function () {
+            const container = document.getElementById('ingredients-list');
+
+            const row = document.createElement('div');
+            row.classList.add('ingredient-row', 'row', 'mb-2');
+            row.dataset.index = ingredientIndex;
+
+            row.innerHTML = `
+                <input type="hidden" name="Ingredients[${ingredientIndex}].Id" value="0" />
+                <div class="col">
+                    <input class="form-control" name="Ingredients[${ingredientIndex}].Name" placeholder="Name" />
+                </div>
+                <div class="col">
+                    <input class="form-control" name="Ingredients[${ingredientIndex}].Quantity" placeholder="Quantity" />
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-danger remove-ingredient">×</button>
+                </div>
+            `;
+
+            container.appendChild(row);
+            ingredientIndex++;
+        });
+
+        document.getElementById('ingredients-list').addEventListener('click', function (e) {
+            if (e.target.classList.contains('remove-ingredient')) {
+                e.target.closest('.ingredient-row').remove();
+            }
+        });
+    </script>
+}

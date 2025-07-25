@@ -14,6 +14,12 @@
     <div class="card-body">
         <h5 class="card-title"><strong>Recipe Name:</strong>@Model.Title</h5>
         <p class="card-text"><strong>Description:</strong>@Model.ShortDescription</p>
+        <p class="card-text"><strong>Instructions:</strong>@Model.Instructions</p>
+        <p class="card-text"><strong>Ingredients:</p>
+         @foreach (var ingredient in Model.Ingredients)
+        {
+            <li>@ingredient.Name - @ingredient.Quantity</li>
+        }
         <p class="card-text"><strong>Category:</strong> @Model.CategoryName</p>
         <p class="card-text"><strong>Cuisine:</strong>@Model.CuisineName</p>
         <p class="card-text"><strong>Difficulty Level:</strong>@Model.DifficultyLevel</p>
