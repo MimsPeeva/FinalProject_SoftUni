@@ -184,9 +184,13 @@ namespace Recipify.Web.Controllers
         {
             try
             {
-               
 
-                var recipe = await recipeService.GetByIdWithCommentsAsync(id);
+                var recipe = await dbContext
+                    .Recipes
+                    .Include(r => r.Ingredients)
+                    .FirstOrDefaultAsync(r => r.Id == id);
+
+             //   var recipe = await recipeService.GetByIdWithCommentsAsync(id);
                 if (recipe == null)
                 {
                     return RedirectToAction(nameof(Index));
@@ -196,17 +200,18 @@ namespace Recipify.Web.Controllers
                 {
                     Id = recipe.Id,
                     Title = recipe.Title ?? string.Empty,
-                    ShortDescription = recipe.ShortDescription ?? string.Empty,
+                    ShortDescription = recipe.Description ?? string.Empty,
                     ImageUrl = recipe.ImageUrl ?? string.Empty,
                    Instructions = recipe.Instructions ?? string.Empty,
                    Ingredients=recipe.Ingredients.Select(i => new IngredientInputModel
                     {
-                        Name = i.Name ?? string.Empty,
+                       Id = i.Id,
+                       Name = i.Name ?? string.Empty,
                         Quantity = i.Quantity ?? string.Empty,
                     }).ToList(),
                     CategoryId = recipe.CategoryId,
                     CuisineId = recipe.CuisineId,
-                    DifficultyLevelId = recipe.DifficultyLevelId,
+                    DifficultyLevelId = recipe.DifficultyId,
                     Categories = (await categoryService.GetAllCategoriesDropDownAsync())
                         .Select(c => new SelectListItem
                         {
@@ -238,7 +243,7 @@ namespace Recipify.Web.Controllers
         }
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Edit(EditRecipeViewModel model)
+        public async Task<IActionResult> Edit(EditRecipeViewModel model, string? DeletedIngredientIds)
         {
             if (!ModelState.IsValid)
             {
@@ -283,14 +288,46 @@ namespace Recipify.Web.Controllers
             recipe.CuisineId = model.CuisineId;
             recipe.DifficultyId = model.DifficultyLevelId;
 
-            var modelIngredientNames = model.Ingredients.Select(i => i.Name).ToList();
+            //var modelIngredientNames = model.Ingredients.Select(i => i.Name).ToList();
 
+
+            //foreach (var input in model.Ingredients)
+            //{
+            //    var existing = recipe.Ingredients.FirstOrDefault(i => i.Name == input.Name);
+            //    if (existing != null)
+            //    {
+            //        existing.Quantity = input.Quantity;
+            //    }
+            //    else
+            //    {
+            //        recipe.Ingredients.Add(new Ingredient
+            //        {
+            //            Name = input.Name,
+            //            Quantity = input.Quantity
+            //        });
+            //    }
+            //}
+
+            if (!string.IsNullOrWhiteSpace(DeletedIngredientIds))
+            {
+                var idsToRemove = DeletedIngredientIds
+                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToList();
+
+                var toDelete = recipe.Ingredients
+                    .Where(i => idsToRemove.Contains(i.Id))
+                    .ToList();
+
+                dbContext.Ingredients.RemoveRange(toDelete);
+            }
 
             foreach (var input in model.Ingredients)
             {
-                var existing = recipe.Ingredients.FirstOrDefault(i => i.Name == input.Name);
+                var existing = recipe.Ingredients.FirstOrDefault(i => i.Id == input.Id);
                 if (existing != null)
                 {
+                    existing.Name = input.Name;
                     existing.Quantity = input.Quantity;
                 }
                 else
@@ -298,12 +335,11 @@ namespace Recipify.Web.Controllers
                     recipe.Ingredients.Add(new Ingredient
                     {
                         Name = input.Name,
-                        Quantity = input.Quantity
+                        Quantity = input.Quantity,
+                        RecipeId = recipe.Id 
                     });
                 }
             }
-
-            
 
 
             try

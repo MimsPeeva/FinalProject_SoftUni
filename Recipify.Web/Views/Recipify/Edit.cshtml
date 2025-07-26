@@ -49,6 +49,9 @@
         <button type="button" id="add-ingredient" class="btn btn-secondary mt-2">Add Ingredient</button>
     </div>
 
+    <input type="hidden" name="DeletedIngredientIds" id="DeletedIngredientIds" />
+
+
     <div class="mb-3">
         <label asp-for="Instructions" class="form-label"></label>
         <textarea asp-for="Instructions" class="form-control"></textarea>
@@ -111,10 +114,29 @@
             ingredientIndex++;
         });
 
-        document.getElementById('ingredients-list').addEventListener('click', function (e) {
-            if (e.target.classList.contains('remove-ingredient')) {
-                e.target.closest('.ingredient-row').remove();
+        // document.getElementById('ingredients-list').addEventListener('click', function (e) {
+        //     if (e.target.classList.contains('remove-ingredient')) {
+        //         e.target.closest('.ingredient-row').remove();
+        //     }
+        // });
+
+
+
+
+            document.getElementById('ingredients-list').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-ingredient')) {
+            const row = e.target.closest('.ingredient-row');
+            const idInput = row.querySelector('input[name$=".Id"]');
+            const deletedInput = document.getElementById('DeletedIngredientIds');
+
+            if (idInput && idInput.value && idInput.value !== "0") {
+                let deletedIds = deletedInput.value ? deletedInput.value.split(',') : [];
+                deletedIds.push(idInput.value);
+                deletedInput.value = deletedIds.join(',');
             }
-        });
+
+            row.remove();
+        }
+		});
     </script>
 }

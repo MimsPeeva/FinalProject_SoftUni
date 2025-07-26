@@ -164,26 +164,66 @@ namespace Recipify.Services.Core
             //  recipe.Ingredients = ingredientList;
 
         }
-        public async Task EditRecipesAsync(EditRecipeViewModel model)
+        public async Task EditRecipesAsync(EditRecipeViewModel model,string? deletedIds)
         {
-            var recipe = await dbContext.Recipes.FindAsync(model.Id);
+            var recipe = await dbContext
+                .Recipes
+                .Include(r=>r.Ingredients)
+                .FirstOrDefaultAsync(r=>r.Id==model.Id);
 
-            if (recipe == null) return;
+            if (recipe == null)
+            {
+                throw new ArgumentException("Recipe not found");
+            }
 
             recipe.Title = model.Title;
             recipe.Description = model.ShortDescription;
-            recipe.Ingredients = model.Ingredients
-                .Where(i => !string.IsNullOrWhiteSpace(i.Name))
-                .Select(i => new Ingredient
-                {
-                    Name = i.Name.Trim(),
-                    Quantity = i.Quantity?.Trim() ?? string.Empty
-                })
-                .ToList();
+            //recipe.Ingredients = model.Ingredients
+            //    .Where(i => !string.IsNullOrWhiteSpace(i.Name))
+            //    .Select(i => new Ingredient
+            //    {
+            //        Name = i.Name.Trim(),
+            //        Quantity = i.Quantity?.Trim() ?? string.Empty
+            //    })
+            //    .ToList();
             recipe.Instructions = model.Instructions;
             recipe.CategoryId = model.CategoryId;
             recipe.CuisineId = model.CuisineId;
             recipe.DifficultyId = model.DifficultyLevelId;
+
+
+            if (!string.IsNullOrEmpty(deletedIds))
+            {
+                var idsToRemove = deletedIds.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                                            .Select(id => int.Parse(id))
+                                            .ToList();
+
+                var ingredientsToRemove = recipe.Ingredients
+                    .Where(i => idsToRemove.Contains(i.Id)).ToList();
+
+                dbContext.Ingredients.RemoveRange(ingredientsToRemove);
+            }
+
+            foreach (var ing in model.Ingredients)
+            {
+                if (ing.Id == 0)
+                {
+                    recipe.Ingredients.Add(new Ingredient
+                    {
+                        Name = ing.Name,
+                        Quantity = ing.Quantity
+                    });
+                }
+                else
+                {
+                    var existing = recipe.Ingredients.FirstOrDefault(i => i.Id == ing.Id);
+                    if (existing != null)
+                    {
+                        existing.Name = ing.Name;
+                        existing.Quantity = ing.Quantity;
+                    }
+                }
+            }
 
             await dbContext.SaveChangesAsync();
         }
