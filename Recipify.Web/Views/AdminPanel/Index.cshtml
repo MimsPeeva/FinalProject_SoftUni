@@ -1,12 +1,18 @@
-﻿@model List<Recipify.Web.ViewModels.Admin.UserRoleViewModel>
+﻿@using Recipify.Web.ViewModels.Admin
+@model IEnumerable<UserRoleViewModel>
 
 @{
     ViewData["Title"] = "User Role Management";
 }
 
+<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" />
+<link href="~/css/font-awesome.css" rel="stylesheet" />
+<link href="~/css/flex-slider.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
 <h2>User Role Management</h2>
 
-<table class="table">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Email</th>
@@ -21,15 +27,17 @@
                 <td>@user.Email</td>
                 <td>@string.Join(", ", user.Roles)</td>
                 <td>
-                    <form method="post" asp-action="AddToRole">
+                    <form method="post" asp-action="AddToRole" class="mb-2">
+                        @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-                        <input type="text" name="role" placeholder="Role name" />
+                        <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
                         <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
                     </form>
 
                     <form method="post" asp-action="RemoveFromRole">
+                        @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-                        <input type="text" name="role" placeholder="Role name" />
+                        <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to remove" />
                         <button type="submit" class="btn btn-sm btn-danger">Remove Role</button>
                     </form>
                 </td>

@@ -5,15 +5,23 @@
     ViewData["Title"] = "Recipe Details";
 }
 
+<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" media="all">
+
+<link href="~/css/font-awesome.css" rel="stylesheet" media="all">
+
+<link href="~/css/flex-slider.css" rel="stylesheet" media="all">
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" media="all">
+
 <h2>@Model.Title</h2>
 <hr />
 @await Html.PartialAsync("_ValidationSummary")
 
 <div class="card mb-4">
-    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.ImageUrl" />
     <div class="card-body">
         <h5 class="card-title"><strong>Recipe Name:</strong>@Model.Title</h5>
         <p class="card-text"><strong>Description:</strong>@Model.ShortDescription</p>
+        <img src="@Model.ImageUrl" class="card-img-top" style="max-height: 300px; max-width:500px; object-fit: fill;" alt="@Model.ImageUrl" />
         <p class="card-text"><strong>Instructions:</strong>@Model.Instructions</p>
         <p class="card-text"><strong>Ingredients:</p>
          @foreach (var ingredient in Model.Ingredients)

@@ -79,13 +79,13 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  background-color: #fff;
-  font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    background-color: #ff589e;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -108,8 +108,8 @@ global styles
 */
 html,
 body {
-  background: #fff;
-  font-family: "Raleway", sans-serif;
+    background: #ff589e;
+    font-family: "Raleway", sans-serif;
 }
 
 ::selection {

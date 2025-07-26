@@ -5,18 +5,27 @@
     ViewData["Title"] = "My Recipes";
 }
 
+<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" media="all">
+
+<link href="~/css/font-awesome.css" rel="stylesheet" media="all">
+
+<link href="~/css/flex-slider.css" rel="stylesheet" media="all">
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" media="all">
+
 <h2>@ViewData["Title"]</h2>
 <hr />
-
+<body>
 <div class="row text-center">
     @foreach (var recipe in Model)
     {
         <div class="col-md-3 mb-4">
             <div class="card h-100">
-                <img src="@recipe.ImageUrl" class="card-img-top" style="max-height: 150px; object-fit: cover;" alt="@recipe.Title" />
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">@recipe.Title</h5>
                     <p class="card-text">@recipe.ShortDescription</p>
+                        <img src="@recipe.ImageUrl" class="card-img-top" style="max-height: 150px; object-fit: cover;" alt="@recipe.Title" />
+
                     <a asp-action="Details" asp-route-id="@recipe.Id" class="btn btn-info mt-auto">Details</a>
                 </div>
             </div>
@@ -24,3 +33,4 @@
     }
 </div>
 
+</body>

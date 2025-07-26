@@ -8,6 +8,14 @@
 <h2>@ViewData["Title"]</h2>  
 <hr />  
 
+<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" media="all">
+
+<link href="~/css/font-awesome.css" rel="stylesheet" media="all">
+
+<link href="~/css/flex-slider.css" rel="stylesheet" media="all">
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" media="all">
+
 @await Html.PartialAsync("_ValidationSummary")  
 
 <form asp-action="Create" method="post" enctype="multipart/form-data">  
@@ -22,6 +30,13 @@
         <textarea asp-for="ShortDescription" class="form-control"></textarea>  
         <span asp-validation-for="ShortDescription" class="text-danger"></span>  
     </div>
+
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
     <div class="mb-3">
         <label class="form-label">Ingredients</label>
         <div id="ingredient-list">
@@ -50,11 +65,7 @@
         <span asp-validation-for="Instructions" class="text-danger"></span>  
     </div>  
 
-    <div class="mb-3">  
-        <label asp-for="ImageUrl" class="form-label"></label>  
-        <input asp-for="ImageUrl" class="form-control" />  
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>  
-    </div>  
+     
 
     <div class="mb-3">  
         <label asp-for="CategoryId" class="form-label"></label>  

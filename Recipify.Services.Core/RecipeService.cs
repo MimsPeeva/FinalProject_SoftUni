@@ -37,10 +37,11 @@ namespace Recipify.Services.Core
                       Id = r.Id,
                       Title = r.Title,
                       CategoryId = r.Category.Id,
+                      ImageUrl=r.ImageUrl,
                       CuisineId = r.Cuisine.Id,
                       ShortDescription = r.Description,
                       DifficultyLevelId = r.Difficulty.Id,
-                      //Ingredients = r.Ingredients.Select(i => i.Name).ToList(),
+                     // Ingredients = (List<IngredientInputModel>)r.Ingredients,
                       //Comments
 
                   })
@@ -71,6 +72,7 @@ namespace Recipify.Services.Core
             {
                 Id = recipeModel.Id,
                 Title = recipeModel.Title,
+                ImageUrl = recipeModel.ImageUrl,
                 ShortDescription = recipeModel.Description,
                 Instructions = recipeModel.Instructions,
                 Ingredients = recipeModel.Ingredients
@@ -103,6 +105,7 @@ namespace Recipify.Services.Core
             Id = r.Id,
             Title = r.Title,
             ShortDescription = r.Description,
+            ImageUrl = r.ImageUrl,
             Instructions = r.Instructions,
             CategoryName = r.Category.Name,
             CuisineName = r.Cuisine.Name,
@@ -178,6 +181,7 @@ namespace Recipify.Services.Core
 
             recipe.Title = model.Title;
             recipe.Description = model.ShortDescription;
+            recipe.ImageUrl = model.ImageUrl;
             //recipe.Ingredients = model.Ingredients
             //    .Where(i => !string.IsNullOrWhiteSpace(i.Name))
             //    .Select(i => new Ingredient
@@ -263,6 +267,7 @@ namespace Recipify.Services.Core
                 {
                     Id = r.Id,
                     Title = r.Title,
+                    ImageUrl = r.ImageUrl,
                     CategoryId = r.Category.Id,
                     CuisineId = r.Cuisine.Id,
                     ShortDescription = r.Description,
