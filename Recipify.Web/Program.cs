@@ -70,20 +70,25 @@ namespace Recipify.Web
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
 
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //   var services = scope.ServiceProvider;
+            //    try
+            //    {
+
+            //       await  IdentitySeeder.SeedRolesAsync(services);
+            //        await IdentitySeeder.SeedAdminAsync(services);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        var logger = services.GetRequiredService<ILogger<Program>>();
+            //        logger.LogError(ex, "An error occurred seeding the DB.");
+            //    }
+            //}
             using (var scope = app.Services.CreateScope())
             {
-               var services = scope.ServiceProvider;
-                try
-                {
-                   
-                   await  IdentitySeeder.SeedRolesAsync(services);
-                    await IdentitySeeder.SeedAdminAsync(services);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred seeding the DB.");
-                }
+                var services = scope.ServiceProvider;
+                await SeedRolesAsync(services);
             }
 
 
@@ -108,6 +113,21 @@ namespace Recipify.Web
             app.MapRazorPages();
 
             app.Run();
+
+            async Task SeedRolesAsync(IServiceProvider serviceProvider)
+            {
+                var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                string[] roleNames = { "Administrator", "Editor", "User" };
+
+                foreach (var roleName in roleNames)
+                {
+                    if (!await roleManager.RoleExistsAsync(roleName))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(roleName));
+                    }
+                }
+            }
         }
     }
+
 }

@@ -50,8 +50,7 @@ namespace Recipify.Web.Controllers
             {
                 ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
                 return View(new List<RecipeIndexViewModel>());
-                //Console.WriteLine(e);
-                //return this.RedirectToAction(nameof(Index), "Home");
+              
             }
         }
         [HttpGet]

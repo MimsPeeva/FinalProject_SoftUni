@@ -5,12 +5,32 @@
     ViewData["Title"] = "User Role Management";
 }
 
-<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" />
-<link href="~/css/font-awesome.css" rel="stylesheet" />
-<link href="~/css/flex-slider.css" rel="stylesheet" />
-<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" media="all">
+
+<link href="~/css/font-awesome.css" rel="stylesheet" media="all">
+
+<link href="~/css/flex-slider.css" rel="stylesheet" media="all">
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" media="all">
 
 <h2>User Role Management</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.Message as string))
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+<a href="javascript:history.back()" class="btn btn-secondary mb-3">← Go Back</a>
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -25,7 +45,16 @@
         {
             <tr>
                 <td>@user.Email</td>
-                <td>@string.Join(", ", user.Roles)</td>
+                <td>
+                    @if (user.Roles != null && user.Roles.Any())
+                    {
+                        @string.Join(", ", user.Roles)
+                    }
+                    else
+                    {
+                        <span class="text-danger">No roles assigned</span>
+                    }
+                </td>
                 <td>
                     <form method="post" asp-action="AddToRole" class="mb-2">
                         @Html.AntiForgeryToken()
@@ -34,17 +63,20 @@
                         <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
                     </form>
 
-                    <form method="post" asp-action="RemoveFromRole">
+                    <form method="post" asp-action="RemoveFromRole" class="d-flex gap-2 align-items-center">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-                        <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to remove" />
+                        <select name="role" title ="role" class="form-control w-50">
+                            <option disabled selected>Choose role</option>
+                            @foreach (var role in user.AllRoles)
+                            {
+                                <option value="@role">@role</option>
+                            }
+                        </select>
                         <button type="submit" class="btn btn-sm btn-danger">Remove Role</button>
                     </form>
                 </td>
             </tr>
         }
-        <a href="javascript:history.back()" class="btn btn-secondary mb-3">
-            ← Go Back
-        </a>
     </tbody>
 </table>

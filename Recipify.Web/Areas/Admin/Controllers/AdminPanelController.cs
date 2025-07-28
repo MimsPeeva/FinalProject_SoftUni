@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Recipify.Web.ViewModels.Admin;
 
 namespace Recipify.Web.Areas.Admin.Controllers
@@ -28,15 +29,16 @@ namespace Recipify.Web.Areas.Admin.Controllers
             foreach (var user in users)
             {
                 var roles = await userManager.GetRolesAsync(user);
+                var allRoles = roleManager.Roles.Select(r => r.Name).ToList();
 
                 model.Add(new UserRoleViewModel
                 {
                     UserId = user.Id,
                     Email = user.Email,
-                    Roles = roles.ToList()
+                    Roles = roles.ToList(),
+                    AllRoles =  allRoles
                 });
             }
-
             return View(model);
         }
         [HttpPost]
@@ -44,27 +46,32 @@ namespace Recipify.Web.Areas.Admin.Controllers
         {
             var user = await userManager.FindByIdAsync(userId);
 
-            if (user != null)
+            if (string.IsNullOrWhiteSpace(role))
             {
-                if (!await roleManager.RoleExistsAsync(role))
-                {
-                    var roleResult = await roleManager.CreateAsync(new IdentityRole(role));
-                    if (!roleResult.Succeeded)
-                    {
-                        ModelState.AddModelError("", "Could not create the role.");
-                        return RedirectToAction(nameof(Index));
-                    }
-                }
+                logger.LogWarning("Role name was empty for user ID: {UserId}", userId);
+                return RedirectToAction(nameof(Index));
+            }
 
-                var result = await userManager.AddToRoleAsync(user, role);
-                if (result.Succeeded)
-                {
-                    logger.LogInformation("User '{Email}' added to role '{Role}' by '{Admin}' at {Time}.",
-                        user.Email,
-                        role,
-                        User.Identity?.Name ?? "Unknown",
-                        DateTime.UtcNow);
-                }
+            if (user == null)
+            {
+                logger.LogWarning("User not found with ID: {UserId}", userId);
+                return RedirectToAction(nameof(Index));
+            }
+
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                logger.LogWarning("Role '{Role}' does not exist", role);
+                return RedirectToAction(nameof(Index));
+            }
+
+            var result = await userManager.AddToRoleAsync(user, role);
+            if (result.Succeeded)
+            {
+                logger.LogInformation("Added role '{Role}' to user '{Email}'", role, user.Email);
+            }
+            else
+            {
+                logger.LogError("Failed to add role. Errors: {Errors}", string.Join(", ", result.Errors.Select(e => e.Description)));
             }
 
             return RedirectToAction(nameof(Index));
@@ -85,8 +92,7 @@ namespace Recipify.Web.Areas.Admin.Controllers
                         DateTime.UtcNow);
                 }
             }
-
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { message = "Role removed successfully." });
         }
     }
 }

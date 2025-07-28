@@ -14,6 +14,7 @@ namespace Recipify.Web.ViewModels.Admin
         [Required]
         public string Email { get; set; } = null!;
 
-        public List<string> Roles { get; set; } = new List<string>();
+        public List<string> Roles { get; set; } 
+        public List<string> AllRoles { get; set; } 
     }
 }
