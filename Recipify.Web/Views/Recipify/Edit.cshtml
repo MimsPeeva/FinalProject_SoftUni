@@ -73,21 +73,21 @@
     </div>
 
     <div class="mb-3">
-        <label asp-for="CategoryId" class="form-label"></label>
-        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>
-        <span asp-validation-for="CategoryId" class="text-danger"></span>
+        <label asp-for="Category" class="form-label"></label>
+        <select asp-for="Category" asp-items="Model.Categories" class="form-select"></select>
+        <span asp-validation-for="Category" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="CuisineId" class="form-label"></label>
-        <select asp-for="CuisineId" asp-items="Model.Cuisines" class="form-select"></select>
-        <span asp-validation-for="CuisineId" class="text-danger"></span>
+        <label asp-for="Cuisine" class="form-label"></label>
+        <select asp-for="Cuisine" asp-items="Model.Cuisines" class="form-select"></select>
+        <span asp-validation-for="Cuisine" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="DifficultyLevelId" class="form-label"></label>
-        <select asp-for="DifficultyLevelId" asp-items="Model.DifficultyLevels" class="form-select"></select>
-        <span asp-validation-for="DifficultyLevelId" class="text-danger"></span>
+        <label asp-for="DifficultyLevel" class="form-label"></label>
+        <select asp-for="DifficultyLevel" asp-items="Model.DifficultyLevels" class="form-select"></select>
+        <span asp-validation-for="DifficultyLevel" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-success">Save Changes</button>
@@ -122,12 +122,7 @@
             ingredientIndex++;
         });
 
-        // document.getElementById('ingredients-list').addEventListener('click', function (e) {
-        //     if (e.target.classList.contains('remove-ingredient')) {
-        //         e.target.closest('.ingredient-row').remove();
-        //     }
-        // });
-
+        
 
 
 

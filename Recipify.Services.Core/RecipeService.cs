@@ -31,7 +31,7 @@ namespace Recipify.Services.Core
                 .Include(r => r.Cuisine)
                 .Include(r => r.Difficulty)
                 .Include(r => r.Ingredients)
-                .Include(r => r.Comments)
+              //  .Include(r => r.Comments)
                   .Select(r => new RecipeIndexViewModel
                   {
                       Id = r.Id,
@@ -41,7 +41,6 @@ namespace Recipify.Services.Core
                       CuisineId = r.Cuisine.Id,
                       ShortDescription = r.Description,
                       DifficultyLevelId = r.Difficulty.Id,
-                     // Ingredients = (List<IngredientInputModel>)r.Ingredients,
                       //Comments
 
                   })
@@ -125,9 +124,9 @@ namespace Recipify.Services.Core
         public async Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model)
         {
             //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
-            Category? categoryRef = await this.dbContext.Categories.FirstAsync(c => c.Id == model.CategoryId);
-            Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstAsync(c => c.Id == model.CuisineId);
-            DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevelId);
+            Category? categoryRef = await this.dbContext.Categories.FirstAsync(c => c.Id == model.Category);
+            Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstAsync(c => c.Id == model.Cuisine);
+            DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevel);
             if (categoryRef != null && cuisineRef != null && difficultyRef != null /*&& user!=null*/)
             {
 
@@ -146,9 +145,9 @@ namespace Recipify.Services.Core
                     Instructions = model.Instructions,
                     Ingredients = ingredients,
                     ImageUrl = model.ImageUrl,
-                    CategoryId = model.CategoryId,
-                    CuisineId = model.CuisineId,
-                    DifficultyId = model.DifficultyLevelId,
+                    CategoryId = model.Category,
+                    CuisineId = model.Cuisine,
+                    DifficultyId = model.DifficultyLevel,
                     Category = categoryRef,
                     Cuisine = cuisineRef,
                     Difficulty = difficultyRef
@@ -191,9 +190,9 @@ namespace Recipify.Services.Core
             //    })
             //    .ToList();
             recipe.Instructions = model.Instructions;
-            recipe.CategoryId = model.CategoryId;
-            recipe.CuisineId = model.CuisineId;
-            recipe.DifficultyId = model.DifficultyLevelId;
+            recipe.CategoryId = model.Category;
+            recipe.CuisineId = model.Cuisine;
+            recipe.DifficultyId = model.DifficultyLevel;
 
 
             if (!string.IsNullOrEmpty(deletedIds))
@@ -288,9 +287,9 @@ namespace Recipify.Services.Core
             recipe.Description = model.ShortDescription;
             recipe.ImageUrl = model.ImageUrl;
             recipe.Instructions = model.Instructions;
-            recipe.CategoryId = model.CategoryId;
-            recipe.CuisineId = model.CuisineId;
-            recipe.DifficultyId = model.DifficultyLevelId;
+            recipe.CategoryId = model.Category;
+            recipe.CuisineId = model.Cuisine;
+            recipe.DifficultyId = model.DifficultyLevel;
 
             try
             {
@@ -336,6 +335,8 @@ namespace Recipify.Services.Core
                 })
                 .FirstOrDefaultAsync();
         }
+   
+
+   
     }
-    
 }

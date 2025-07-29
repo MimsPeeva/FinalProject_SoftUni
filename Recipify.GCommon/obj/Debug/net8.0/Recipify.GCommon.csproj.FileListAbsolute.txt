@@ -10,3 +10,4 @@ D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.dll
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\refint\Recipify.GCommon.dll
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.pdb
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\ref\Recipify.GCommon.dll
+D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.csproj.AssemblyReference.cache

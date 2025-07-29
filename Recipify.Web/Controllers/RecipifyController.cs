@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Data.Models;
 using Recipify.Services.Core.Contracts;
+using Recipify.Web.Helpers;
 using Recipify.Web.ViewModels.Recipe;
 
 namespace Recipify.Web.Controllers
@@ -46,13 +47,17 @@ namespace Recipify.Web.Controllers
                     await recipeService.GetAllRecipesAsync();
                 return View(allRecipes);
             }
-            catch (Exception )
+            catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
                 return View(new List<RecipeIndexViewModel>());
-              
+
             }
         }
+
+
+
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
@@ -208,9 +213,9 @@ namespace Recipify.Web.Controllers
                        Name = i.Name ?? string.Empty,
                         Quantity = i.Quantity ?? string.Empty,
                     }).ToList(),
-                    CategoryId = recipe.CategoryId,
-                    CuisineId = recipe.CuisineId,
-                    DifficultyLevelId = recipe.DifficultyId,
+                    Category = recipe.CategoryId,
+                    Cuisine = recipe.CuisineId,
+                    DifficultyLevel = recipe.DifficultyId,
                     Categories = (await categoryService.GetAllCategoriesDropDownAsync())
                         .Select(c => new SelectListItem
                         {
@@ -283,9 +288,9 @@ namespace Recipify.Web.Controllers
             recipe.Description = model.ShortDescription;
             recipe.ImageUrl = model.ImageUrl;
             recipe.Instructions = model.Instructions;
-            recipe.CategoryId = model.CategoryId;
-            recipe.CuisineId = model.CuisineId;
-            recipe.DifficultyId = model.DifficultyLevelId;
+            recipe.CategoryId = model.Category;
+            recipe.CuisineId = model.Cuisine;
+            recipe.DifficultyId = model.DifficultyLevel;
 
             //var modelIngredientNames = model.Ingredients.Select(i => i.Name).ToList();
 

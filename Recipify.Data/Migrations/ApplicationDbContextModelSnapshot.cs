@@ -239,7 +239,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
 
                     b.HasData(
                         new
@@ -304,7 +304,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasIndex("RecipeId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
 
                     b.HasData(
                         new
@@ -371,7 +371,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactMessages");
+                    b.ToTable("ContactMessages", (string)null);
                 });
 
             modelBuilder.Entity("Recipify.Data.Models.Cuisine", b =>
@@ -389,7 +389,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cuisines");
+                    b.ToTable("Cuisines", (string)null);
 
                     b.HasData(
                         new
@@ -454,7 +454,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Difficulties");
+                    b.ToTable("Difficulties", (string)null);
 
                     b.HasData(
                         new
@@ -499,7 +499,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasIndex("RecipeId");
 
-                    b.ToTable("Ingredients");
+                    b.ToTable("Ingredients", (string)null);
 
                     b.HasData(
                         new
@@ -683,7 +683,7 @@ namespace Recipify.Data.Migrations
 
                     b.HasIndex("DifficultyId");
 
-                    b.ToTable("Recipes");
+                    b.ToTable("Recipes", (string)null);
 
                     b.HasData(
                         new
@@ -747,7 +747,7 @@ namespace Recipify.Data.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new

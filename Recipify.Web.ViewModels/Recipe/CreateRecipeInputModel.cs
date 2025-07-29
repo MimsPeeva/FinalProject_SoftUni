@@ -30,13 +30,13 @@ namespace Recipify.Web.ViewModels.Recipe
 
        public List<IngredientInputModel>? Ingredients { get; set; } = new List<IngredientInputModel>();
      
-        public int CategoryId { get; set; }
+        public int Category { get; set; }
 
         public IEnumerable<SelectListItem> Categories { get; set; } = new List<SelectListItem>();
-        public int CuisineId { get; set; }
+        public int Cuisine { get; set; }
 
          public IEnumerable<SelectListItem> Cuisines { get; set; } = new List<SelectListItem>();
-        public int DifficultyLevelId { get; set; }
+        public int DifficultyLevel { get; set; }
 
         public IEnumerable<SelectListItem>? DifficultyLevels { get; set; } = new List<SelectListItem>();
     }

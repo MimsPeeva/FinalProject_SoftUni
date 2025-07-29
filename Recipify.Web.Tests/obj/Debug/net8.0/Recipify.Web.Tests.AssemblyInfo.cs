@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d02ed1f03bc140b77922752952bfb00aa611a908")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b04f8fccb481ceb9692e40f8e3fca37b97e3fca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.Web.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.Web.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
