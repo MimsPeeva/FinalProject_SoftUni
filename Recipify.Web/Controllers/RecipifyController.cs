@@ -36,31 +36,76 @@ namespace Recipify.Web.Controllers
             this.userManager = userManager;
             this.dbContext = dbContext;
         }
+        //[HttpGet]
+        //[AllowAnonymous]
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    try
+        //    {
+        //       var allRecipes = await recipeService.GetAllRecipesAsync();
+
+        //        var viewModel = new RecipeSearchViewModel
+        //        {
+        //            SearchName = string.Empty,
+        //            Results = allRecipes.ToList(),
+        //        };
+        //        return View(viewModel);
+
+        //    }
+        //    catch (Exception)
+        //    {
+        //        ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
+
+        //        var fallbackModel = new RecipeSearchViewModel
+        //        {
+        //            SearchName = string.Empty,
+        //            Results = new List<RecipeIndexViewModel>(),
+        //        };
+
+        //        return View(fallbackModel);
+        //    }
+        //}
+
         [HttpGet]
         [AllowAnonymous]
-
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchName = "", int page = 1)
         {
+            const int pageSize = 8;
+
             try
             {
-               var allRecipes = await recipeService.GetAllRecipesAsync();
+                var allRecipes = string.IsNullOrWhiteSpace(searchName)
+                    ? await recipeService.GetAllRecipesAsync()
+                    : await recipeService.SearchRecipesAsync(searchName);
+
+                var totalRecipes = allRecipes.Count();
+
+                var pagedRecipes = allRecipes
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
 
                 var viewModel = new RecipeSearchViewModel
                 {
-                    SearchName = string.Empty,
-                    Results = allRecipes.ToList(),
+                    SearchName = searchName,
+                    Results = pagedRecipes,
+                    CurrentPage = page,
+                    TotalPages = (int)Math.Ceiling(totalRecipes / (double)pageSize)
                 };
+
                 return View(viewModel);
-                // return View(allRecipes);
             }
             catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
-                // return View(new List<RecipeIndexViewModel>());
+
                 var fallbackModel = new RecipeSearchViewModel
                 {
-                    SearchName = string.Empty,
+                    SearchName = searchName,
                     Results = new List<RecipeIndexViewModel>(),
+                    CurrentPage = 1,
+                    TotalPages = 1
                 };
 
                 return View(fallbackModel);
@@ -372,7 +417,7 @@ namespace Recipify.Web.Controllers
         }
 
         [HttpGet]
-        // [Authorize(Roles = "Administrator")]
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
 
@@ -419,7 +464,7 @@ namespace Recipify.Web.Controllers
             return View(model);
         }
         [HttpPost]
-        // [Authorize(Roles = "Administrator")]
+         [Authorize]
         public async Task<IActionResult> Delete(DeleteRecipeInputModel inputModel)
         {
             //try

@@ -30,21 +30,15 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Recipify" asp-action="Index">Recipes</a>
                         </li>
-                      @*   <li class="nav-item">
-                            <a class="nav-link" asp-controller="Recipify" asp-action="Index">Categories</a>
-                        </li> *@
                         <li>
                             <a class="nav-link" asp-controller="AboutUs" asp-action="Index">About Us</a>
                         </li>
                         <li>
                             <a class="nav-link" asp-controller="Contacts" asp-action="Index">Contact Us</a>
 						</li>
-                        <li class="nav-item">
+                       @*  <li class="nav-item">
                             <form asp-controller="Recipify" asp-action="Search" method="get">
-                                @* <p>
-                                    <label>Search: <input type="text" name="SearchString" /></label>
-                                    <input type="submit" value="Search" />
-                                </p> *@
+                              
                                 <div class="row mb-3">
                                     <div class="col-md-8">
                                         <input type="text" name="SearchName" class="form-control" placeholder="Search by name..."  />
@@ -54,7 +48,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </li>
+                        </li> *@
                        
                         @if (User.IsInRole("Administrator"))
                         {

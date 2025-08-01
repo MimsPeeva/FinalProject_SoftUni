@@ -9,9 +9,11 @@ namespace Recipify.Web.ViewModels.Recipe
 {
     public class RecipeSearchViewModel
     {
-        public string SearchName { get; set; }
-       // public List<SelectListItem> Categories { get; set; }
+        public string SearchName { get; set; }= string.Empty;
+        // public List<SelectListItem> Categories { get; set; }
         public List<RecipeIndexViewModel> Results { get; set; } = new List<RecipeIndexViewModel>();
+        public int CurrentPage { get; set; }
+        public int TotalPages { get; set; }
     }
 
 
