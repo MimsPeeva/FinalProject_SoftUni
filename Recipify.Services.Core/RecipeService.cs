@@ -252,16 +252,7 @@ namespace Recipify.Services.Core
 
             return await dbContext.Recipes
                 .AsNoTracking()
-                .Include(r => r.Category)
-                .Include(r => r.Cuisine)
-                .Include(r => r.Difficulty)
-                .Where(r =>
-                    r.Title.ToLower().Contains(query) ||
-                    r.Description.ToLower().Contains(query) ||
-                    r.Category.Name.ToLower().Contains(query) ||
-                    r.Cuisine.Name.ToLower().Contains(query) ||
-                    r.Difficulty.Level.ToLower().Contains(query)
-                )
+                .Where(r => r.Title.ToLower().Contains(query) )
                 .Select(r => new RecipeIndexViewModel
                 {
                     Id = r.Id,

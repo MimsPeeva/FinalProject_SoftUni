@@ -5,6 +5,12 @@
     ViewData["Title"] = "Search Recipes";
 }
 
+@{
+    var searchName = Model?.SearchName ?? "";
+    var results = Model?.Results ?? new List<RecipeIndexViewModel>();
+}
+
+
 <link href="~/css/templatemo-softy-pinko.css" rel="stylesheet" media="all">
 
 <link href="~/css/font-awesome.css" rel="stylesheet" media="all">
@@ -19,27 +25,28 @@
 <form asp-action="Search" method="get">
     <div class="row mb-3">
         <div class="col-md-4">
-            <input type="text" name="SearchTerm" class="form-control" placeholder="Search by name..." value="@Model.SearchTerm" />
+            <input type="text" name="SearchName" class="form-control" placeholder="Search by name..." value="@searchName" />
+           
         </div>
-        <div class="col-md-4">
-            <select name="CategoryId" class="form-select">
-                <option value="">-- All Categories --</option>
-                @foreach (var category in Model.Categories)
-                {
-                    <option value="@category.Value" selected="@(Model.CategoryId == category.Value)">@category.Text</option>
-                }
-            </select>
-        </div>
+      
         <div class="col-md-4">
             <button type="submit" class="btn btn-primary w-100">Search</button>
         </div>
     </div>
 </form>
-
-@if (Model.Results != null && Model.Results.Any())
+@if (Model == null)
+{
+    <p>Model is NULL!</p>
+}
+else
+{
+    <p>SearchName: @Model.SearchName</p>
+    <p>Results count: @(Model.Results?.Count ?? 0)</p>
+}
+@if (results.Any())
 {
     <div class="row text-center">
-        @foreach (var recipe in Model.Results)
+        @foreach (var recipe in results)
         {
             <div class="col-md-3 mb-4">
                 <div class="card h-100">

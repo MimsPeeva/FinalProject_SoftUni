@@ -43,15 +43,27 @@ namespace Recipify.Web.Controllers
         {
             try
             {
-                IEnumerable<RecipeIndexViewModel> allRecipes =
-                    await recipeService.GetAllRecipesAsync();
-                return View(allRecipes);
+               var allRecipes = await recipeService.GetAllRecipesAsync();
+
+                var viewModel = new RecipeSearchViewModel
+                {
+                    SearchName = string.Empty,
+                    Results = allRecipes.ToList(),
+                };
+                return View(viewModel);
+                // return View(allRecipes);
             }
             catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
-                return View(new List<RecipeIndexViewModel>());
+                // return View(new List<RecipeIndexViewModel>());
+                var fallbackModel = new RecipeSearchViewModel
+                {
+                    SearchName = string.Empty,
+                    Results = new List<RecipeIndexViewModel>(),
+                };
 
+                return View(fallbackModel);
             }
         }
 
@@ -448,22 +460,36 @@ namespace Recipify.Web.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Search(string query)
+        public async Task<IActionResult> Search(string searchName)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(query))
+                if (string.IsNullOrWhiteSpace(searchName))
                 {
-                    return RedirectToAction(nameof(Index));
+                    var emptyViewModel = new RecipeSearchViewModel
+                    {
+                        SearchName = string.Empty,
+                        Results = new List<RecipeIndexViewModel>(),
+                    };
+
+                    return View("Search", emptyViewModel);
                 }
-                IEnumerable<RecipeIndexViewModel> searchResults = await recipeService.SearchRecipesAsync(query);
-                return View("Index", searchResults);
+
+                var results = await recipeService.SearchRecipesAsync(searchName);
+
+                var viewModel = new RecipeSearchViewModel
+                {
+                    SearchName = searchName,
+                    Results = results.ToList()
+                };
+
+                return View("Search", viewModel);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 ModelState.AddModelError(string.Empty, "An error occurred while searching for recipes.");
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Search));
             }
         }
     }

@@ -1,5 +1,7 @@
 ﻿@using Recipify.Web.ViewModels.Recipe;
- @model IEnumerable<Recipify.Web.ViewModels.Recipe.RecipeIndexViewModel>
+@*  @model IEnumerable<Recipify.Web.ViewModels.Recipe.RecipeIndexViewModel>
+ *@
+ @model Recipify.Web.ViewModels.Recipe.RecipeSearchViewModel
 
 @{
     ViewData["Title"] = "All Recipes";
@@ -25,7 +27,7 @@
 <hr />
 
 <div class="row text-center">
-    @foreach (var recipe in Model)
+    @foreach (var recipe in Model.Results)
     {
         <div class="col-md-3 mb-4">
             <div class="card h-100">
