@@ -87,7 +87,7 @@ namespace Recipify.Services.Core
                 CategoryId = recipeModel.CategoryId,
                 CuisineId = recipeModel.CuisineId,
                 DifficultyLevelId = recipeModel.DifficultyId,
-                Comments = new List<CommentViewModel>()
+              //  Comments = new List<CommentViewModel>()
             };
 
             return recipeDetails;
@@ -109,12 +109,12 @@ namespace Recipify.Services.Core
             CategoryName = r.Category.Name,
             CuisineName = r.Cuisine.Name,
             DifficultyLevel = r.Difficulty.Level,
-            Comments = r.Comments.Select(c => new CommentViewModel
-            {
-                Id = c.Id,
-                Content = c.Content,
-                AuthorName = c.Author,
-            }).ToList()
+            //Comments = r.Comments.Select(c => new CommentViewModel
+            //{
+            //    Id = c.Id,
+            //    Content = c.Content,
+            //    AuthorName = c.Author,
+            //}).ToList()
         })
         .FirstOrDefaultAsync();
 

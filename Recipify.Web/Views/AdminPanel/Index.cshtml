@@ -27,7 +27,7 @@
                 <td>@user.Email</td>
                 <td>@string.Join(", ", user.Roles)</td>
                 <td>
-                    <form method="post" asp-action="AddToRole" class="mb-2">
+                    @* <form method="post" asp-action="AddToRole" class="mb-2">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
                         <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
@@ -39,7 +39,43 @@
                         <input type="hidden" name="userId" value="@user.UserId" />
                         <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to remove" />
                         <button type="submit" class="btn btn-sm btn-danger">Remove Role</button>
+                    </form> *@
+
+                    <form method="post" asp-action="AddToRole" class="mb-2">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="userId" value="@user.UserId" />
+                        <select name="role" class="form-control d-inline-block w-50">
+                            <option value="">-- Select Role to Add --</option>
+                            @foreach (var role in user.AllRoles)
+                            {
+                                <option value="@role">@role</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
                     </form>
+
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Message"]</div>
+                    }
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger">@TempData["Error"]</div>
+                    }
+
+                    <form method="post" asp-action="RemoveFromRole">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="userId" value="@user.UserId" />
+                        <select name="role" class="form-control d-inline-block w-50">
+                            <option value="">-- Select Role to Remove --</option>
+                            @foreach (var role in user.Roles)
+                            {
+                                <option value="@role">@role</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-danger">Remove Role</button>
+                    </form>
+
                 </td>
             </tr>
         }

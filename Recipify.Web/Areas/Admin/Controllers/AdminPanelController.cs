@@ -44,38 +44,42 @@ namespace Recipify.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToRole(string userId, string role)
         {
+            logger.LogWarning("➡️ AddToRole triggered for userId: {UserId}, role: {Role}", userId, role);
+
             var user = await userManager.FindByIdAsync(userId);
 
             if (string.IsNullOrWhiteSpace(role))
             {
-                logger.LogWarning("Role name was empty for user ID: {UserId}", userId);
+                TempData["Error"] = "❌ Role name was empty.";
                 return RedirectToAction(nameof(Index));
             }
 
             if (user == null)
             {
-                logger.LogWarning("User not found with ID: {UserId}", userId);
+                TempData["Error"] = $"❌ User not found with ID: {userId}";
                 return RedirectToAction(nameof(Index));
             }
 
             if (!await roleManager.RoleExistsAsync(role))
             {
-                logger.LogWarning("Role '{Role}' does not exist", role);
+                TempData["Error"] = $"❌ Role '{role}' does not exist.";
                 return RedirectToAction(nameof(Index));
             }
 
             var result = await userManager.AddToRoleAsync(user, role);
+
             if (result.Succeeded)
             {
-                logger.LogInformation("Added role '{Role}' to user '{Email}'", role, user.Email);
+                TempData["Message"] = $"✅ Role '{role}' added to {user.Email}.";
             }
             else
             {
-                logger.LogError("Failed to add role. Errors: {Errors}", string.Join(", ", result.Errors.Select(e => e.Description)));
+                TempData["Error"] = $"❌ Failed to add role: {string.Join(", ", result.Errors.Select(e => e.Description))}";
             }
 
             return RedirectToAction(nameof(Index));
         }
+
         [HttpPost]
         public async Task<IActionResult> RemoveFromRole(string userId, string role)
         {

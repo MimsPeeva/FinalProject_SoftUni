@@ -138,6 +138,7 @@ namespace Recipify.Web.Controllers
       
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddComment(int recipeId, string content)
         {
             try
@@ -304,6 +305,7 @@ namespace Recipify.Web.Controllers
         }
         [HttpPost]
         [Authorize]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(EditRecipeViewModel model, string? DeletedIngredientIds)
         {
             if (!ModelState.IsValid)
@@ -465,6 +467,7 @@ namespace Recipify.Web.Controllers
         }
         [HttpPost]
          [Authorize]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(DeleteRecipeInputModel inputModel)
         {
             //try

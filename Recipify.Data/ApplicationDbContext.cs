@@ -5,6 +5,7 @@
     using Microsoft.Identity.Client;
     using Recipify.Data.Models;
     using System.Reflection;
+    using System.Reflection.Emit;
 
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -28,7 +29,8 @@
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             builder.Entity<Recipe>()
                 .HasQueryFilter(r => !r.IsDeleted);
-
+            builder.Entity<Comment>().HasQueryFilter(c => !c.Recipe.IsDeleted);
+            builder.Entity<Ingredient>().HasQueryFilter(i => !i.Recipe.IsDeleted);
         }
     }
 }

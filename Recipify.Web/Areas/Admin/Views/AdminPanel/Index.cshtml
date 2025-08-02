@@ -59,8 +59,15 @@
                     <form method="post" asp-action="AddToRole" class="mb-2">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-                        <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
-                        <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
+@*                         <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
+ *@     <select name="role" class="form-select d-inline-block w-50">
+                            @foreach (var role in user.AllRoles)
+                            {
+                                <option value="@role">@role</option>
+                            }
+                        </select>
+ 
+         <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
                     </form>
 
                     <form method="post" asp-action="RemoveFromRole" class="d-flex gap-2 align-items-center">

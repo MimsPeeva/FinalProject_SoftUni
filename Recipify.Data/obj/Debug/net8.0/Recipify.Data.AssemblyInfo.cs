@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b04f8fccb481ceb9692e40f8e3fca37b97e3fca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2054cada355238611dfd140afafadff914c53a9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

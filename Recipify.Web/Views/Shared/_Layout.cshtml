@@ -63,7 +63,22 @@
 
     <footer class="border-top text-center text-muted py-3">
         <div class="container">
-            &copy; 2025 - Recipify
+            <ul class="list-inline">
+                <li class="list-inline-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="list-inline-item"><a asp-controller="Recipify" asp-action="Index">All Recipes</a></li>
+                <li class="list-inline-item"><a asp-controller="AboutUs" asp-action="Index">About Us</a></li>
+                <li class="list-inline-item"><a asp-controller="Contacts" asp-action="Index">Contact</a></li>
+                <li class="list-inline-item"><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+            </ul>
+            <p class="small">&copy; @DateTime.Now.Year - Recipify. Created by Mariya Peeva. All rights reserved.</p>
+            <p class="small">Need help? Email us at <a href="mailto:support@recipify.com">support@recipify.com</a></p>
+            <p class="small"> &copy; 2025 - Recipify</p>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook me-2"></i></a>
+                <a href="#"><i class="bi bi-instagram me-2"></i></a>
+                <a href="#"><i class="bi bi-twitter-x me-2"></i></a>
+            </div>
+
             | <a asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
@@ -80,5 +95,8 @@
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     @RenderSection("Scripts", required: false)
+
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
 </body>
 </html>

@@ -51,6 +51,9 @@ namespace Recipify.Web
             builder.Services.AddScoped<IDifficultyLevelService, DifficultyLevelService>();
             builder.Services.AddScoped<ICommentService, CommentService>();
 
+         
+
+
             WebApplication? app = builder.Build();
             
             if (app.Environment.IsDevelopment())
@@ -111,6 +114,8 @@ namespace Recipify.Web
     pattern: "{area:exists}/{controller=AdminPanel}/{action=Index}/{id?}");
 
             app.MapRazorPages();
+
+         
 
             app.Run();
 
