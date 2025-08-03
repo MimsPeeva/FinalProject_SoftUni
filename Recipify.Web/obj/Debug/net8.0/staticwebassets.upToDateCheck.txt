@@ -1,4 +1,5 @@
 wwwroot\css\bootstrap.min.css
+wwwroot\css\custom.css
 wwwroot\css\flex-slider.css
 wwwroot\css\font-awesome.css
 wwwroot\css\templatemo-softy-pinko.css

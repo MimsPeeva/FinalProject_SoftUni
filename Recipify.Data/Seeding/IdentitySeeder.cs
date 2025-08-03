@@ -10,7 +10,7 @@ namespace Recipify.Data.Seeding
 {
     public class IdentitySeeder
     {
-        private static readonly string[] Roles = new[] { "Administrator", "User" };
+        private static readonly string[] Roles = new[] { "Administrator", "User", "Editor" };
 
         public static async Task SeedRolesAsync(IServiceProvider serviceProvider)
         {
