@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -127,6 +131,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"

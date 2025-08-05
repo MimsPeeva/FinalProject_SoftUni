@@ -1,6 +1,7 @@
 D:\FinalProject_SoftUni\Recipify.Data.Common\bin\Debug\net8.0\Recipify.Data.Common.deps.json
 D:\FinalProject_SoftUni\Recipify.Data.Common\bin\Debug\net8.0\Recipify.Data.Common.dll
 D:\FinalProject_SoftUni\Recipify.Data.Common\bin\Debug\net8.0\Recipify.Data.Common.pdb
+D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.csproj.AssemblyReference.cache
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.AssemblyInfoInputs.cache
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.AssemblyInfo.cs
@@ -10,4 +11,3 @@ D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Comm
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\refint\Recipify.Data.Common.dll
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.pdb
 D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\ref\Recipify.Data.Common.dll
-D:\FinalProject_SoftUni\Recipify.Data.Common\obj\Debug\net8.0\Recipify.Data.Common.csproj.AssemblyReference.cache

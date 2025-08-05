@@ -1187,6 +1187,19 @@
           }
         }
       },
+      "Moq/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Moq.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Moq.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "MvcPagedList.Core/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -3911,6 +3924,20 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Moq/4.5.0": {
+      "sha512": "RMXNiLcvhdpGYZcN41pbJc9HC+PYB7+0a9QteJDKQ6sadFgo1FuYFV+xyADfFJalXzoZx5T40ypx8yX3bk0b5A==",
+      "type": "package",
+      "path": "moq/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Moq.dll",
+        "lib/net45/Moq.pdb",
+        "lib/net45/Moq.xml",
+        "moq.4.5.0.nupkg.sha512",
+        "moq.nuspec"
       ]
     },
     "MvcPagedList.Core/3.2.0": {
@@ -8025,6 +8052,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Moq >= 4.5.0",
       "MvcPagedList.Core >= 3.2.0"
     ]
   },
@@ -8079,6 +8107,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Moq": {
+            "target": "Package",
+            "version": "[4.5.0, )"
+          },
           "MvcPagedList.Core": {
             "target": "Package",
             "version": "[3.2.0, )"
@@ -8103,5 +8135,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Moq 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Moq",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

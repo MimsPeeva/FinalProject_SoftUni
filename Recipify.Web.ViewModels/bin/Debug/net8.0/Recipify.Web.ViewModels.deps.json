@@ -9,6 +9,7 @@
       "Recipify.Web.ViewModels/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Models": "1.0.0",
           "Recipify.GCommon": "1.0.0",
@@ -955,6 +956,14 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+      "Moq/4.5.0": {
+        "runtime": {
+          "lib/net45/Moq.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        }
+      },
       "MvcPagedList.Core/3.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.2.0"
@@ -1683,6 +1692,7 @@
       },
       "Recipify.Data.Common/1.0.0": {
         "dependencies": {
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0"
         },
         "runtime": {
@@ -1695,6 +1705,7 @@
       "Recipify.Data.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
           "Recipify.GCommon": "1.0.0"
@@ -1708,6 +1719,7 @@
       },
       "Recipify.GCommon/1.0.0": {
         "dependencies": {
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0"
         },
         "runtime": {
@@ -1720,6 +1732,7 @@
       "Recipify.Services.AutoMapping/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.GCommon": "1.0.0",
           "Recipify.Services.Common": "1.0.0"
@@ -1733,6 +1746,7 @@
       },
       "Recipify.Services.Common/1.0.0": {
         "dependencies": {
+          "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0"
         },
         "runtime": {
@@ -2302,6 +2316,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Moq/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RMXNiLcvhdpGYZcN41pbJc9HC+PYB7+0a9QteJDKQ6sadFgo1FuYFV+xyADfFJalXzoZx5T40ypx8yX3bk0b5A==",
+      "path": "moq/4.5.0",
+      "hashPath": "moq.4.5.0.nupkg.sha512"
     },
     "MvcPagedList.Core/3.2.0": {
       "type": "package",

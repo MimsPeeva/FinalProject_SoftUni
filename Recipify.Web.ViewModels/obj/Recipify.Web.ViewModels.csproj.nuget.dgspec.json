@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -134,6 +138,10 @@
               "target": "Package",
               "version": "[8.0.15, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -206,6 +214,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -289,6 +301,10 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -361,6 +377,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -446,6 +466,10 @@
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.3.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",

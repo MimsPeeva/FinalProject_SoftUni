@@ -1,6 +1,7 @@
 D:\FinalProject_SoftUni\Recipify.GCommon\bin\Debug\net8.0\Recipify.GCommon.deps.json
 D:\FinalProject_SoftUni\Recipify.GCommon\bin\Debug\net8.0\Recipify.GCommon.dll
 D:\FinalProject_SoftUni\Recipify.GCommon\bin\Debug\net8.0\Recipify.GCommon.pdb
+D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.csproj.AssemblyReference.cache
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.GeneratedMSBuildEditorConfig.editorconfig
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.AssemblyInfoInputs.cache
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.AssemblyInfo.cs
@@ -10,4 +11,3 @@ D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.dll
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\refint\Recipify.GCommon.dll
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.pdb
 D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\ref\Recipify.GCommon.dll
-D:\FinalProject_SoftUni\Recipify.GCommon\obj\Debug\net8.0\Recipify.GCommon.csproj.AssemblyReference.cache

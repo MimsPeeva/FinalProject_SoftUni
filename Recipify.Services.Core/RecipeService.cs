@@ -15,11 +15,11 @@ namespace Recipify.Services.Core
     public class RecipeService : IRecipeService
     {
         private readonly ApplicationDbContext dbContext;
-        private readonly UserManager<IdentityUser> userManager;
-        public RecipeService(ApplicationDbContext dbContext, UserManager<IdentityUser> userManager)
+      //  private readonly UserManager<IdentityUser> userManager;
+        public RecipeService(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
-            this.userManager = userManager;
+           // this.userManager = userManager;
         }
 
 
