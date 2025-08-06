@@ -4,7 +4,7 @@
 
 
 h1,h2,h3,h4 {
-    color: deeppink;
+    color: deeppink !important;
     text-align: center;
 }
 
@@ -27,8 +27,4 @@ h1,h2,h3,h4 {
     background-color: hotpink !important;
 }
 
-a asp-controller {
-    background-color: pink;
-    color: white;
-    border-color: #ff69b4;
-}
+

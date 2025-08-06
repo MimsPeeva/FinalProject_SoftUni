@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\FinalProject_SoftUni\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\templatemo-softy-pinko.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\templatemo-softy-pinko.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|d:\\finalproject_softuni\\recipify.web\\wwwroot\\css\\templatemo-softy-pinko.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7}|Recipify.Web\\Recipify.Web.csproj|solutionrelative:recipify.web\\wwwroot\\css\\templatemo-softy-pinko.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,39 +34,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "templatemo-softy-pinko.css",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\templatemo-softy-pinko.css",
               "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\templatemo-softy-pinko.css",
               "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\templatemo-softy-pinko.css",
               "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\templatemo-softy-pinko.css",
-              "ViewState": "AgIAAIkFAAAAAAAAAAAQwJ8FAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAIwFAAAAAAAAAAAQwKMFAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-08-06T20:20:18.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Recipify.Web\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Recipify.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-06T20:13:36.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "custom.css",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\custom.css",
               "RelativeDocumentMoniker": "Recipify.Web\\wwwroot\\css\\custom.css",
               "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Web\\wwwroot\\css\\custom.css",
               "RelativeToolTip": "Recipify.Web\\wwwroot\\css\\custom.css",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-08-06T20:11:24.809Z",
               "EditorCaption": ""

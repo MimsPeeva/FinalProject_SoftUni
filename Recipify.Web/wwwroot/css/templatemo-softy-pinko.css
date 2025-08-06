@@ -1439,3 +1439,9 @@ a {
     background-color: #DB0090;
     color:white;
 }
+
+customBtn {
+    background-color: pink !important;
+    color: white;
+    border-color: #ff69b4;
+}
