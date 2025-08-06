@@ -1,4 +1,4 @@
-﻿@using Recipify.Web.ViewModels.Admin
+﻿﻿@using Recipify.Web.ViewModels.Admin
 @model IEnumerable<UserRoleViewModel>
 
 @{
@@ -59,21 +59,21 @@
                     <form method="post" asp-action="AddToRole" class="mb-2">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-@*                         <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
+                        @*                         <input type="text" name="role" class="form-control d-inline-block w-50" placeholder="Enter role to add" />
  *@     <select name="role" class="form-select d-inline-block w-50">
                             @foreach (var role in user.AllRoles)
                             {
                                 <option value="@role">@role</option>
                             }
                         </select>
- 
-         <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
+
+                        <button type="submit" class="btn btn-sm btn-primary">Add Role</button>
                     </form>
 
                     <form method="post" asp-action="RemoveFromRole" class="d-flex gap-2 align-items-center">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="userId" value="@user.UserId" />
-                        <select name="role" title ="role" class="form-control w-50">
+                        <select name="role" title="role" class="form-control w-50">
                             <option disabled selected>Choose role</option>
                             @foreach (var role in user.AllRoles)
                             {

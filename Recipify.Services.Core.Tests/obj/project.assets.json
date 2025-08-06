@@ -1089,6 +1089,22 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.15"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
         "type": "package",
         "dependencies": {
@@ -2335,6 +2351,22 @@
           "lib/net6.0/System.ClientModel.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.CodeDom/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -3784,11 +3816,41 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "xunit.abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net35/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.extensibility.core/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "xunit.abstractions": "[2.0.0]"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.dll": {
+            "related": ".dll.tdnet;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.dll": {
+            "related": ".dll.tdnet;.pdb;.xml"
+          }
+        }
+      },
       "Recipify.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
@@ -3796,7 +3858,8 @@
           "Newtonsoft.Json": "13.0.3",
           "Recipify.Data.Common": "1.0.0",
           "Recipify.Data.Models": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.dll": {}
@@ -3809,8 +3872,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.Common.dll": {}
@@ -3824,10 +3889,12 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.Models.dll": {}
@@ -3840,8 +3907,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.GCommon.dll": {}
@@ -3855,10 +3924,12 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.GCommon": "1.0.0",
-          "Recipify.Services.Common": "1.0.0"
+          "Recipify.Services.Common": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.AutoMapping.dll": {}
@@ -3871,8 +3942,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.Common.dll": {}
@@ -3885,6 +3958,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data": "1.0.0",
@@ -3892,7 +3966,8 @@
           "Recipify.GCommon": "1.0.0",
           "Recipify.Services.AutoMapping": "1.0.0",
           "Recipify.Services.Common": "1.0.0",
-          "Recipify.Web.ViewModels": "1.0.0"
+          "Recipify.Web.ViewModels": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.Core.dll": {}
@@ -3906,11 +3981,13 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Models": "1.0.0",
           "Recipify.GCommon": "1.0.0",
-          "Recipify.Services.AutoMapping": "1.0.0"
+          "Recipify.Services.AutoMapping": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Web.ViewModels.dll": {}
@@ -4998,6 +5075,21 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.8.0.15.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.15": {
+      "sha512": "dA9D6HMKdWnZEpMQdL1CdpRALLEOyBno/S+vC8UEktqp/ZsxN3cnJWoouoAsrXmcNkh29Ryh+DpZdP1/LRKiug==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.8.0.15.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
@@ -6736,6 +6828,33 @@
         "lib/netstandard2.0/System.ClientModel.xml",
         "system.clientmodel.1.0.0.nupkg.sha512",
         "system.clientmodel.nuspec"
+      ]
+    },
+    "System.CodeDom/7.0.0": {
+      "sha512": "GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "type": "package",
+      "path": "system.codedom/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.CodeDom.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "lib/net462/System.CodeDom.dll",
+        "lib/net462/System.CodeDom.xml",
+        "lib/net6.0/System.CodeDom.dll",
+        "lib/net6.0/System.CodeDom.xml",
+        "lib/net7.0/System.CodeDom.dll",
+        "lib/net7.0/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.7.0.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Collections/4.3.0": {
@@ -10471,6 +10590,38 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "xunit.abstractions/2.0.0": {
+      "sha512": "NAdxKQRzuLnCZ0g++x6i87/8rMBpQoRiRlRNLAqfODm2zJPbteHRoSER3DXfxnqrHXyBJT8rFaZ8uveBeQyaMA==",
+      "type": "package",
+      "path": "xunit.abstractions/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/xunit.abstractions.dll",
+        "lib/net35/xunit.abstractions.xml",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.abstractions.dll",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.abstractions.xml",
+        "xunit.abstractions.2.0.0.nupkg.sha512",
+        "xunit.abstractions.nuspec"
+      ]
+    },
+    "xunit.extensibility.core/2.0.0": {
+      "sha512": "QDmEvruvqIfnzraEjPq0tcDBEhrLuSbkLY38xFnrv+H2Q6kHULq1l2nyj5W/xrY2Om3wmkaSs4FMaDXPmK7QCA==",
+      "type": "package",
+      "path": "xunit.extensibility.core/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.dll",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.dll.tdnet",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.pdb",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.core.xml",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.runner.tdnet.dll",
+        "lib/portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS/xunit.runner.utility.desktop.dll",
+        "xunit.extensibility.core.2.0.0.nupkg.sha512",
+        "xunit.extensibility.core.nuspec"
+      ]
+    },
     "Recipify.Data/1.0.0": {
       "type": "project",
       "path": "../Recipify.Data/Recipify.Data.csproj",
@@ -10514,6 +10665,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Microsoft.EntityFrameworkCore >= 8.0.15",
+      "Microsoft.EntityFrameworkCore.InMemory >= 8.0.15",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.5.0",
       "MvcPagedList.Core >= 3.2.0",
@@ -10522,7 +10675,9 @@
       "NUnit3TestAdapter >= 4.5.0",
       "Recipify.Data >= 1.0.0",
       "Recipify.Services.Core >= 1.0.0",
-      "coverlet.collector >= 6.0.0"
+      "System.CodeDom >= 7.0.0",
+      "coverlet.collector >= 6.0.0",
+      "xunit.extensibility.core >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -10583,6 +10738,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.15, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[8.0.15, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.8.0, )"
@@ -10607,9 +10770,17 @@
             "target": "Package",
             "version": "[4.5.0, )"
           },
+          "System.CodeDom": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "coverlet.collector": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "xunit.extensibility.core": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [
@@ -10639,6 +10810,26 @@
       "warningLevel": 1,
       "message": "Package 'Moq 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
       "libraryId": "Moq",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xunit.abstractions 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "xunit.abstractions",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xunit.extensibility.core 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "xunit.extensibility.core",
       "targetGraphs": [
         "net8.0"
       ]

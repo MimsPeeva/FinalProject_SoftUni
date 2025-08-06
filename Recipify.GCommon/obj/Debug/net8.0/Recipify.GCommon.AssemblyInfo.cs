@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Recipify.GCommon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0ece060f1f80e22aee4e9c786358e37a993fb1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8e9b781dd555e2ab72fa4f811040d077597860b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Recipify.GCommon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Recipify.GCommon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2226,6 +2226,22 @@
           "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
         "type": "package",
         "dependencies": {
@@ -3480,17 +3496,20 @@
           }
         }
       },
-      "System.CodeDom/5.0.0": {
+      "System.CodeDom/7.0.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.CodeDom.dll": {
+          "lib/net7.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.CodeDom.dll": {
+          "lib/net7.0/System.CodeDom.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Collections.Immutable/7.0.0": {
@@ -4200,6 +4219,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
@@ -4207,7 +4227,8 @@
           "Newtonsoft.Json": "13.0.3",
           "Recipify.Data.Common": "1.0.0",
           "Recipify.Data.Models": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.dll": {}
@@ -4220,8 +4241,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.Common.dll": {}
@@ -4235,10 +4258,12 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Data.Models.dll": {}
@@ -4251,8 +4276,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.GCommon.dll": {}
@@ -4266,10 +4293,12 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.GCommon": "1.0.0",
-          "Recipify.Services.Common": "1.0.0"
+          "Recipify.Services.Common": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.AutoMapping.dll": {}
@@ -4282,8 +4311,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.Common.dll": {}
@@ -4296,6 +4327,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data": "1.0.0",
@@ -4303,7 +4335,8 @@
           "Recipify.GCommon": "1.0.0",
           "Recipify.Services.AutoMapping": "1.0.0",
           "Recipify.Services.Common": "1.0.0",
-          "Recipify.Web.ViewModels": "1.0.0"
+          "Recipify.Web.ViewModels": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Services.Core.dll": {}
@@ -4316,9 +4349,11 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Web.Infrastructure.dll": {}
@@ -4332,11 +4367,13 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Models": "1.0.0",
           "Recipify.GCommon": "1.0.0",
-          "Recipify.Services.AutoMapping": "1.0.0"
+          "Recipify.Services.AutoMapping": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Recipify.Web.ViewModels.dll": {}
@@ -7369,6 +7406,20 @@
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+      "sha512": "di7I9EUk+ibG2N7Ns4ecUK6Mz7HED7qik3jSbBIhdKXcU3ansXJEAAlOdM7xfRDzozs5elSLk9qQuHCbYwI1yA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
       "sha512": "rOge9UqPepLr4fDSbAjH+gMl4TwK7byKgUy66vgsjlwl11n/+MjbYZAYqfrD8mpGDwJ6Nzv2LIIK2fBHDqA+CQ==",
       "type": "package",
@@ -9332,28 +9383,31 @@
         "system.clientmodel.nuspec"
       ]
     },
-    "System.CodeDom/5.0.0": {
-      "sha512": "JPJArwA1kdj8qDAkY2XGjSWoYnqiM7q/3yRNkt6n28Mnn95MuEGkZXUbPBf7qc3IjwrGY5ttQon7yqHZyQJmOQ==",
+    "System.CodeDom/7.0.0": {
+      "sha512": "GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
       "type": "package",
-      "path": "system.codedom/5.0.0",
+      "path": "system.codedom/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.CodeDom.dll",
-        "lib/net461/System.CodeDom.xml",
+        "buildTransitive/net461/System.CodeDom.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "lib/net462/System.CodeDom.dll",
+        "lib/net462/System.CodeDom.xml",
+        "lib/net6.0/System.CodeDom.dll",
+        "lib/net6.0/System.CodeDom.xml",
+        "lib/net7.0/System.CodeDom.dll",
+        "lib/net7.0/System.CodeDom.xml",
         "lib/netstandard2.0/System.CodeDom.dll",
         "lib/netstandard2.0/System.CodeDom.xml",
-        "ref/net461/System.CodeDom.dll",
-        "ref/net461/System.CodeDom.xml",
-        "ref/netstandard2.0/System.CodeDom.dll",
-        "ref/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.5.0.0.nupkg.sha512",
+        "system.codedom.7.0.0.nupkg.sha512",
         "system.codedom.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Collections.Immutable/7.0.0": {
@@ -10827,6 +10881,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.15",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.15",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.15",
+      "Microsoft.EntityFrameworkCore.InMemory >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.15",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.15",
@@ -10837,7 +10892,8 @@
       "Recipify.GCommon >= 1.0.0",
       "Recipify.Services.Core >= 1.0.0",
       "Recipify.Web.Infrastructure >= 1.0.0",
-      "Recipify.Web.ViewModels >= 1.0.0"
+      "Recipify.Web.ViewModels >= 1.0.0",
+      "System.CodeDom >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -10923,6 +10979,10 @@
             "target": "Package",
             "version": "[8.0.15, )"
           },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[8.0.15, )"
@@ -10946,6 +11006,10 @@
           "MvcPagedList.Core": {
             "target": "Package",
             "version": "[3.2.0, )"
+          },
+          "System.CodeDom": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           }
         },
         "imports": [

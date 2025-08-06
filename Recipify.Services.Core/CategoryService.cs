@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Recipify.Data;
 using Recipify.Services.Core.Contracts;
@@ -14,6 +15,7 @@ namespace Recipify.Services.Core
     public class CategoryService : ICategoryService
     {
         private readonly ApplicationDbContext dbContext;
+      
 
         public CategoryService(ApplicationDbContext dbContext)
         {

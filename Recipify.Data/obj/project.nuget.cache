@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HSpgqvOnJnc=",
+  "dgSpecHash": "sbw5kongITA=",
   "success": true,
   "projectFilePath": "D:\\FinalProject_SoftUni\\Recipify.Data\\Recipify.Data.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.15\\microsoft.entityframeworkcore.abstractions.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.15\\microsoft.entityframeworkcore.analyzers.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.15\\microsoft.entityframeworkcore.design.8.0.15.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.0\\microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.15\\microsoft.entityframeworkcore.relational.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.15\\microsoft.entityframeworkcore.sqlserver.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.15\\microsoft.entityframeworkcore.tools.8.0.15.nupkg.sha512",
@@ -129,7 +130,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
-    "C:\\Users\\Acer\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

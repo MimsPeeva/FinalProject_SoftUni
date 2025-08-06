@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -58,6 +62,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -138,6 +146,10 @@
               "target": "Package",
               "version": "[8.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -145,6 +157,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -228,6 +244,10 @@
               "target": "Package",
               "version": "[8.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.15, )"
@@ -253,6 +273,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -322,6 +346,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -329,6 +357,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -405,6 +437,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
@@ -428,6 +464,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -512,6 +552,10 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -519,6 +563,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -588,6 +636,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -595,6 +647,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -683,6 +739,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -690,6 +750,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -773,6 +837,10 @@
               "target": "Package",
               "version": "[2.3.0, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -780,6 +848,10 @@
             "MvcPagedList.Core": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

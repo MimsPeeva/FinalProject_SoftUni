@@ -9,6 +9,7 @@
       "Recipify.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.15",
           "Moq": "4.5.0",
@@ -17,7 +18,8 @@
           "Newtonsoft.Json": "13.0.3",
           "Recipify.Data.Common": "1.0.0",
           "Recipify.Data.Models": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.Data.dll": {}
@@ -959,6 +961,17 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.15"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51807"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.15",
@@ -1357,7 +1370,7 @@
       },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
-          "System.CodeDom": "4.4.0"
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
@@ -1530,11 +1543,11 @@
           }
         }
       },
-      "System.CodeDom/4.4.0": {
+      "System.CodeDom/7.0.0": {
         "runtime": {
-          "lib/netstandard2.0/System.CodeDom.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.25519.3"
+          "lib/net7.0/System.CodeDom.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -2322,8 +2335,10 @@
       },
       "Recipify.Data.Common/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.Data.Common.dll": {
@@ -2335,10 +2350,12 @@
       "Recipify.Data.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.Data.Models.dll": {
@@ -2349,8 +2366,10 @@
       },
       "Recipify.GCommon/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.GCommon.dll": {
@@ -2793,6 +2812,13 @@
       "sha512": "sha512-Ek0uHShBYrMmfQs0t4SlknWLvZH8P16l10HJtqsFmsz9Ym2E2sKUCq/NbmgBilDdlzF6sy15UFYxQ8O1z8+xBQ==",
       "path": "microsoft.entityframeworkcore.design/8.0.15",
       "hashPath": "microsoft.entityframeworkcore.design.8.0.15.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-di7I9EUk+ibG2N7Ns4ecUK6Mz7HED7qik3jSbBIhdKXcU3ansXJEAAlOdM7xfRDzozs5elSLk9qQuHCbYwI1yA==",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.0",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
       "type": "package",
@@ -3242,12 +3268,12 @@
       "path": "system.clientmodel/1.0.0",
       "hashPath": "system.clientmodel.1.0.0.nupkg.sha512"
     },
-    "System.CodeDom/4.4.0": {
+    "System.CodeDom/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
-      "path": "system.codedom/4.4.0",
-      "hashPath": "system.codedom.4.4.0.nupkg.sha512"
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

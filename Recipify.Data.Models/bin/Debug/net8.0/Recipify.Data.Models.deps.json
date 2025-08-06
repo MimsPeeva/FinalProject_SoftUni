@@ -9,10 +9,12 @@
       "Recipify.Data.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
-          "Recipify.GCommon": "1.0.0"
+          "Recipify.GCommon": "1.0.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.Data.Models.dll": {}
@@ -672,6 +674,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/8.0.15": {},
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.15"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51807"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.15",
@@ -1080,6 +1093,14 @@
         }
       },
       "System.Buffers/4.5.0": {},
+      "System.CodeDom/7.0.0": {
+        "runtime": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1807,8 +1828,10 @@
       },
       "Recipify.Data.Common/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.Data.Common.dll": {
@@ -1819,8 +1842,10 @@
       },
       "Recipify.GCommon/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Moq": "4.5.0",
-          "MvcPagedList.Core": "3.2.0"
+          "MvcPagedList.Core": "3.2.0",
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "Recipify.GCommon.dll": {
@@ -2201,6 +2226,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/8.0.15",
       "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.15.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-di7I9EUk+ibG2N7Ns4ecUK6Mz7HED7qik3jSbBIhdKXcU3ansXJEAAlOdM7xfRDzozs5elSLk9qQuHCbYwI1yA==",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.0",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/8.0.15": {
       "type": "package",
       "serviceable": true,
@@ -2543,6 +2575,13 @@
       "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+    },
+    "System.CodeDom/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

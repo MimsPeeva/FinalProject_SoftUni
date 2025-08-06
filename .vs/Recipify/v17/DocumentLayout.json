@@ -18,19 +18,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "RecipeService.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
               "RelativeDocumentMoniker": "Recipify.Services.Core\\RecipeService.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs*",
-              "RelativeToolTip": "Recipify.Services.Core\\RecipeService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core\\RecipeService.cs",
+              "RelativeToolTip": "Recipify.Services.Core\\RecipeService.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAkwIAAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T20:18:18.727Z",
+              "WhenOpened": "2025-08-06T16:54:52.813Z",
               "EditorCaption": ""
             },
             {
@@ -39,20 +47,12 @@
               "Title": "RecipeServiseTests.cs",
               "DocumentMoniker": "D:\\FinalProject_SoftUni\\Recipify.Services.Core.Tests\\RecipeServiseTests.cs",
               "RelativeDocumentMoniker": "Recipify.Services.Core.Tests\\RecipeServiseTests.cs",
-              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core.Tests\\RecipeServiseTests.cs",
-              "RelativeToolTip": "Recipify.Services.Core.Tests\\RecipeServiseTests.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwGIAAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\FinalProject_SoftUni\\Recipify.Services.Core.Tests\\RecipeServiseTests.cs*",
+              "RelativeToolTip": "Recipify.Services.Core.Tests\\RecipeServiseTests.cs*",
+              "ViewState": "AgIAABIBAAAAAAAAAAAwwDMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T20:14:07.839Z",
+              "WhenOpened": "2025-08-06T15:25:23.261Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

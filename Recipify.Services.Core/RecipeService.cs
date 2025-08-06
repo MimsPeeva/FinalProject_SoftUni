@@ -124,9 +124,9 @@ namespace Recipify.Services.Core
         public async Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model)
         {
             //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
-            Category? categoryRef = await this.dbContext.Categories.FirstAsync(c => c.Id == model.Category);
-            Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstAsync(c => c.Id == model.Cuisine);
-            DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstAsync(c => c.Id == model.DifficultyLevel);
+            Category? categoryRef = await this.dbContext.Categories.FirstOrDefaultAsync(c => c.Id == model.Category);
+            Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstOrDefaultAsync(c => c.Id == model.Cuisine);
+            DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstOrDefaultAsync(c => c.Id == model.DifficultyLevel);
             if (categoryRef != null && cuisineRef != null && difficultyRef != null /*&& user!=null*/)
             {
 
@@ -154,16 +154,13 @@ namespace Recipify.Services.Core
                 };
                 await dbContext.Recipes.AddAsync(recipe);
                 await dbContext.SaveChangesAsync();
+                //add 
+                return;
             }
 
             throw new ArgumentException("Invalid category, cuisine or difficulty level.");
 
-            //var ingredientList = (model.Ingredients ?? new List<string>())
-            //    .Where(i => !string.IsNullOrWhiteSpace(i))
-            //    .Select(name => new Ingredient { Name = name.Trim() })
-            //    .ToList();
-
-            //  recipe.Ingredients = ingredientList;
+            
 
         }
         public async Task EditRecipesAsync(EditRecipeViewModel model,string? deletedIds)

@@ -42,6 +42,7 @@ D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.DotNet.Scaffoldi
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 D:\FinalProject_SoftUni\Recipify.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll

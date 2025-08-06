@@ -9,6 +9,7 @@ namespace Recipify.Web
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Identity.Client;
+    using Recipify.Data.Models;
     using Recipify.Data.Seeding;
     using Recipify.Services.Core;
     using Recipify.Services.Core.Contracts;
@@ -31,6 +32,7 @@ namespace Recipify.Web
                 });
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             builder.Services
+
                 .AddDefaultIdentity<IdentityUser>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;
@@ -50,8 +52,7 @@ namespace Recipify.Web
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IDifficultyLevelService, DifficultyLevelService>();
             builder.Services.AddScoped<ICommentService, CommentService>();
-
-         
+            builder.Services.AddScoped<IAdminService, AdminService>();
 
 
             WebApplication? app = builder.Build();
@@ -73,21 +74,7 @@ namespace Recipify.Web
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
 
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //   var services = scope.ServiceProvider;
-            //    try
-            //    {
-
-            //       await  IdentitySeeder.SeedRolesAsync(services);
-            //        await IdentitySeeder.SeedAdminAsync(services);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        var logger = services.GetRequiredService<ILogger<Program>>();
-            //        logger.LogError(ex, "An error occurred seeding the DB.");
-            //    }
-            //}
+          
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
