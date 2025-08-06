@@ -22,3 +22,13 @@ h1,h2,h3,h4 {
         box-shadow: inherit;
         font-weight: 400;
     }
+
+.custom-a {
+    background-color: hotpink !important;
+}
+
+a asp-controller {
+    background-color: pink;
+    color: white;
+    border-color: #ff69b4;
+}

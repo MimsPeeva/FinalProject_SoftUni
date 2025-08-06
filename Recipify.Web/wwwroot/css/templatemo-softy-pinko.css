@@ -335,7 +335,7 @@ a.main-button {
     padding: 12px 20px;
     background-color: #8261ee;
     text-transform: uppercase;
-    color: #FF589E;
+    color: #DB0090;
     letter-spacing: 0.25px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -348,20 +348,20 @@ a.main-button:hover {
 }
 
 button.main-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  border-radius: 20px;
-  padding: 12px 20px;
-  background-color: #8261ee;
-  text-transform: uppercase;
-     color: #FF589E;
-  letter-spacing: 0.25px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    background-color: #8261ee;
+    text-transform: uppercase;
+    color: #DB0090;
+    letter-spacing: 0.25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 button.main-button:hover {
@@ -1434,4 +1434,8 @@ form {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+a {
+    background-color: #DB0090;
+    color:white;
 }

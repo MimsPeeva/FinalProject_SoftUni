@@ -47,7 +47,7 @@ namespace Recipify.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddToRole(string userId, string role)
         {
-            logger.LogWarning(">>> AddToRole called with userId={UserId}, role={Role}", userId, role);
+            logger.LogWarning("AddToRole called with userId={UserId}, role={Role}", userId, role);
             if (string.IsNullOrWhiteSpace(role))
             {
                 TempData["Error"] = "Role name is required.";
@@ -71,6 +71,7 @@ namespace Recipify.Web.Areas.Admin.Controllers
             if (result.Succeeded)
             {
                 TempData["Success"] = $"Role '{role}' added to user '{user.Email}'.";
+                
             }
             else
             {
