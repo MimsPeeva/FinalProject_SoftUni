@@ -8,11 +8,12 @@
     ".NETCoreApp,Version=v8.0": {
       "Recipify.Data/1.0.0": {
         "dependencies": {
+          "Castle.Core": "5.2.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.15",
-          "Moq": "4.5.0",
+          "Moq": "4.18.0",
           "MvcPagedList.Core": "3.2.0",
           "NEST": "7.17.5",
           "Newtonsoft.Json": "13.0.3",
@@ -57,6 +58,17 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "Castle.Core/5.2.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.1.0"
           }
         }
       },
@@ -1379,11 +1391,15 @@
           }
         }
       },
-      "Moq/4.5.0": {
+      "Moq/4.18.0": {
+        "dependencies": {
+          "Castle.Core": "5.2.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
         "runtime": {
-          "lib/net45/Moq.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.0"
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.18.0.0",
+            "fileVersion": "4.18.0.0"
           }
         }
       },
@@ -1669,6 +1685,28 @@
       "System.Diagnostics.DiagnosticSource/6.0.1": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Diagnostics.EventLog/6.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "System.Diagnostics.Tools/4.3.0": {
@@ -2335,8 +2373,9 @@
       },
       "Recipify.Data.Common/1.0.0": {
         "dependencies": {
+          "Castle.Core": "5.2.1",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
-          "Moq": "4.5.0",
+          "Moq": "4.18.0",
           "MvcPagedList.Core": "3.2.0",
           "System.CodeDom": "7.0.0"
         },
@@ -2349,9 +2388,10 @@
       },
       "Recipify.Data.Models/1.0.0": {
         "dependencies": {
+          "Castle.Core": "5.2.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
-          "Moq": "4.5.0",
+          "Moq": "4.18.0",
           "MvcPagedList.Core": "3.2.0",
           "Recipify.Data.Common": "1.0.0",
           "Recipify.GCommon": "1.0.0",
@@ -2366,8 +2406,9 @@
       },
       "Recipify.GCommon/1.0.0": {
         "dependencies": {
+          "Castle.Core": "5.2.1",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.0",
-          "Moq": "4.5.0",
+          "Moq": "4.18.0",
           "MvcPagedList.Core": "3.2.0",
           "System.CodeDom": "7.0.0"
         },
@@ -2399,6 +2440,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "Castle.Core/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wHARzQA695jwwKreOzNsq54KiGqKP38tv8hi8e2FXDEC/sA6BtrX90tVPDkOfVu13PbEzr00TCV8coikl+D1Iw==",
+      "path": "castle.core/5.2.1",
+      "hashPath": "castle.core.5.2.1.nupkg.sha512"
     },
     "Elasticsearch.Net/7.17.5": {
       "type": "package",
@@ -3093,12 +3141,12 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
-    "Moq/4.5.0": {
+    "Moq/4.18.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RMXNiLcvhdpGYZcN41pbJc9HC+PYB7+0a9QteJDKQ6sadFgo1FuYFV+xyADfFJalXzoZx5T40ypx8yX3bk0b5A==",
-      "path": "moq/4.5.0",
-      "hashPath": "moq.4.5.0.nupkg.sha512"
+      "sha512": "sha512-FweC21Di1QYRovLbEK6Nu1rHrTwueXw0/1GtGgpH7YvSR/yeiLRfs2otUZdBhyAJJW7SZ0UUSNIBjcLyDFLerw==",
+      "path": "moq/4.18.0",
+      "hashPath": "moq.4.18.0.nupkg.sha512"
     },
     "MvcPagedList.Core/3.2.0": {
       "type": "package",
@@ -3372,6 +3420,13 @@
       "sha512": "sha512-KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
       "path": "system.diagnostics.diagnosticsource/6.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
     },
     "System.Diagnostics.Tools/4.3.0": {
       "type": "package",

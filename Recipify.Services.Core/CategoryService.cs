@@ -24,25 +24,7 @@ namespace Recipify.Services.Core
 
         public async Task<IEnumerable<CategoriesDropdownModel>> GetAllCategoriesDropDownAsync()
         {
-            //    return await this.dbContext
-            //.Categories
-            //.AsNoTracking()
-            //.Select(c => new SelectListItem
-            //{
-            //    Value = c.Id.ToString(),
-            //    Text = c.Name
-            //})
-            //.ToListAsync();
-
-            //    return await dbContext
-            //.Categories
-            //.AsNoTracking()
-            //.Select(c => new CategoriesDropdownModel
-            //{
-            //    Id = c.Id,
-            //    Name = c.Name
-            //})
-            //.ToListAsync();
+          
 
             IEnumerable<CategoriesDropdownModel> recipesAsDropDown = await this.dbContext
                   .Categories

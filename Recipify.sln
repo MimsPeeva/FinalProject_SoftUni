@@ -37,6 +37,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipify.Web", "Recipify.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipify.GCommon", "Recipify.GCommon\Recipify.GCommon.csproj", "{ECC70A02-DA6C-4D64-86B3-969AE6EB4F60}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestHelpers", "TestHelpers", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		DbSetMocking.cs = DbSetMocking.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,6 +117,7 @@ Global
 		{86909A20-72E9-418E-ABA0-7D6738CF8D4F} = {F5309D7D-C09A-4F63-9926-BBF0D4623380}
 		{47C0B2FF-FF13-4D5E-A561-D6FEE0F4E9EE} = {F5309D7D-C09A-4F63-9926-BBF0D4623380}
 		{CF06A478-4DBE-44E9-BD23-F6B9699B7ED7} = {93EF63D2-F88C-45A8-A833-653989757DFE}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {F5309D7D-C09A-4F63-9926-BBF0D4623380}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0063E44C-41E7-488F-ABC8-30AB4DD8226E}

@@ -35,7 +35,7 @@ namespace Recipify.Services.Core.Tests
         [Test]
         public async Task GetAllRecipesAsync_Returns_All_Recipes()
         {
-            _dbContext.Recipes.Add(new Recipe { Id = 1, Title = "Recipe1",Description="desc",Instructions="instructions", CategoryId = 1, CuisineId = 1, DifficultyId = 1 });
+            _dbContext.Recipes.Add(new Recipe { Id = 1, Title = "Recipe1", Description = "desc", Instructions = "instructions", CategoryId = 1, CuisineId = 1, DifficultyId = 1 });
             _dbContext.Recipes.Add(new Recipe { Id = 2, Title = "Recipe2", Description = "desc", Instructions = "instructions", CategoryId = 1, CuisineId = 1, DifficultyId = 1 });
             _dbContext.SaveChanges();
 
@@ -110,9 +110,9 @@ namespace Recipify.Services.Core.Tests
                 ShortDescription = "Classic Italian dessert",
                 Instructions = "Mix, layer, chill.",
                 ImageUrl = "http://example.com/tiramisu.jpg",
-                Category = 1,        
-                Cuisine = 1,         
-                DifficultyLevel = 1,  
+                Category = 1,
+                Cuisine = 1,
+                DifficultyLevel = 1,
                 Ingredients = new List<IngredientInputModel>
                 {
                     new IngredientInputModel { Name = "Mascarpone", Quantity = "500g" },
@@ -207,12 +207,16 @@ namespace Recipify.Services.Core.Tests
         [Test]
         public async Task DeleteRecipesAsync_Removes_Recipe()
         {
-            var recipe = new Recipe {
+            var recipe = new Recipe
+            {
                 Id = 30,
                 Title = "DelRecipe",
-                Description="desc",
-                Instructions="fffff", 
-                CategoryId = 1, CuisineId = 1, DifficultyId = 1 };
+                Description = "desc",
+                Instructions = "fffff",
+                CategoryId = 1,
+                CuisineId = 1,
+                DifficultyId = 1
+            };
             _dbContext.Recipes.Add(recipe);
             _dbContext.SaveChanges();
 

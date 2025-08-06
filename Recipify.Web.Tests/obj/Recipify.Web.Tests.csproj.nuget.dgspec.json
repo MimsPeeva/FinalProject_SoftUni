@@ -51,13 +51,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -142,6 +146,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.15, )"
@@ -152,7 +160,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -240,6 +248,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.15, )"
@@ -260,7 +272,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -346,13 +358,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -441,13 +457,17 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -525,13 +545,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -628,13 +652,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -716,13 +744,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -804,9 +836,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -814,7 +850,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -918,6 +954,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.3.0, )"
@@ -928,7 +968,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",
@@ -1022,6 +1062,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.AspNet.SignalR": {
               "target": "Package",
               "version": "[2.4.3, )"
@@ -1060,7 +1104,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",

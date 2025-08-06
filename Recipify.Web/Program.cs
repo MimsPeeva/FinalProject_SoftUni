@@ -54,6 +54,7 @@ namespace Recipify.Web
             builder.Services.AddScoped<ICommentService, CommentService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
 
+            builder.Logging.AddConsole();
 
             WebApplication? app = builder.Build();
             

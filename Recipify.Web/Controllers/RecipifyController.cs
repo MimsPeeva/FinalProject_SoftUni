@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using Recipify.Data;
 using Recipify.Data.Models;
 using Recipify.Services.Core.Contracts;
@@ -20,6 +21,9 @@ namespace Recipify.Web.Controllers
         private readonly ICommentService commentService;
         private readonly UserManager<IdentityUser> userManager;
         private readonly ApplicationDbContext dbContext;
+
+   
+
         public RecipifyController(
             IRecipeService recipeService,
             ICategoryService categoryService,
@@ -36,36 +40,8 @@ namespace Recipify.Web.Controllers
             this.userManager = userManager;
             this.dbContext = dbContext;
         }
-        //[HttpGet]
-        //[AllowAnonymous]
 
-        //public async Task<IActionResult> Index()
-        //{
-        //    try
-        //    {
-        //       var allRecipes = await recipeService.GetAllRecipesAsync();
 
-        //        var viewModel = new RecipeSearchViewModel
-        //        {
-        //            SearchName = string.Empty,
-        //            Results = allRecipes.ToList(),
-        //        };
-        //        return View(viewModel);
-
-        //    }
-        //    catch (Exception)
-        //    {
-        //        ModelState.AddModelError(string.Empty, "An error occurred while loading recipes.");
-
-        //        var fallbackModel = new RecipeSearchViewModel
-        //        {
-        //            SearchName = string.Empty,
-        //            Results = new List<RecipeIndexViewModel>(),
-        //        };
-
-        //        return View(fallbackModel);
-        //    }
-        //}
 
         [HttpGet]
         [AllowAnonymous]
@@ -470,17 +446,7 @@ namespace Recipify.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(DeleteRecipeInputModel inputModel)
         {
-            //try
-            //{
-            //    await recipeService.DeleteRecipesAsync(id);
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //    ModelState.AddModelError(string.Empty, "An error occurred while deleting the recipe.");
-            //    return RedirectToAction(nameof(Index));
-            //}
+           
             if (!ModelState.IsValid)
             {
                 return View("Delete", inputModel);

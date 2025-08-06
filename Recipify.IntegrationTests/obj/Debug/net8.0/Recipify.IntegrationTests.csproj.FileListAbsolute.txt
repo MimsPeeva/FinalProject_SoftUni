@@ -14,6 +14,7 @@ D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Recipify.Inte
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\AutoMapper.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Azure.Core.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Azure.Identity.dll
+D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Castle.Core.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Elasticsearch.Net.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Microsoft.AspNetCore.Antiforgery.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -117,6 +118,7 @@ D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\nunit.framewo
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.ClientModel.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.CodeDom.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\System.Memory.Data.dll
@@ -198,6 +200,8 @@ D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win-
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\FinalProject_SoftUni\Recipify.IntegrationTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll

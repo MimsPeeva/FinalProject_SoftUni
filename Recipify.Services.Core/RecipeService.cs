@@ -123,7 +123,6 @@ namespace Recipify.Services.Core
 
         public async Task CreateRecipesAsync(/*string userId,*/ CreateRecipeInputModel model)
         {
-            //  IdentityUser? user = await this.userManager.FindByIdAsync(userId);
             Category? categoryRef = await this.dbContext.Categories.FirstOrDefaultAsync(c => c.Id == model.Category);
             Cuisine? cuisineRef = await this.dbContext.Cuisines.FirstOrDefaultAsync(c => c.Id == model.Cuisine);
             DifficultyLevel? difficultyRef = await this.dbContext.Difficulties.FirstOrDefaultAsync(c => c.Id == model.DifficultyLevel);
@@ -178,14 +177,6 @@ namespace Recipify.Services.Core
             recipe.Title = model.Title;
             recipe.Description = model.ShortDescription;
             recipe.ImageUrl = model.ImageUrl;
-            //recipe.Ingredients = model.Ingredients
-            //    .Where(i => !string.IsNullOrWhiteSpace(i.Name))
-            //    .Select(i => new Ingredient
-            //    {
-            //        Name = i.Name.Trim(),
-            //        Quantity = i.Quantity?.Trim() ?? string.Empty
-            //    })
-            //    .ToList();
             recipe.Instructions = model.Instructions;
             recipe.CategoryId = model.Category;
             recipe.CuisineId = model.Cuisine;

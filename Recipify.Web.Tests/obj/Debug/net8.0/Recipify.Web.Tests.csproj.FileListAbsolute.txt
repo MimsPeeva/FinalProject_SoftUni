@@ -21,6 +21,7 @@ D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Recipify.Web.Tests.p
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\AutoMapper.dll
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Azure.Core.dll
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Azure.Identity.dll
+D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Castle.Core.dll
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Elasticsearch.Net.dll
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Humanizer.dll
 D:\FinalProject_SoftUni\Recipify.Web.Tests\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll

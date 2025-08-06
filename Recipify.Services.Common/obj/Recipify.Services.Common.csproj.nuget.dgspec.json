@@ -51,13 +51,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.18.0, )"
             },
             "MvcPagedList.Core": {
               "target": "Package",

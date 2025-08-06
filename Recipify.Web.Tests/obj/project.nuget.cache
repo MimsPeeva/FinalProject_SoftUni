@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "nvo32ClbT3U=",
+  "dgSpecHash": "6ZErzCBAEK4=",
   "success": true,
   "projectFilePath": "D:\\FinalProject_SoftUni\\Recipify.Web.Tests\\Recipify.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\castle.core\\5.2.1\\castle.core.5.2.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -134,7 +135,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.15\\microsoft.entityframeworkcore.abstractions.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.15\\microsoft.entityframeworkcore.analyzers.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.15\\microsoft.entityframeworkcore.design.8.0.15.nupkg.sha512",
-    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.0\\microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.0\\microsoft.entityframeworkcore.inmemory.8.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.15\\microsoft.entityframeworkcore.relational.8.0.15.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.11\\microsoft.entityframeworkcore.sqlite.8.0.11.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.11\\microsoft.entityframeworkcore.sqlite.core.8.0.11.nupkg.sha512",
@@ -191,7 +192,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
-    "C:\\Users\\Acer\\.nuget\\packages\\moq\\4.5.0\\moq.4.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\moq\\4.18.0\\moq.4.18.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mvcpagedlist.core\\3.2.0\\mvcpagedlist.core.3.2.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
@@ -314,18 +315,6 @@
       "warningLevel": 1,
       "filePath": "D:\\FinalProject_SoftUni\\Recipify.Web.Tests\\Recipify.Web.Tests.csproj",
       "libraryId": "Microsoft.Owin.Security",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'Moq 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "projectPath": "D:\\FinalProject_SoftUni\\Recipify.Web.Tests\\Recipify.Web.Tests.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\FinalProject_SoftUni\\Recipify.Web.Tests\\Recipify.Web.Tests.csproj",
-      "libraryId": "Moq",
       "targetGraphs": [
         "net8.0"
       ]

@@ -22,15 +22,6 @@ namespace Recipify.Services.Core
         public async Task<IEnumerable<DificultyLevelDropDownModel>> GetAllDifficultyLevelsDropDownAsync()
         {
 
-            // return await this.dbContext
-            //.Difficulties
-            //.AsNoTracking()
-            //.Select(c => new SelectListItem
-            //{
-            //    Value = c.Id.ToString(),
-            //    Text = c.Level
-            //})
-            //.ToListAsync();
             IEnumerable<DificultyLevelDropDownModel> recipesAsDropDown = await this.dbContext
                    .Difficulties
                    .AsNoTracking()
@@ -41,16 +32,7 @@ namespace Recipify.Services.Core
                    })
                    .ToArrayAsync();
             return recipesAsDropDown;
-            //{
-            //    return await dbContext
-            //.Difficulties
-            //.AsNoTracking()
-            //.Select(c => new DificultyLevelDropDownModel
-            //{
-            //    Id = c.Id,
-            //    Name = c.Level
-            //})
-            //.ToListAsync();
+          
         }
     }
 }
